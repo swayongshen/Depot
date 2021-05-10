@@ -1,38 +1,52 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-entity Seller {
-    * username <<pk>>
+entity seller {
+    * username PK
     * password
+    * updated_at
+    * created_at
 }
 
-entity Product {
-    * product_id <<pk>>
-    * seller_username <<fk>>
+entity product {
+    * product_id PK
+    * seller_username FK
     * name
     * description
     * price
     image
+    * updated_at
+    * created_at
 }
 
-entity Line_item {
-    * cart_item_id <<pk>>
-    * product_id <<fk>>
+entity line_item {
+    * cart_item_id PK
+    * product_id FK
     * quantity
     * price
+    * updated_at
+    * created_at
 }
 
-entity Cart {
-    * cart_id <<pk>>
+entity cart {
+    * cart_id PK
+    * updated_at
+    * created_at
 }
 
-entity Order {
-    * order_id <<pk>>
+entity order {
+    * order_id PK
     * buyer_name
     * buyer_email
     * address
     * payment_info
+    * updated_at
+    * created_at
 }
 
+seller }o--|{ product
+product }o--|{ line_item
+line_item }o--o{ cart
+order }o--o{ line_item
 
 @enduml
