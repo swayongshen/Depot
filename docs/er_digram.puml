@@ -1,27 +1,41 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
-
-List <|-- AbstractList
-Collection <|-- AbstractCollection
-
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
-
-class ArrayList {
-Object[] elementData
-size()
+entity Seller {
+    * username
+    --
+    * password
 }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
+entity Product {
+    * name
+    --
+    * description
+    * price
+    image
 }
+
+entity Cart_item {
+    * quantity
+    * price
+    --
+}
+
+entity Cart {
+}
+
+entity Order {
+    * order_id
+    --
+    * buyer_name
+    * buyer_email
+    * address
+    * payment_info
+}
+
+Seller }o--|| Product
+Product }o--|| Cart_item
+Cart_item }o--o{ Cart
+Cart_item }o--o{ Order
 
 @enduml
