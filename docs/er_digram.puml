@@ -2,40 +2,37 @@
 'https://plantuml.com/class-diagram
 
 entity Seller {
-    * username
-    --
+    * username <<pk>>
     * password
 }
 
 entity Product {
+    * product_id <<pk>>
+    * seller_username <<fk>>
     * name
-    --
     * description
     * price
     image
 }
 
-entity Cart_item {
+entity Line_item {
+    * cart_item_id <<pk>>
+    * product_id <<fk>>
     * quantity
     * price
-    --
 }
 
 entity Cart {
+    * cart_id <<pk>>
 }
 
 entity Order {
-    * order_id
-    --
+    * order_id <<pk>>
     * buyer_name
     * buyer_email
     * address
     * payment_info
 }
 
-Seller }o--|| Product
-Product }o--|| Cart_item
-Cart_item }o--o{ Cart
-Cart_item }o--o{ Order
 
 @enduml
