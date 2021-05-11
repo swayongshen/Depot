@@ -15,9 +15,9 @@
       <%= image_tag 'logo.svg', alt: 'The Pragmatic Bookshelf' %>
       <span class="title"><%= @page_title %></span>
     </div>
-    <div id="columns" class="container">
-      <div class="row">
-        <div class="col">
+    <div class="container-fluid">
+      <div class="row" id="columns">
+        <div class="col-2" id="side">
           <ul>
             <li><a href="http://www....">Home</a></li>
             <li><a href="http://www..../faq">Questions</a></li>
@@ -25,10 +25,8 @@
             <li><a href="http://www..../contact">Contact</a></li>
           </ul>
         </div>
-        <div class="col-10">
-          <div id="main">
-            <%= yield %>
-          </div>
+        <div class="col-10" id="main">
+          <%= yield %>
         </div>
       </div>
     </div>
