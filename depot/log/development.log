@@ -15,3 +15,272 @@ Migrating to CreateProducts (20210511053123)
   [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6958702983027556635)[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/products" for 127.0.0.1 at 2021-05-11 13:33:46 +0800
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1447)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/swayongshen/Documents/Wright/learning_phase_project/depot/public/packs
+[Webpacker] Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: e332c6419728fac579d5
+Version: webpack 4.46.0
+Time: 1086ms
+Built at: 05/11/2021 1:33:48 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 2012.3ms | Allocations: 22202)
+Completed 200 OK in 2024ms (Views: 2013.8ms | ActiveRecord: 0.7ms | Allocations: 26895)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2021-05-11 13:33:49 +0800
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 6.1ms | Allocations: 7280)
+  Rendered products/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 7651)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 10653)
+Completed 200 OK in 22ms (Views: 8.9ms | ActiveRecord: 3.1ms | Allocations: 16171)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2021-05-11 13:34:33 +0800
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 2.0ms | Allocations: 1454)
+  Rendered products/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1813)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 5090)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 6267)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2021-05-11 13:34:35 +0800
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 1.4ms | Allocations: 1081)
+  Rendered products/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1199)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 4296)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 4723)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2021-05-11 13:34:47 +0800
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 2.0ms | Allocations: 1453)
+  Rendered products/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1811)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 5086)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 6250)
+
+
+Started POST "/products" for 127.0.0.1 at 2021-05-11 13:35:00 +0800
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"title"=>"Test", "description"=>"Testing data", "image_url"=>"123", "price"=>"123"}, "commit"=>"Create Product"}
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+  [1m[36mProduct Create (1.1ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Test"], ["description", "Testing data"], ["image_url", "123"], ["price", "123.0"], ["created_at", "2021-05-11 05:35:00.655038"], ["updated_at", "2021-05-11 05:35:00.655038"]]
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 9ms (ActiveRecord: 4.1ms | Allocations: 2998)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2021-05-11 13:35:00 +0800
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:62:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 330)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 3371)
+Completed 200 OK in 13ms (Views: 4.3ms | ActiveRecord: 1.5ms | Allocations: 6820)
+
+
+Started GET "/products" for 127.0.0.1 at 2021-05-11 13:35:02 +0800
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1314)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 4413)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.8ms | Allocations: 4973)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2021-05-11 13:35:04 +0800
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:62:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 113)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 3213)
+Completed 200 OK in 7ms (Views: 4.1ms | ActiveRecord: 0.8ms | Allocations: 4374)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mProduct Destroy (3.1ms)[0m  [1m[31mDELETE FROM "products"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Rails, Angular, Postgres, and Bootstrap"], ["description", "<p>\n      <em>Powerful, Effective, and Efficient Full-Stack Web Development</em>\n      As a Rails developer, you care about user experience and performance,\n      but you also want simple and maintainable code. Achieve all that by\n      embracing the full stack of web development, from styling with\n      Bootstrap, building an interactive user interface with AngularJS, to\n      storing data quickly and reliably in PostgreSQL. Take a holistic view of\n      full-stack development to create usable, high-performing applications,\n      and learn to use these technologies effectively in a Ruby on Rails\n      environment.\n      </p>"], ["image_url", "dcbang.jpg"], ["price", "45.0"], ["created_at", "2021-05-11 05:36:28.914319"], ["updated_at", "2021-05-11 05:36:28.914319"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Seven Mobile Apps in Seven Weeks"], ["description", "<p>\n      <em>Native Apps, Multiple Platforms</em>\n      Answer the question “Can we build this for ALL the devices?” with a\n      resounding YES. This book will help you get there with a real-world\n      introduction to seven platforms, whether you’re new to mobile or an\n      experienced developer needing to expand your options. Plus, you’ll find\n      out which cross-platform solution makes the most sense for your needs.\n      </p>"], ["image_url", "7apps.jpg"], ["price", "26.0"], ["created_at", "2021-05-11 05:36:28.918024"], ["updated_at", "2021-05-11 05:36:28.918024"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Ruby Performance Optimization"], ["description", "<p>\n      <em>Why Ruby Is Slow, and How to Fix It</em> \n      You don’t have to accept slow Ruby or Rails performance. In this\n      comprehensive guide to Ruby optimization, you’ll learn how to write\n      faster Ruby code—but that’s just the beginning. See exactly what makes\n      Ruby and Rails code slow, and how to fix it. Alex Dymo will guide you\n      through perils of memory and CPU optimization, profiling, measuring,\n      performance testing, garbage collection, and tuning. You’ll find that\n      all those “hard” things aren’t so difficult after all, and your code\n      will run orders of magnitude faster.\n      </p>"], ["image_url", "adrpo.jpg"], ["price", "46.0"], ["created_at", "2021-05-11 05:36:28.921576"], ["updated_at", "2021-05-11 05:36:28.921576"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/products" for 127.0.0.1 at 2021-05-11 13:36:31 +0800
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1269)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 4393)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.9ms | Allocations: 4819)
+
+
+Started GET "/products" for 127.0.0.1 at 2021-05-11 13:37:02 +0800
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1269)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 12650)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 1.7ms | Allocations: 13070)
+
+
+Started GET "/products" for 127.0.0.1 at 2021-05-11 13:37:03 +0800
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1269)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 4416)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.7ms | Allocations: 4838)
+
+
+Started GET "/products" for 127.0.0.1 at 2021-05-11 13:37:47 +0800
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1552)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 4904)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.9ms | Allocations: 6070)
+
+
+Started GET "/products" for 127.0.0.1 at 2021-05-11 13:38:12 +0800
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1278)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 4425)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 1.0ms | Allocations: 4846)
+
+
+Started GET "/products" for 127.0.0.1 at 2021-05-11 13:38:13 +0800
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1269)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 4419)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 1.4ms | Allocations: 4839)
+
+
+Started GET "/products" for 127.0.0.1 at 2021-05-11 13:38:18 +0800
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (Duration: 13.8ms | Allocations: 6676)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 36.9ms | Allocations: 19759)
+Completed 200 OK in 48ms (Views: 34.4ms | ActiveRecord: 4.4ms | Allocations: 22835)
+
+
+Started GET "/products" for 127.0.0.1 at 2021-05-11 13:38:19 +0800
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1287)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 4436)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 1.4ms | Allocations: 4866)
+
+
+Started GET "/products" for 127.0.0.1 at 2021-05-11 13:39:08 +0800
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  Rendered products/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 3528)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 6790)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.9ms | Allocations: 7966)
+
+
