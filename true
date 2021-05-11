@@ -1,0 +1,2 @@
+Could not find generator 'migrate'. Maybe you meant "migration"?
+Run `bin/rails generate --help` for more options.
