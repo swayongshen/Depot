@@ -284,3 +284,14 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.9ms | Allocations: 7966)
 
 
+Started GET "/products/new" for 127.0.0.1 at 2021-05-11 13:42:44 +0800
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 3.9ms | Allocations: 5654)
+  Rendered products/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 6020)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 9075)
+Completed 200 OK in 14ms (Views: 6.8ms | ActiveRecord: 2.7ms | Allocations: 14494)
+
+
