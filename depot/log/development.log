@@ -10776,3 +10776,604 @@ Processing by LineItemsController#create as JS
 Completed 200 OK in 35ms (Views: 7.2ms | ActiveRecord: 15.8ms | Allocations: 9648)
 
 
+Started GET "/" for 127.0.0.1 at 2021-05-12 14:14:27 +0800
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_cart.rb:6:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:4
+  Rendered store/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 3343)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mLineItem Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT $2[0m  [["cart_id", 23], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 23]]
+  ↳ app/views/carts/_cart.html.erb:3
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/line_items/_line_item.html.erb:7
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/line_items/_line_item.html.erb:7
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/line_items/_line_item.html.erb:7
+  Rendered collection of line_items/_line_item.html.erb [3 times] (Duration: 4.3ms | Allocations: 3197)
+  Rendered carts/_cart.html.erb (Duration: 6.3ms | Allocations: 4535)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 12610)
+Completed 200 OK in 28ms (Views: 11.4ms | ActiveRecord: 11.4ms | Allocations: 16876)
+
+
+Started GET "/products" for 127.0.0.1 at 2021-05-12 14:14:35 +0800
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  Rendered products/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 3593)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 7368)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.8ms | Allocations: 8372)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2021-05-12 14:14:38 +0800
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:62:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 2.1ms | Allocations: 2170)
+  Rendered products/edit.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2578)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 6470)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.4ms | Allocations: 7744)
+
+
+Started PATCH "/products/1" for 127.0.0.1 at 2021-05-12 14:14:45 +0800
+Processing by ProductsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"title"=>"Rails, Angular, Postgres, and Bootstrap", "description"=>"<p>\r\n      <em>Powerful, Effective, and Efficient Full-Stack Web Development</em>\r\n      As a Rails developer, you care about user experience and performance,\r\n      but you also want simple and maintainable code. Achieve all that by\r\n      embracing the full stack of web development, from styling with\r\n      Bootstrap, building an interactive user interface with AngularJS, to\r\n      storing data quickly and reliably in PostgreSQL. Take a holistic view of\r\n      full-stack development to create usable, high-performing applications,\r\n      and learn to use these technologies effectively in a Ruby on Rails\r\n      environment.\r\n      </p>", "image_url"=>"dcbang.jpg", "price"=>"41"}, "commit"=>"Update Product", "id"=>"1"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:62:in `set_product'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+  [1m[36mProduct Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 AND "products"."id" != $2 LIMIT $3[0m  [["title", "Rails, Angular, Postgres, and Bootstrap"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+  [1m[36mProduct Update (0.7ms)[0m  [1m[33mUPDATE "products" SET "description" = $1, "price" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["description", "<p>\r\n      <em>Powerful, Effective, and Efficient Full-Stack Web Development</em>\r\n      As a Rails developer, you care about user experience and performance,\r\n      but you also want simple and maintainable code. Achieve all that by\r\n      embracing the full stack of web development, from styling with\r\n      Bootstrap, building an interactive user interface with AngularJS, to\r\n      storing data quickly and reliably in PostgreSQL. Take a holistic view of\r\n      full-stack development to create usable, high-performing applications,\r\n      and learn to use these technologies effectively in a Ruby on Rails\r\n      environment.\r\n      </p>"], ["price", "41.0"], ["updated_at", "2021-05-12 06:14:45.838329"], ["id", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 9ms (ActiveRecord: 4.3ms | Allocations: 4708)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2021-05-12 14:14:45 +0800
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:62:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 330)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 4225)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.4ms | Allocations: 5504)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-12 14:14:48 +0800
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_cart.rb:6:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:4
+  Rendered store/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 3284)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mLineItem Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT $2[0m  [["cart_id", 23], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  [1m[36mLineItem Load (0.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 23]]
+  ↳ app/views/carts/_cart.html.erb:3
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/line_items/_line_item.html.erb:7
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/line_items/_line_item.html.erb:7
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/line_items/_line_item.html.erb:7
+  Rendered collection of line_items/_line_item.html.erb [3 times] (Duration: 5.7ms | Allocations: 3193)
+  Rendered carts/_cart.html.erb (Duration: 7.8ms | Allocations: 4419)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 12420)
+Completed 200 OK in 20ms (Views: 12.9ms | ActiveRecord: 5.4ms | Allocations: 13573)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-12 14:14:58 +0800
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (2.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_cart.rb:6:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.0ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:4
+  Rendered store/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 3278)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mLineItem Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT $2[0m  [["cart_id", 23], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  [1m[36mLineItem Load (1.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 23]]
+  ↳ app/views/carts/_cart.html.erb:3
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/line_items/_line_item.html.erb:7
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/line_items/_line_item.html.erb:7
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/line_items/_line_item.html.erb:7
+  Rendered collection of line_items/_line_item.html.erb [3 times] (Duration: 6.1ms | Allocations: 3193)
+  Rendered carts/_cart.html.erb (Duration: 8.6ms | Allocations: 4415)
+  Rendered layout layouts/application.html.erb (Duration: 25.7ms | Allocations: 12407)
+Completed 200 OK in 34ms (Views: 19.5ms | ActiveRecord: 9.0ms | Allocations: 13553)
+
+
+Started POST "/line_items?product_id=1" for 127.0.0.1 at 2021-05-12 14:15:18 +0800
+Processing by LineItemsController#create as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product_id"=>"1"}
+  [1m[36mCart Load (1.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_cart.rb:6:in `set_cart'
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/line_items_controller.rb:27:in `create'
+  [1m[36mLineItem Load (0.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1 AND "line_items"."product_id" = $2 LIMIT $3[0m  [["cart_id", 23], ["product_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cart.rb:9:in `add_product'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/line_items_controller.rb:33:in `block in create'
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/line_items_controller.rb:33:in `block in create'
+  [1m[36mLineItem Update (0.8ms)[0m  [1m[33mUPDATE "line_items" SET "updated_at" = $1, "quantity" = $2 WHERE "line_items"."id" = $3[0m  [["updated_at", "2021-05-12 06:15:18.407008"], ["quantity", 2], ["id", 53]]
+  ↳ app/controllers/line_items_controller.rb:33:in `block in create'
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/line_items_controller.rb:33:in `block in create'
+  Rendering line_items/create.js.erb
+  [1m[36mLineItem Load (0.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 23]]
+  ↳ app/views/carts/_cart.html.erb:3
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/line_items/_line_item.html.erb:7
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/line_items/_line_item.html.erb:7
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/line_items/_line_item.html.erb:7
+  Rendered collection of line_items/_line_item.html.erb [3 times] (Duration: 5.1ms | Allocations: 3142)
+  Rendered carts/_cart.html.erb (Duration: 7.1ms | Allocations: 4361)
+  Rendered line_items/create.js.erb (Duration: 7.4ms | Allocations: 4564)
+Completed 200 OK in 26ms (Views: 4.7ms | ActiveRecord: 12.3ms | Allocations: 10436)
+
+
+Started DELETE "/carts/23" for 127.0.0.1 at 2021-05-12 14:15:23 +0800
+Processing by CartsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"23"}
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:65:in `set_cart'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/carts_controller.rb:54:in `destroy'
+  [1m[36mLineItem Load (0.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 23]]
+  ↳ app/controllers/carts_controller.rb:54:in `destroy'
+  [1m[36mLineItem Destroy (0.8ms)[0m  [1m[31mDELETE FROM "line_items" WHERE "line_items"."id" = $1[0m  [["id", 54]]
+  ↳ app/controllers/carts_controller.rb:54:in `destroy'
+  [1m[36mLineItem Destroy (0.6ms)[0m  [1m[31mDELETE FROM "line_items" WHERE "line_items"."id" = $1[0m  [["id", 55]]
+  ↳ app/controllers/carts_controller.rb:54:in `destroy'
+  [1m[36mLineItem Destroy (0.5ms)[0m  [1m[31mDELETE FROM "line_items" WHERE "line_items"."id" = $1[0m  [["id", 53]]
+  ↳ app/controllers/carts_controller.rb:54:in `destroy'
+  [1m[36mCart Destroy (0.6ms)[0m  [1m[31mDELETE FROM "carts" WHERE "carts"."id" = $1[0m  [["id", 23]]
+  ↳ app/controllers/carts_controller.rb:54:in `destroy'
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/carts_controller.rb:54:in `destroy'
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 7.4ms | Allocations: 6343)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-12 14:15:23 +0800
+Processing by StoreController#index as HTML
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/concerns/current_cart.rb:8:in `rescue in set_cart'
+  [1m[36mCart Create (0.6ms)[0m  [1m[32mINSERT INTO "carts" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-05-12 06:15:23.196860"], ["updated_at", "2021-05-12 06:15:23.196860"]]
+  ↳ app/controllers/concerns/current_cart.rb:8:in `rescue in set_cart'
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/concerns/current_cart.rb:8:in `rescue in set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:4
+  Rendered store/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 3278)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mLineItem Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT $2[0m  [["cart_id", 24], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  [1m[36mLineItem Load (0.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  ↳ app/views/carts/_cart.html.erb:3
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 10)
+  Rendered carts/_cart.html.erb (Duration: 2.2ms | Allocations: 1128)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 9065)
+Completed 200 OK in 28ms (Views: 18.5ms | ActiveRecord: 6.8ms | Allocations: 12184)
+
+
+Started GET "/products" for 127.0.0.1 at 2021-05-12 14:15:29 +0800
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  Rendered products/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 3224)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 7030)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.5ms | Allocations: 7452)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2021-05-12 14:15:31 +0800
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:62:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 1.5ms | Allocations: 1120)
+  Rendered products/edit.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1263)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 5155)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.6ms | Allocations: 6299)
+
+
+Started PATCH "/products/1" for 127.0.0.1 at 2021-05-12 14:15:33 +0800
+Processing by ProductsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"title"=>"Rails, Angular, Postgres, and Bootstrap", "description"=>"<p>\r\n      <em>Powerful, Effective, and Efficient Full-Stack Web Development</em>\r\n      As a Rails developer, you care about user experience and performance,\r\n      but you also want simple and maintainable code. Achieve all that by\r\n      embracing the full stack of web development, from styling with\r\n      Bootstrap, building an interactive user interface with AngularJS, to\r\n      storing data quickly and reliably in PostgreSQL. Take a holistic view of\r\n      full-stack development to create usable, high-performing applications,\r\n      and learn to use these technologies effectively in a Ruby on Rails\r\n      environment.\r\n      </p>", "image_url"=>"dcbang.jpg", "price"=>"30"}, "commit"=>"Update Product", "id"=>"1"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:62:in `set_product'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+  [1m[36mProduct Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 AND "products"."id" != $2 LIMIT $3[0m  [["title", "Rails, Angular, Postgres, and Bootstrap"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+  [1m[36mProduct Update (0.9ms)[0m  [1m[33mUPDATE "products" SET "price" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["price", "30.0"], ["updated_at", "2021-05-12 06:15:33.991553"], ["id", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 11ms (ActiveRecord: 5.3ms | Allocations: 4510)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2021-05-12 14:15:34 +0800
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:62:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 4009)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.4ms | Allocations: 5155)
+
+
+Started POST "/line_items?product_id=1" for 127.0.0.1 at 2021-05-12 14:15:40 +0800
+Processing by LineItemsController#create as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product_id"=>"1"}
+  [1m[36mCart Load (0.8ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_cart.rb:6:in `set_cart'
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/line_items_controller.rb:27:in `create'
+  [1m[36mLineItem Load (0.8ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1 AND "line_items"."product_id" = $2 LIMIT $3[0m  [["cart_id", 24], ["product_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cart.rb:9:in `add_product'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/line_items_controller.rb:33:in `block in create'
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/line_items_controller.rb:33:in `block in create'
+  [1m[36mLineItem Create (1.8ms)[0m  [1m[32mINSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 1], ["cart_id", 24], ["created_at", "2021-05-12 06:15:40.174930"], ["updated_at", "2021-05-12 06:15:40.174930"]]
+  ↳ app/controllers/line_items_controller.rb:33:in `block in create'
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/line_items_controller.rb:33:in `block in create'
+  Rendering line_items/create.js.erb
+  [1m[36mLineItem Load (1.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  ↳ app/views/carts/_cart.html.erb:3
+  Rendered collection of line_items/_line_item.html.erb [1 times] (Duration: 0.5ms | Allocations: 196)
+  Rendered carts/_cart.html.erb (Duration: 4.4ms | Allocations: 1402)
+  Rendered line_items/create.js.erb (Duration: 4.8ms | Allocations: 1583)
+Completed 200 OK in 24ms (Views: 3.9ms | ActiveRecord: 11.2ms | Allocations: 7541)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2021-05-12 14:27:12 +0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:66:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 11.4ms | Allocations: 5756)
+  Rendered products/edit.html.erb within layouts/application (Duration: 12.0ms | Allocations: 6289)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/swayongshen/Documents/Wright/learning_phase_project/depot/public/packs
+[Webpacker] Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: 2a1ad93d4245503a8634
+Version: webpack 4.46.0
+Time: 1142ms
+Built at: 05/12/2021 2:27:14 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-b2023f19b791ae9ff48f.js    816 KiB  application  [emitted] [immutable]  application
+js/application-b2023f19b791ae9ff48f.js.map    854 KiB  application  [emitted] [dev]        application
+      js/bootstrap-17c7f131e7f228d2bcc9.js    620 KiB    bootstrap  [emitted] [immutable]  bootstrap
+  js/bootstrap-17c7f131e7f228d2bcc9.js.map    635 KiB    bootstrap  [emitted] [dev]        bootstrap
+                             manifest.json  689 bytes               [emitted]              
+Entrypoint application = js/application-b2023f19b791ae9ff48f.js js/application-b2023f19b791ae9ff48f.js.map
+Entrypoint bootstrap = js/bootstrap-17c7f131e7f228d2bcc9.js js/bootstrap-17c7f131e7f228d2bcc9.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 186 bytes {application} [built]
+[./app/javascript/channels/consumer.js] 269 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/channels/products_channel.js] 385 bytes {application} [optional] [built]
+[./app/javascript/packs/application.js] 580 bytes {application} [built]
+[./app/javascript/packs/bootstrap.js] 118 KiB {bootstrap} {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {bootstrap} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 115 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 1965.1ms | Allocations: 17150)
+Completed 200 OK in 1982ms (Views: 1966.3ms | ActiveRecord: 3.5ms | Allocations: 27527)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2021-05-12 14:27:14 +0800
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:66:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 7.4ms | Allocations: 1121)
+  Rendered products/edit.html.erb within layouts/application (Duration: 8.4ms | Allocations: 1296)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.8ms | Allocations: 5514)
+Completed 200 OK in 39ms (Views: 32.6ms | ActiveRecord: 1.4ms | Allocations: 7051)
+
+
+Started GET "/cable" for 127.0.0.1 at 2021-05-12 14:27:15 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2021-05-12 14:27:15 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ProductsChannel is transmitting the subscription confirmation
+ProductsChannel is streaming from products
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2021-05-12 14:27:19 +0800
+ProductsChannel stopped streaming from products
+Started PATCH "/products/1" for 127.0.0.1 at 2021-05-12 14:27:19 +0800
+Processing by ProductsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"title"=>"Rails, Angular, Postgres, and Bootstrap", "description"=>"<p>\r\n      <em>Powerful, Effective, and Efficient Full-Stack Web Development</em>\r\n      As a Rails developer, you care about user experience and performance,\r\n      but you also want simple and maintainable code. Achieve all that by\r\n      embracing the full stack of web development, from styling with\r\n      Bootstrap, building an interactive user interface with AngularJS, to\r\n      storing data quickly and reliably in PostgreSQL. Take a holistic view of\r\n      full-stack development to create usable, high-performing applications,\r\n      and learn to use these technologies effectively in a Ruby on Rails\r\n      environment.\r\n      </p>", "image_url"=>"dcbang.jpg", "price"=>"40"}, "commit"=>"Update Product", "id"=>"1"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:66:in `set_product'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+  [1m[36mProduct Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 AND "products"."id" != $2 LIMIT $3[0m  [["title", "Rails, Angular, Postgres, and Bootstrap"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+  [1m[36mProduct Update (1.2ms)[0m  [1m[33mUPDATE "products" SET "price" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["price", "40.0"], ["updated_at", "2021-05-12 06:27:19.974728"], ["id", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+  Rendering store/index.html.erb
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/store/index.html.erb:4
+  Rendered store/index.html.erb (Duration: 7.3ms | Allocations: 4536)
+[ActionCable] Broadcasting to products: {:html=>"<p id=\"notice\"></p>\n<h1>Product catalogue</h1>\n      <div class=\"entry\">\n        <img src=\"/assets/7apps-902a7fcba2fb72309a4e03f51b11df7455b49870ab7d972a13e1c80de2be8989.jpg\" />\n        <h3>Seven Mobile Apps in Seven Weeks</h3>\n        <p>\n      <em>Native Apps, Multiple Platforms</em>\n      Answer the question “Can we build this for ALL the devices?” with a\n      resounding YES. This book will help you get there with a real-world\n      introduction to seven platforms, whether you’re new to mobile or an\n      experienced developer needing to expand your options. Plus, you’ll find\n      out which cross-platform solution makes the most sense for your needs.\n      </p>\n        <div class=\"price_line\">\n          <span class=\"price\">$26.00</span>\n          <form class=\"button_to\" method=\"post\" action=\"/line_items?product_id=2\" data-remote=\"true\"><input type=\"submit\" value=\"Add to cart\" /><input type=\"hidden\" name=\"authenticity_token\" value=\"QOWvx8LRecHF0zzbqL2zbxrWw4GGX85t6Ev_BcWJ3TXzhDDYwFYaCIVdBaJUFHaRxMCGhDpXczbWQyBr3BxBjg\" /></form>\n        </div>\n      </div>\n      <div class=\"entry\">\n        <img src=\"/assets/adrpo-6a7ff0bda272e3b6f11fb05a1a87e10428faeba16f573b56983441040a311ae1.jpg\" />\n        <h3>Ruby Performance Optimization</h3>\n        <p>\n      <em>Why Ruby Is Slow, and How to Fix It</em> \n      You don’t have to accept slow Ruby or Rails performance. In this\n      comprehensive guide to Ruby optimization, you’ll learn how to write\n      faster Ruby code—but that’s just the beginning. See exactly what makes\n      Ruby and Rails code slow, and how to fix it. Alex Dymo will guide you\n      through perils of memory and CPU optimization, profiling, measuring,\n      performance testing, garbage collection, and tuning. You’ll find that\n      all those “hard” things aren’t so difficult after all, and your code\n      will run orders of magnitude faster.\n      </p>\n        <div class=\"price_line\">\n          <span class=\"price\">$46.00</span>\n          <form class=\"button_to\" method=\"post\" action=\"/line_items?product_id=3\" data-remote=\"true\"><input type=\"submit\" value=\"Add to cart\" /><input type=\"hidden\" name=\"authenticity_token\" value=\"TjX2Hi_y_NzxcmzXAjmctlnjWf-tba0KFaZPVPVRaS39VGkBLXWfFbH8Va7-kFlIh_Uc-hFlEFErrpA67MT1lg\" /></form>\n        </div>\n      </div>\n      <div class=\"entry\">\n        <img src=\"/assets/dcbang-fd0902f12309120965ed39c0c176783bdf2bc8e30aaa29bcd43a612359fcc6c8.jpg\" />\n        <h3>Rails, Angular, Postgres, and Bootstrap</h3>\n        <p>\r\n      <em>Powerful, Effective, and Efficient Full-Stack Web Development</em>\r\n      As a Rails developer, you care about user experience and performance,\r\n      but you also want simple and maintainable code. Achieve all that by\r\n      embracing the full stack of web development, from styling with\r\n      Bootstrap, building an interactive user interface with AngularJS, to\r\n      storing data quickly and reliably in PostgreSQL. Take a holistic view of\r\n      full-stack development to create usable, high-performing applications,\r\n      and learn to use these technologies effectively in a Ruby on Rails\r\n      environment.\r\n      </p>\n        <div class=\"price_line\">\n          <span class=\"price\">$40.00</span>\n          <form class=\"button_to\" method=\"post\" action=\"/line_items?product_id=1\" data-remote=\"true\"><input type=\"submit\" value=\"Add to cart\" /><input type=\"hidden\" name=\"authenticity_token\" value=\"dSynjsnMq1AONalNhfjBy5gghv02_5a8CARH3w2Iwb7GTTiRy0vImU67kDR5UQQ1RjbD-Ir3K-c2DJixFB1dBQ\" /></form>\n        </div>\n      </div>\n\n"}
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 24ms (ActiveRecord: 7.7ms | Allocations: 9951)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2021-05-12 14:27:20 +0800
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:66:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 332)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 4240)
+Completed 200 OK in 18ms (Views: 12.3ms | ActiveRecord: 0.9ms | Allocations: 5518)
+
+
+Started GET "/cable" for 127.0.0.1 at 2021-05-12 14:27:20 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2021-05-12 14:27:20 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ProductsChannel is transmitting the subscription confirmation
+ProductsChannel is streaming from products
+Started GET "/" for 127.0.0.1 at 2021-05-12 14:27:25 +0800
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_cart.rb:6:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:4
+  Rendered store/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 3289)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mLineItem Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT $2[0m  [["cart_id", 24], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  ↳ app/views/carts/_cart.html.erb:3
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/line_items/_line_item.html.erb:7
+  Rendered collection of line_items/_line_item.html.erb [1 times] (Duration: 2.1ms | Allocations: 2106)
+  Rendered carts/_cart.html.erb (Duration: 8.5ms | Allocations: 8068)
+  Rendered layout layouts/application.html.erb (Duration: 26.9ms | Allocations: 20016)
+Completed 200 OK in 40ms (Views: 23.4ms | ActiveRecord: 8.0ms | Allocations: 24397)
+
+
+Started GET "/cable" for 127.0.0.1 at 2021-05-12 14:27:26 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2021-05-12 14:27:26 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ProductsChannel is transmitting the subscription confirmation
+ProductsChannel is streaming from products
+Started GET "/products/1/edit" for 127.0.0.1 at 2021-05-12 14:27:30 +0800
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:66:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 1.4ms | Allocations: 1126)
+  Rendered products/edit.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1272)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 5180)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.5ms | Allocations: 6339)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2021-05-12 14:27:32 +0800
+ProductsChannel stopped streaming from products
+Started PATCH "/products/1" for 127.0.0.1 at 2021-05-12 14:27:32 +0800
+Processing by ProductsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"title"=>"Rails, Angular, Postgres, and Bootstrap", "description"=>"<p>\r\n      <em>Powerful, Effective, and Efficient Full-Stack Web Development</em>\r\n      As a Rails developer, you care about user experience and performance,\r\n      but you also want simple and maintainable code. Achieve all that by\r\n      embracing the full stack of web development, from styling with\r\n      Bootstrap, building an interactive user interface with AngularJS, to\r\n      storing data quickly and reliably in PostgreSQL. Take a holistic view of\r\n      full-stack development to create usable, high-performing applications,\r\n      and learn to use these technologies effectively in a Ruby on Rails\r\n      environment.\r\n      </p>", "image_url"=>"dcbang.jpg", "price"=>"50"}, "commit"=>"Update Product", "id"=>"1"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:66:in `set_product'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+  [1m[36mProduct Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 AND "products"."id" != $2 LIMIT $3[0m  [["title", "Rails, Angular, Postgres, and Bootstrap"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+  [1m[36mProduct Update (0.6ms)[0m  [1m[33mUPDATE "products" SET "price" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["price", "50.0"], ["updated_at", "2021-05-12 06:27:32.667881"], ["id", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+  Rendering store/index.html.erb
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/store/index.html.erb:4
+  Rendered store/index.html.erb (Duration: 3.4ms | Allocations: 3257)
+[ActionCable] Broadcasting to products: {:html=>"<p id=\"notice\"></p>\n<h1>Product catalogue</h1>\n      <div class=\"entry\">\n        <img src=\"/assets/7apps-902a7fcba2fb72309a4e03f51b11df7455b49870ab7d972a13e1c80de2be8989.jpg\" />\n        <h3>Seven Mobile Apps in Seven Weeks</h3>\n        <p>\n      <em>Native Apps, Multiple Platforms</em>\n      Answer the question “Can we build this for ALL the devices?” with a\n      resounding YES. This book will help you get there with a real-world\n      introduction to seven platforms, whether you’re new to mobile or an\n      experienced developer needing to expand your options. Plus, you’ll find\n      out which cross-platform solution makes the most sense for your needs.\n      </p>\n        <div class=\"price_line\">\n          <span class=\"price\">$26.00</span>\n          <form class=\"button_to\" method=\"post\" action=\"/line_items?product_id=2\" data-remote=\"true\"><input type=\"submit\" value=\"Add to cart\" /><input type=\"hidden\" name=\"authenticity_token\" value=\"cki0wBlUT_Fx5lCP2Q70I1hLSxdcQSfnaHkqpybbeR3BKSvfG9MsODFoafYlpzHdhl0OEuBJmrxWcfXJP07lpg\" /></form>\n        </div>\n      </div>\n      <div class=\"entry\">\n        <img src=\"/assets/adrpo-6a7ff0bda272e3b6f11fb05a1a87e10428faeba16f573b56983441040a311ae1.jpg\" />\n        <h3>Ruby Performance Optimization</h3>\n        <p>\n      <em>Why Ruby Is Slow, and How to Fix It</em> \n      You don’t have to accept slow Ruby or Rails performance. In this\n      comprehensive guide to Ruby optimization, you’ll learn how to write\n      faster Ruby code—but that’s just the beginning. See exactly what makes\n      Ruby and Rails code slow, and how to fix it. Alex Dymo will guide you\n      through perils of memory and CPU optimization, profiling, measuring,\n      performance testing, garbage collection, and tuning. You’ll find that\n      all those “hard” things aren’t so difficult after all, and your code\n      will run orders of magnitude faster.\n      </p>\n        <div class=\"price_line\">\n          <span class=\"price\">$46.00</span>\n          <form class=\"button_to\" method=\"post\" action=\"/line_items?product_id=3\" data-remote=\"true\"><input type=\"submit\" value=\"Add to cart\" /><input type=\"hidden\" name=\"authenticity_token\" value=\"w3Iw1D3NM8T4kWfczWtWWDSklv83EKaQP4wzwdcQfrdwE6_LP0pQDbgfXqUxwpOm6rLT-osYG8sBhOyvzoXiDA\" /></form>\n        </div>\n      </div>\n      <div class=\"entry\">\n        <img src=\"/assets/dcbang-fd0902f12309120965ed39c0c176783bdf2bc8e30aaa29bcd43a612359fcc6c8.jpg\" />\n        <h3>Rails, Angular, Postgres, and Bootstrap</h3>\n        <p>\r\n      <em>Powerful, Effective, and Efficient Full-Stack Web Development</em>\r\n      As a Rails developer, you care about user experience and performance,\r\n      but you also want simple and maintainable code. Achieve all that by\r\n      embracing the full stack of web development, from styling with\r\n      Bootstrap, building an interactive user interface with AngularJS, to\r\n      storing data quickly and reliably in PostgreSQL. Take a holistic view of\r\n      full-stack development to create usable, high-performing applications,\r\n      and learn to use these technologies effectively in a Ruby on Rails\r\n      environment.\r\n      </p>\n        <div class=\"price_line\">\n          <span class=\"price\">$50.00</span>\n          <form class=\"button_to\" method=\"post\" action=\"/line_items?product_id=1\" data-remote=\"true\"><input type=\"submit\" value=\"Add to cart\" /><input type=\"hidden\" name=\"authenticity_token\" value=\"Z2w_yAtKpdhvnDA7u-ZDHooCxhvHTawjsLNS3UBW1wzUDaDXCc3GES8SCUJHT4bgVBSDHntFEXiOu42zWcNLtw\" /></form>\n        </div>\n      </div>\n\n"}
+Redirected to http://localhost:3000/products/1
+ProductsChannel transmitting {"html"=>"<p id=\"notice\"></p>\n<h1>Product catalogue</h1>\n      <div class=\"entry\">\n        <img src=\"/assets/7apps-902a7fcba2fb72309a4e03f51b11df7455b49870ab7d972a13e1c80de2be8989.jpg\" />\n        <h3>Seven Mobile Apps in Seven Weeks</h3>\n        <p>\n      <em>Native Apps, Multiple Pla... (via streamed from products)
+Completed 302 Found in 14ms (ActiveRecord: 4.7ms | Allocations: 8202)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2021-05-12 14:27:32 +0800
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:66:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 117)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 4022)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.4ms | Allocations: 5166)
+
+
+Started GET "/cable" for 127.0.0.1 at 2021-05-12 14:27:32 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2021-05-12 14:27:32 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ProductsChannel is transmitting the subscription confirmation
+ProductsChannel is streaming from products
+Started GET "/products/1/edit" for 127.0.0.1 at 2021-05-12 14:27:47 +0800
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:66:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 1.4ms | Allocations: 1118)
+  Rendered products/edit.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1261)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 5165)
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 0.7ms | Allocations: 6307)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2021-05-12 14:27:53 +0800
+ProductsChannel stopped streaming from products
+Started PATCH "/products/1" for 127.0.0.1 at 2021-05-12 14:27:54 +0800
+Processing by ProductsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"title"=>"Rails, Angular, Postgres, and Bootstrap", "description"=>"<p>\r\n      <em>Powerful, Effective, and Efficient Full-Stack Web Development</em>\r\n      As a Rails developer, you care about user experience and performance,\r\n      but you also want simple and maintainable code. Achieve all that by\r\n      embracing the full stack of web development, from styling with\r\n      Bootstrap, building an interactive user interface with AngularJS, to\r\n      storing data quickly and reliably in PostgreSQL. Take a holistic view of\r\n      full-stack development to create usable, high-performing applications,\r\n      and learn to use these technologies effectively in a Ruby on Rails\r\n      environment.\r\n      </p>", "image_url"=>"dcbang.jpg", "price"=>"60"}, "commit"=>"Update Product", "id"=>"1"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:66:in `set_product'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+  [1m[36mProduct Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 AND "products"."id" != $2 LIMIT $3[0m  [["title", "Rails, Angular, Postgres, and Bootstrap"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+  [1m[36mProduct Update (1.2ms)[0m  [1m[33mUPDATE "products" SET "price" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["price", "60.0"], ["updated_at", "2021-05-12 06:27:54.034265"], ["id", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+  Rendering store/index.html.erb
+  [1m[36mProduct Load (2.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/store/index.html.erb:4
+  Rendered store/index.html.erb (Duration: 8.7ms | Allocations: 3258)
+[ActionCable] Broadcasting to products: {:html=>"<p id=\"notice\"></p>\n<h1>Product catalogue</h1>\n      <div class=\"entry\">\n        <img src=\"/assets/7apps-902a7fcba2fb72309a4e03f51b11df7455b49870ab7d972a13e1c80de2be8989.jpg\" />\n        <h3>Seven Mobile Apps in Seven Weeks</h3>\n        <p>\n      <em>Native Apps, Multiple Platforms</em>\n      Answer the question “Can we build this for ALL the devices?” with a\n      resounding YES. This book will help you get there with a real-world\n      introduction to seven platforms, whether you’re new to mobile or an\n      experienced developer needing to expand your options. Plus, you’ll find\n      out which cross-platform solution makes the most sense for your needs.\n      </p>\n        <div class=\"price_line\">\n          <span class=\"price\">$26.00</span>\n          <form class=\"button_to\" method=\"post\" action=\"/line_items?product_id=2\" data-remote=\"true\"><input type=\"submit\" value=\"Add to cart\" /><input type=\"hidden\" name=\"authenticity_token\" value=\"t-iy3tymqtzAbQuKGlUPb8kJ-6OYF4qP_lTWS5aCjBsEiS3B3iHJFYDjMvPm_MqRFx--piQfN9TAXAkljxcQoA\" /></form>\n        </div>\n      </div>\n      <div class=\"entry\">\n        <img src=\"/assets/adrpo-6a7ff0bda272e3b6f11fb05a1a87e10428faeba16f573b56983441040a311ae1.jpg\" />\n        <h3>Ruby Performance Optimization</h3>\n        <p>\n      <em>Why Ruby Is Slow, and How to Fix It</em> \n      You don’t have to accept slow Ruby or Rails performance. In this\n      comprehensive guide to Ruby optimization, you’ll learn how to write\n      faster Ruby code—but that’s just the beginning. See exactly what makes\n      Ruby and Rails code slow, and how to fix it. Alex Dymo will guide you\n      through perils of memory and CPU optimization, profiling, measuring,\n      performance testing, garbage collection, and tuning. You’ll find that\n      all those “hard” things aren’t so difficult after all, and your code\n      will run orders of magnitude faster.\n      </p>\n        <div class=\"price_line\">\n          <span class=\"price\">$46.00</span>\n          <form class=\"button_to\" method=\"post\" action=\"/line_items?product_id=3\" data-remote=\"true\"><input type=\"submit\" value=\"Add to cart\" /><input type=\"hidden\" name=\"authenticity_token\" value=\"rPmGntyptE-wq0KD2qXPKRMHFaqrVZl2BRMc827SvBsfmBmB3i7XhvAle_omDArXzRFQrxddJC07G8Odd0cgoA\" /></form>\n        </div>\n      </div>\n      <div class=\"entry\">\n        <img src=\"/assets/dcbang-fd0902f12309120965ed39c0c176783bdf2bc8e30aaa29bcd43a612359fcc6c8.jpg\" />\n        <h3>Rails, Angular, Postgres, and Bootstrap</h3>\n        <p>\r\n      <em>Powerful, Effective, and Efficient Full-Stack Web Development</em>\r\n      As a Rails developer, you care about user experience and performance,\r\n      but you also want simple and maintainable code. Achieve all that by\r\n      embracing the full stack of web development, from styling with\r\n      Bootstrap, building an interactive user interface with AngularJS, to\r\n      storing data quickly and reliably in PostgreSQL. Take a holistic view of\r\n      full-stack development to create usable, high-performing applications,\r\n      and learn to use these technologies effectively in a Ruby on Rails\r\n      environment.\r\n      </p>\n        <div class=\"price_line\">\n          <span class=\"price\">$60.00</span>\n          <form class=\"button_to\" method=\"post\" action=\"/line_items?product_id=1\" data-remote=\"true\"><input type=\"submit\" value=\"Add to cart\" /><input type=\"hidden\" name=\"authenticity_token\" value=\"ErgwGDxl3zD7mFLxDLhm5sLu6XPBs1pDDsGhjmJVz3qh2a8HPuK8-bsWa4jwEaMYHPisdn275xgwyX7ge8BTwQ\" /></form>\n        </div>\n      </div>\n\n"}
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 24ms (ActiveRecord: 9.1ms | Allocations: 8097)
+
+
+ProductsChannel transmitting {"html"=>"<p id=\"notice\"></p>\n<h1>Product catalogue</h1>\n      <div class=\"entry\">\n        <img src=\"/assets/7apps-902a7fcba2fb72309a4e03f51b11df7455b49870ab7d972a13e1c80de2be8989.jpg\" />\n        <h3>Seven Mobile Apps in Seven Weeks</h3>\n        <p>\n      <em>Native Apps, Multiple Pla... (via streamed from products)
+Started GET "/products/1" for 127.0.0.1 at 2021-05-12 14:27:54 +0800
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:66:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 4022)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.6ms | Allocations: 5166)
+
+
+Started GET "/cable" for 127.0.0.1 at 2021-05-12 14:27:54 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2021-05-12 14:27:54 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ProductsChannel is transmitting the subscription confirmation
+ProductsChannel is streaming from products
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2021-05-12 14:28:03 +0800
+ProductsChannel stopped streaming from products
+Started GET "/" for 127.0.0.1 at 2021-05-12 14:28:03 +0800
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (1.0ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_cart.rb:6:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:4
+  Rendered store/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 3283)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mLineItem Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT $2[0m  [["cart_id", 24], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  [1m[36mLineItem Load (1.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  ↳ app/views/carts/_cart.html.erb:3
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/line_items/_line_item.html.erb:7
+  Rendered collection of line_items/_line_item.html.erb [1 times] (Duration: 2.6ms | Allocations: 1113)
+  Rendered carts/_cart.html.erb (Duration: 5.2ms | Allocations: 2294)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 10308)
+Completed 200 OK in 23ms (Views: 14.9ms | ActiveRecord: 5.4ms | Allocations: 11454)
+
+
+Started GET "/cable" for 127.0.0.1 at 2021-05-12 14:28:03 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2021-05-12 14:28:03 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+ProductsChannel is transmitting the subscription confirmation
+ProductsChannel is streaming from products
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2021-05-12 14:28:06 +0800
+ProductsChannel stopped streaming from products
+Started GET "/" for 127.0.0.1 at 2021-05-12 14:28:13 +0800
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_cart.rb:6:in `set_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  ↳ app/views/store/index.html.erb:4
+  Rendered store/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 3280)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mLineItem Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "line_items" WHERE "line_items"."cart_id" = $1 LIMIT $2[0m  [["cart_id", 24], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:23
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  ↳ app/views/carts/_cart.html.erb:3
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/line_items/_line_item.html.erb:7
+  Rendered collection of line_items/_line_item.html.erb [1 times] (Duration: 1.6ms | Allocations: 1113)
+  Rendered carts/_cart.html.erb (Duration: 3.4ms | Allocations: 2294)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 10300)
+Completed 200 OK in 14ms (Views: 9.6ms | ActiveRecord: 2.7ms | Allocations: 11452)
+
+
