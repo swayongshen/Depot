@@ -1,4 +1,5 @@
 class CartsController < ApplicationController
+  skip_before_action :authenticate_user!
   before_action :set_cart, only: %i[ show edit update destroy ]
   # If there's a RecordNotFound exception, call invalid_cart
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
