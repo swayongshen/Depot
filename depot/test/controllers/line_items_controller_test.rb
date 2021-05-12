@@ -24,7 +24,7 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
     # Follow the redirect to the cart page.
     follow_redirect!
 
-    assert_select 'h2', 'Your Pragmatic Cart'
+    assert_select 'h2', 'Your Cart'
 
     # Checks that the ruby book is indeed added to cart.
     assert_select 'td', "Programming Ruby 1.9"

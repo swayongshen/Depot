@@ -927,3 +927,1970 @@ Completed 200 OK in 101ms (Views: 100.2ms | ActiveRecord: 0.0ms | Allocations: 5
   Rendered layout layouts/application.html.erb (Duration: 101.8ms | Allocations: 49129)
 Completed 200 OK in 105ms (Views: 102.7ms | ActiveRecord: 0.5ms | Allocations: 51273)
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (35.4ms)[0m  [1m[35mTRUNCATE TABLE "line_items", "carts", "products"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[35m (34.9ms)[0m  [1m[35mTRUNCATE TABLE "line_items", "carts", "products"[0m
+  [1m[35m (34.9ms)[0m  [1m[35mTRUNCATE TABLE "line_items", "carts", "products"[0m
+  [1m[35m (35.0ms)[0m  [1m[35mTRUNCATE TABLE "line_items", "carts", "products"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "line_items";
+DELETE FROM "carts";
+INSERT INTO "products" ("id", "title", "description", "image_url", "price", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 02:39:17.259711', '2021-05-12 02:39:17.259711'), (298486374, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 02:39:17.259711', '2021-05-12 02:39:17.259711'), (207281424, 'Programming Ruby 1.9', 'Ruby is the fastest growing and most exciting dynamic language out there. If you need to get working programs delivered fast, you should add Ruby to your toolbox.', 'lorem.jpg', 49.5, '2021-05-12 02:39:17.259711', '2021-05-12 02:39:17.259711');
+INSERT INTO "line_items" ("id", "product_id", "cart_id", "created_at", "updated_at", "quantity") VALUES (980190962, 298486374, 980190962, '2021-05-12 02:39:17.264054', '2021-05-12 02:39:17.264054', DEFAULT), (298486374, 298486374, 298486374, '2021-05-12 02:39:17.264054', '2021-05-12 02:39:17.264054', DEFAULT);
+INSERT INTO "carts" ("id", "created_at", "updated_at") VALUES (980190962, '2021-05-12 02:39:17.266069', '2021-05-12 02:39:17.266069'), (298486374, '2021-05-12 02:39:17.266069', '2021-05-12 02:39:17.266069')[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "line_items";
+DELETE FROM "carts";
+INSERT INTO "products" ("id", "title", "description", "image_url", "price", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 02:39:17.260621', '2021-05-12 02:39:17.260621'), (298486374, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 02:39:17.260621', '2021-05-12 02:39:17.260621'), (207281424, 'Programming Ruby 1.9', 'Ruby is the fastest growing and most exciting dynamic language out there. If you need to get working programs delivered fast, you should add Ruby to your toolbox.', 'lorem.jpg', 49.5, '2021-05-12 02:39:17.260621', '2021-05-12 02:39:17.260621');
+INSERT INTO "line_items" ("id", "product_id", "cart_id", "created_at", "updated_at", "quantity") VALUES (980190962, 298486374, 980190962, '2021-05-12 02:39:17.265445', '2021-05-12 02:39:17.265445', DEFAULT), (298486374, 298486374, 298486374, '2021-05-12 02:39:17.265445', '2021-05-12 02:39:17.265445', DEFAULT);
+INSERT INTO "carts" ("id", "created_at", "updated_at") VALUES (980190962, '2021-05-12 02:39:17.267359', '2021-05-12 02:39:17.267359'), (298486374, '2021-05-12 02:39:17.267359', '2021-05-12 02:39:17.267359')[0m
+  [1m[35m (0.8ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "line_items";
+DELETE FROM "carts";
+INSERT INTO "products" ("id", "title", "description", "image_url", "price", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 02:39:17.259476', '2021-05-12 02:39:17.259476'), (298486374, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 02:39:17.259476', '2021-05-12 02:39:17.259476'), (207281424, 'Programming Ruby 1.9', 'Ruby is the fastest growing and most exciting dynamic language out there. If you need to get working programs delivered fast, you should add Ruby to your toolbox.', 'lorem.jpg', 49.5, '2021-05-12 02:39:17.259476', '2021-05-12 02:39:17.259476');
+INSERT INTO "line_items" ("id", "product_id", "cart_id", "created_at", "updated_at", "quantity") VALUES (980190962, 298486374, 980190962, '2021-05-12 02:39:17.264037', '2021-05-12 02:39:17.264037', DEFAULT), (298486374, 298486374, 298486374, '2021-05-12 02:39:17.264037', '2021-05-12 02:39:17.264037', DEFAULT);
+INSERT INTO "carts" ("id", "created_at", "updated_at") VALUES (980190962, '2021-05-12 02:39:17.266472', '2021-05-12 02:39:17.266472'), (298486374, '2021-05-12 02:39:17.266472', '2021-05-12 02:39:17.266472')[0m
+  [1m[35m (0.9ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "line_items";
+DELETE FROM "carts";
+INSERT INTO "products" ("id", "title", "description", "image_url", "price", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 02:39:17.260917', '2021-05-12 02:39:17.260917'), (298486374, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 02:39:17.260917', '2021-05-12 02:39:17.260917'), (207281424, 'Programming Ruby 1.9', 'Ruby is the fastest growing and most exciting dynamic language out there. If you need to get working programs delivered fast, you should add Ruby to your toolbox.', 'lorem.jpg', 49.5, '2021-05-12 02:39:17.260917', '2021-05-12 02:39:17.260917');
+INSERT INTO "line_items" ("id", "product_id", "cart_id", "created_at", "updated_at", "quantity") VALUES (980190962, 298486374, 980190962, '2021-05-12 02:39:17.265036', '2021-05-12 02:39:17.265036', DEFAULT), (298486374, 298486374, 298486374, '2021-05-12 02:39:17.265036', '2021-05-12 02:39:17.265036', DEFAULT);
+INSERT INTO "carts" ("id", "created_at", "updated_at") VALUES (980190962, '2021-05-12 02:39:17.267459', '2021-05-12 02:39:17.267459'), (298486374, '2021-05-12 02:39:17.267459', '2021-05-12 02:39:17.267459')[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------
+LineItemsControllerTest: test_should_get_index
+----------------------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------
+LineItemsControllerTest: test_should_get_edit
+---------------------------------------------
+------------------------------------------------------
+LineItemsControllerTest: test_should_destroy_line_item
+------------------------------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------
+LineItemsControllerTest: test_should_update_line_item
+-----------------------------------------------------
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items"[0m
+Started DELETE "/line_items/980190962" for 127.0.0.1 at 2021-05-12 10:39:17 +0800
+Started GET "/line_items/980190962/edit" for 127.0.0.1 at 2021-05-12 10:39:17 +0800
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by LineItemsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Started GET "/line_items" for 127.0.0.1 at 2021-05-12 10:39:17 +0800
+Processing by LineItemsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Started PATCH "/line_items/980190962" for 127.0.0.1 at 2021-05-12 10:39:17 +0800
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLineItem Destroy (0.1ms)[0m  [1m[31mDELETE FROM "line_items" WHERE "line_items"."id" = $1[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/line_items
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms | Allocations: 1778)
+  Rendering layout layouts/application.html.erb
+  Rendering line_items/edit.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------
+LineItemsControllerTest: test_should_create_line_item
+-----------------------------------------------------
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by LineItemsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items"[0m
+  Rendered line_items/_form.html.erb (Duration: 4.0ms | Allocations: 4215)
+  Rendered line_items/edit.html.erb within layouts/application (Duration: 4.7ms | Allocations: 4694)
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 207281424], ["LIMIT", 1]]
+Started POST "/line_items" for 127.0.0.1 at 2021-05-12 10:39:17 +0800
+Processing by LineItemsController#update as HTML
+  Parameters: {"line_item"=>{"product_id"=>"298486374"}, "id"=>"980190962"}
+Processing by LineItemsController#create as HTML
+  Parameters: {"product_id"=>"207281424"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCart Create (0.2ms)[0m  [1m[32mINSERT INTO "carts" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-05-12 02:39:17.346346"], ["updated_at", "2021-05-12 02:39:17.346346"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 207281424], ["LIMIT", 1]]
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1 AND "line_items"."product_id" = $2 LIMIT $3[0m  [["cart_id", 980190963], ["product_id", 207281424], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering line_items/index.html.erb within layouts/application
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 207281424], ["LIMIT", 1]]
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items"[0m
+  [1m[36mLineItem Create (0.3ms)[0m  [1m[32mINSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 207281424], ["cart_id", 980190963], ["created_at", "2021-05-12 02:39:17.352234"], ["updated_at", "2021-05-12 02:39:17.352234"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 10ms (ActiveRecord: 1.1ms | Allocations: 5617)
+  Rendered line_items/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 864)
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items"[0m
+Started GET "/" for 127.0.0.1 at 2021-05-12 10:39:17 +0800
+Processing by StoreController#index as HTML
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190963], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/line_items/980190962
+Completed 302 Found in 24ms (ActiveRecord: 0.7ms | Allocations: 8608)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------
+LineItemsControllerTest: test_should_show_line_item
+---------------------------------------------------
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/line_items/980190962" for 127.0.0.1 at 2021-05-12 10:39:17 +0800
+Processing by LineItemsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering line_items/show.html.erb within layouts/application
+  Rendered line_items/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 364)
+[Webpacker] Compiling...
+  Rendered store/index.html.erb within layouts/application (Duration: 322.0ms | Allocations: 48203)
+[Webpacker] Compiling...
+[Webpacker] Compiling...
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: f1cda82b5aee0a7f50a6
+Version: webpack 4.46.0
+Time: 839ms
+Built at: 05/12/2021 10:39:19 AM
+                                     Asset      Size       Chunks                         Chunk Names
+    js/application-55d83d7cb0ac168540f1.js   466 KiB  application  [emitted] [immutable]  application
+js/application-55d83d7cb0ac168540f1.js.map   487 KiB  application  [emitted] [dev]        application
+      js/bootstrap-bb1a8dcc8ac6bd187094.js   210 KiB    bootstrap  [emitted] [immutable]  bootstrap
+  js/bootstrap-bb1a8dcc8ac6bd187094.js.map   242 KiB    bootstrap  [emitted] [dev]        bootstrap
+       js/jquery-3-e5c4b7ecea7db0fe70b9.js   137 KiB     jquery-3  [emitted] [immutable]  jquery-3
+   js/jquery-3-e5c4b7ecea7db0fe70b9.js.map   113 KiB     jquery-3  [emitted] [dev]        jquery-3
+                             manifest.json  1.04 KiB               [emitted]              
+Entrypoint application = js/application-55d83d7cb0ac168540f1.js js/application-55d83d7cb0ac168540f1.js.map
+Entrypoint bootstrap = js/bootstrap-bb1a8dcc8ac6bd187094.js js/bootstrap-bb1a8dcc8ac6bd187094.js.map
+Entrypoint jquery-3 = js/jquery-3-e5c4b7ecea7db0fe70b9.js js/jquery-3-e5c4b7ecea7db0fe70b9.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 543 bytes {application} [built]
+[./app/javascript/packs/bootstrap.js] 118 KiB {bootstrap} {application} [built]
+[./app/javascript/packs/jquery-3.6.0.min.js] 133 KiB {jquery-3} {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {bootstrap} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 4 hidden modules
+
+ERROR in ./app/javascript/packs/bootstrap.js
+Module not found: Error: Can't resolve 'jquery' in '/home/swayongshen/Documents/Wright/learning_phase_project/depot/app/javascript/packs'
+ @ ./app/javascript/packs/bootstrap.js 7:82-99
+
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 980190963]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 207281424], ["LIMIT", 1]]
+  Rendered collection of line_items/_line_item.html.erb [1 times] (Duration: 1.6ms | Allocations: 567)
+  Rendered carts/_cart.html.erb (Duration: 4.7ms | Allocations: 1909)
+  Rendered layout layouts/application.html.erb (Duration: 2055.2ms | Allocations: 54270)
+Completed 200 OK in 2059ms (Views: 2056.5ms | ActiveRecord: 0.8ms | Allocations: 56431)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------
+LineItemsControllerTest: test_should_get_new
+--------------------------------------------
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/line_items/new" for 127.0.0.1 at 2021-05-12 10:39:19 +0800
+Processing by LineItemsController#new as HTML
+[Webpacker] Compilation failed:
+Hash: f1cda82b5aee0a7f50a6
+Version: webpack 4.46.0
+Time: 855ms
+Built at: 05/12/2021 10:39:19 AM
+                                     Asset      Size       Chunks                         Chunk Names
+    js/application-55d83d7cb0ac168540f1.js   466 KiB  application  [emitted] [immutable]  application
+js/application-55d83d7cb0ac168540f1.js.map   487 KiB  application  [emitted] [dev]        application
+      js/bootstrap-bb1a8dcc8ac6bd187094.js   210 KiB    bootstrap  [emitted] [immutable]  bootstrap
+  js/bootstrap-bb1a8dcc8ac6bd187094.js.map   242 KiB    bootstrap  [emitted] [dev]        bootstrap
+       js/jquery-3-e5c4b7ecea7db0fe70b9.js   137 KiB     jquery-3  [emitted] [immutable]  jquery-3
+   js/jquery-3-e5c4b7ecea7db0fe70b9.js.map   113 KiB     jquery-3  [emitted] [dev]        jquery-3
+                             manifest.json  1.04 KiB               [emitted]              
+Entrypoint application = js/application-55d83d7cb0ac168540f1.js js/application-55d83d7cb0ac168540f1.js.map
+Entrypoint bootstrap = js/bootstrap-bb1a8dcc8ac6bd187094.js js/bootstrap-bb1a8dcc8ac6bd187094.js.map
+Entrypoint jquery-3 = js/jquery-3-e5c4b7ecea7db0fe70b9.js js/jquery-3-e5c4b7ecea7db0fe70b9.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 543 bytes {application} [built]
+[./app/javascript/packs/bootstrap.js] 118 KiB {bootstrap} {application} [built]
+[./app/javascript/packs/jquery-3.6.0.min.js] 133 KiB {jquery-3} {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {bootstrap} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 4 hidden modules
+
+ERROR in ./app/javascript/packs/bootstrap.js
+Module not found: Error: Can't resolve 'jquery' in '/home/swayongshen/Documents/Wright/learning_phase_project/depot/app/javascript/packs'
+ @ ./app/javascript/packs/bootstrap.js 7:82-99
+
+  Rendering layout layouts/application.html.erb
+  Rendering line_items/new.html.erb within layouts/application
+  Rendered layout layouts/application.html.erb (Duration: 2092.6ms | Allocations: 60847)
+Completed 500 Internal Server Error in 2102ms (ActiveRecord: 0.2ms | Allocations: 63825)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendered line_items/_form.html.erb (Duration: 2.9ms | Allocations: 1544)
+  Rendered line_items/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1854)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 5085)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 5936)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+[Webpacker] Compilation failed:
+Hash: f1cda82b5aee0a7f50a6
+Version: webpack 4.46.0
+Time: 850ms
+Built at: 05/12/2021 10:39:19 AM
+                                     Asset      Size       Chunks                         Chunk Names
+    js/application-55d83d7cb0ac168540f1.js   466 KiB  application  [emitted] [immutable]  application
+js/application-55d83d7cb0ac168540f1.js.map   487 KiB  application  [emitted] [dev]        application
+      js/bootstrap-bb1a8dcc8ac6bd187094.js   210 KiB    bootstrap  [emitted] [immutable]  bootstrap
+  js/bootstrap-bb1a8dcc8ac6bd187094.js.map   242 KiB    bootstrap  [emitted] [dev]        bootstrap
+       js/jquery-3-e5c4b7ecea7db0fe70b9.js   137 KiB     jquery-3  [emitted] [immutable]  jquery-3
+   js/jquery-3-e5c4b7ecea7db0fe70b9.js.map   113 KiB     jquery-3  [emitted] [dev]        jquery-3
+                             manifest.json  1.04 KiB               [emitted]              
+Entrypoint application = js/application-55d83d7cb0ac168540f1.js js/application-55d83d7cb0ac168540f1.js.map
+Entrypoint bootstrap = js/bootstrap-bb1a8dcc8ac6bd187094.js js/bootstrap-bb1a8dcc8ac6bd187094.js.map
+Entrypoint jquery-3 = js/jquery-3-e5c4b7ecea7db0fe70b9.js js/jquery-3-e5c4b7ecea7db0fe70b9.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 543 bytes {application} [built]
+[./app/javascript/packs/bootstrap.js] 118 KiB {bootstrap} {application} [built]
+[./app/javascript/packs/jquery-3.6.0.min.js] 133 KiB {jquery-3} {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {bootstrap} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 4 hidden modules
+
+ERROR in ./app/javascript/packs/bootstrap.js
+Module not found: Error: Can't resolve 'jquery' in '/home/swayongshen/Documents/Wright/learning_phase_project/depot/app/javascript/packs'
+ @ ./app/javascript/packs/bootstrap.js 7:82-99
+
+  Rendered layout layouts/application.html.erb (Duration: 2099.0ms | Allocations: 47117)
+Completed 500 Internal Server Error in 2113ms (ActiveRecord: 0.1ms | Allocations: 49875)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+[Webpacker] Compilation failed:
+Hash: f1cda82b5aee0a7f50a6
+Version: webpack 4.46.0
+Time: 839ms
+Built at: 05/12/2021 10:39:19 AM
+                                     Asset      Size       Chunks                         Chunk Names
+    js/application-55d83d7cb0ac168540f1.js   466 KiB  application  [emitted] [immutable]  application
+js/application-55d83d7cb0ac168540f1.js.map   487 KiB  application  [emitted] [dev]        application
+      js/bootstrap-bb1a8dcc8ac6bd187094.js   210 KiB    bootstrap  [emitted] [immutable]  bootstrap
+  js/bootstrap-bb1a8dcc8ac6bd187094.js.map   242 KiB    bootstrap  [emitted] [dev]        bootstrap
+       js/jquery-3-e5c4b7ecea7db0fe70b9.js   137 KiB     jquery-3  [emitted] [immutable]  jquery-3
+   js/jquery-3-e5c4b7ecea7db0fe70b9.js.map   113 KiB     jquery-3  [emitted] [dev]        jquery-3
+                             manifest.json  1.04 KiB               [emitted]              
+Entrypoint application = js/application-55d83d7cb0ac168540f1.js js/application-55d83d7cb0ac168540f1.js.map
+Entrypoint bootstrap = js/bootstrap-bb1a8dcc8ac6bd187094.js js/bootstrap-bb1a8dcc8ac6bd187094.js.map
+Entrypoint jquery-3 = js/jquery-3-e5c4b7ecea7db0fe70b9.js js/jquery-3-e5c4b7ecea7db0fe70b9.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 543 bytes {application} [built]
+[./app/javascript/packs/bootstrap.js] 118 KiB {bootstrap} {application} [built]
+[./app/javascript/packs/jquery-3.6.0.min.js] 133 KiB {jquery-3} {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {bootstrap} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 4 hidden modules
+
+ERROR in ./app/javascript/packs/bootstrap.js
+Module not found: Error: Can't resolve 'jquery' in '/home/swayongshen/Documents/Wright/learning_phase_project/depot/app/javascript/packs'
+ @ ./app/javascript/packs/bootstrap.js 7:82-99
+
+  Rendered layout layouts/application.html.erb (Duration: 2114.4ms | Allocations: 46665)
+Completed 500 Internal Server Error in 2118ms (ActiveRecord: 0.2ms | Allocations: 48533)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (41.3ms)[0m  [1m[35mTRUNCATE TABLE "line_items", "carts", "products"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (39.2ms)[0m  [1m[35mTRUNCATE TABLE "line_items", "carts", "products"[0m
+  [1m[35m (42.9ms)[0m  [1m[35mTRUNCATE TABLE "line_items", "carts", "products"[0m
+  [1m[35m (46.7ms)[0m  [1m[35mTRUNCATE TABLE "line_items", "carts", "products"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "line_items";
+DELETE FROM "carts";
+INSERT INTO "products" ("id", "title", "description", "image_url", "price", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 02:40:43.836410', '2021-05-12 02:40:43.836410'), (298486374, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 02:40:43.836410', '2021-05-12 02:40:43.836410'), (207281424, 'Programming Ruby 1.9', 'Ruby is the fastest growing and most exciting dynamic language out there. If you need to get working programs delivered fast, you should add Ruby to your toolbox.', 'lorem.jpg', 49.5, '2021-05-12 02:40:43.836410', '2021-05-12 02:40:43.836410');
+INSERT INTO "line_items" ("id", "product_id", "cart_id", "created_at", "updated_at", "quantity") VALUES (980190962, 298486374, 980190962, '2021-05-12 02:40:43.841263', '2021-05-12 02:40:43.841263', DEFAULT), (298486374, 298486374, 298486374, '2021-05-12 02:40:43.841263', '2021-05-12 02:40:43.841263', DEFAULT);
+INSERT INTO "carts" ("id", "created_at", "updated_at") VALUES (980190962, '2021-05-12 02:40:43.843805', '2021-05-12 02:40:43.843805'), (298486374, '2021-05-12 02:40:43.843805', '2021-05-12 02:40:43.843805')[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "line_items";
+DELETE FROM "carts";
+INSERT INTO "products" ("id", "title", "description", "image_url", "price", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 02:40:43.836402', '2021-05-12 02:40:43.836402'), (298486374, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 02:40:43.836402', '2021-05-12 02:40:43.836402'), (207281424, 'Programming Ruby 1.9', 'Ruby is the fastest growing and most exciting dynamic language out there. If you need to get working programs delivered fast, you should add Ruby to your toolbox.', 'lorem.jpg', 49.5, '2021-05-12 02:40:43.836402', '2021-05-12 02:40:43.836402');
+INSERT INTO "line_items" ("id", "product_id", "cart_id", "created_at", "updated_at", "quantity") VALUES (980190962, 298486374, 980190962, '2021-05-12 02:40:43.841834', '2021-05-12 02:40:43.841834', DEFAULT), (298486374, 298486374, 298486374, '2021-05-12 02:40:43.841834', '2021-05-12 02:40:43.841834', DEFAULT);
+INSERT INTO "carts" ("id", "created_at", "updated_at") VALUES (980190962, '2021-05-12 02:40:43.844884', '2021-05-12 02:40:43.844884'), (298486374, '2021-05-12 02:40:43.844884', '2021-05-12 02:40:43.844884')[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "line_items";
+DELETE FROM "carts";
+INSERT INTO "products" ("id", "title", "description", "image_url", "price", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 02:40:43.839201', '2021-05-12 02:40:43.839201'), (298486374, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 02:40:43.839201', '2021-05-12 02:40:43.839201'), (207281424, 'Programming Ruby 1.9', 'Ruby is the fastest growing and most exciting dynamic language out there. If you need to get working programs delivered fast, you should add Ruby to your toolbox.', 'lorem.jpg', 49.5, '2021-05-12 02:40:43.839201', '2021-05-12 02:40:43.839201');
+INSERT INTO "line_items" ("id", "product_id", "cart_id", "created_at", "updated_at", "quantity") VALUES (980190962, 298486374, 980190962, '2021-05-12 02:40:43.844184', '2021-05-12 02:40:43.844184', DEFAULT), (298486374, 298486374, 298486374, '2021-05-12 02:40:43.844184', '2021-05-12 02:40:43.844184', DEFAULT);
+INSERT INTO "carts" ("id", "created_at", "updated_at") VALUES (980190962, '2021-05-12 02:40:43.847019', '2021-05-12 02:40:43.847019'), (298486374, '2021-05-12 02:40:43.847019', '2021-05-12 02:40:43.847019')[0m
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.6ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "line_items";
+DELETE FROM "carts";
+INSERT INTO "products" ("id", "title", "description", "image_url", "price", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 02:40:43.839200', '2021-05-12 02:40:43.839200'), (298486374, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 02:40:43.839200', '2021-05-12 02:40:43.839200'), (207281424, 'Programming Ruby 1.9', 'Ruby is the fastest growing and most exciting dynamic language out there. If you need to get working programs delivered fast, you should add Ruby to your toolbox.', 'lorem.jpg', 49.5, '2021-05-12 02:40:43.839200', '2021-05-12 02:40:43.839200');
+INSERT INTO "line_items" ("id", "product_id", "cart_id", "created_at", "updated_at", "quantity") VALUES (980190962, 298486374, 980190962, '2021-05-12 02:40:43.844742', '2021-05-12 02:40:43.844742', DEFAULT), (298486374, 298486374, 298486374, '2021-05-12 02:40:43.844742', '2021-05-12 02:40:43.844742', DEFAULT);
+INSERT INTO "carts" ("id", "created_at", "updated_at") VALUES (980190962, '2021-05-12 02:40:43.847616', '2021-05-12 02:40:43.847616'), (298486374, '2021-05-12 02:40:43.847616', '2021-05-12 02:40:43.847616')[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------
+LineItemsControllerTest: test_should_get_edit
+---------------------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------
+LineItemsControllerTest: test_should_create_line_item
+------------------------------------------------------
+-----------------------------------------------------
+LineItemsControllerTest: test_should_destroy_line_item
+------------------------------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------
+LineItemsControllerTest: test_should_show_line_item
+---------------------------------------------------
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items"[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 207281424], ["LIMIT", 1]]
+Started DELETE "/line_items/980190962" for 127.0.0.1 at 2021-05-12 10:40:43 +0800
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started POST "/line_items" for 127.0.0.1 at 2021-05-12 10:40:43 +0800
+Started GET "/line_items/980190962/edit" for 127.0.0.1 at 2021-05-12 10:40:43 +0800
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by LineItemsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Started GET "/line_items/980190962" for 127.0.0.1 at 2021-05-12 10:40:43 +0800
+Processing by LineItemsController#create as HTML
+  Parameters: {"product_id"=>"207281424"}
+Processing by LineItemsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLineItem Destroy (0.1ms)[0m  [1m[31mDELETE FROM "line_items" WHERE "line_items"."id" = $1[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/line_items
+Completed 302 Found in 10ms (ActiveRecord: 0.4ms | Allocations: 1776)
+Processing by LineItemsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------
+LineItemsControllerTest: test_should_get_index
+----------------------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mCart Create (0.2ms)[0m  [1m[32mINSERT INTO "carts" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-05-12 02:40:43.917990"], ["updated_at", "2021-05-12 02:40:43.917990"]]
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/line_items" for 127.0.0.1 at 2021-05-12 10:40:43 +0800
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 207281424], ["LIMIT", 1]]
+Processing by LineItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering line_items/edit.html.erb within layouts/application
+  Rendering layout layouts/application.html.erb
+  Rendering line_items/index.html.erb within layouts/application
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1 AND "line_items"."product_id" = $2 LIMIT $3[0m  [["cart_id", 980190963], ["product_id", 207281424], ["LIMIT", 1]]
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items"[0m
+  Rendered line_items/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 829)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 207281424], ["LIMIT", 1]]
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mLineItem Create (0.3ms)[0m  [1m[32mINSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 207281424], ["cart_id", 980190963], ["created_at", "2021-05-12 02:40:43.925917"], ["updated_at", "2021-05-12 02:40:43.925917"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 19ms (ActiveRecord: 1.4ms | Allocations: 6827)
+  Rendered line_items/_form.html.erb (Duration: 5.6ms | Allocations: 4451)
+  Rendering layout layouts/application.html.erb
+  Rendered line_items/edit.html.erb within layouts/application (Duration: 6.6ms | Allocations: 4929)
+  Rendering line_items/show.html.erb within layouts/application
+  Rendered line_items/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 388)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items"[0m
+Started GET "/" for 127.0.0.1 at 2021-05-12 10:40:43 +0800
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190963], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 200.3ms | Allocations: 32939)
+Completed 500 Internal Server Error in 203ms (ActiveRecord: 0.1ms | Allocations: 34701)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------
+LineItemsControllerTest: test_should_get_new
+--------------------------------------------
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/line_items/new" for 127.0.0.1 at 2021-05-12 10:40:44 +0800
+Processing by LineItemsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering line_items/new.html.erb within layouts/application
+  Rendered line_items/_form.html.erb (Duration: 5.6ms | Allocations: 4305)
+  Rendered line_items/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 4621)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 220.3ms | Allocations: 37052)
+Completed 500 Internal Server Error in 232ms (ActiveRecord: 0.1ms | Allocations: 40041)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 7561)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 8028)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------
+LineItemsControllerTest: test_should_update_line_item
+-----------------------------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------
+StoreControllerTest: test_should_get_index
+------------------------------------------
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2021-05-12 10:40:44 +0800
+Started PATCH "/line_items/980190962" for 127.0.0.1 at 2021-05-12 10:40:44 +0800
+Processing by StoreController#index as HTML
+Processing by LineItemsController#update as HTML
+  Parameters: {"line_item"=>{"product_id"=>"298486374"}, "id"=>"980190962"}
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCart Create (0.2ms)[0m  [1m[32mINSERT INTO "carts" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-05-12 02:40:44.150628"], ["updated_at", "2021-05-12 02:40:44.150628"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/line_items/980190962
+Completed 302 Found in 9ms (ActiveRecord: 0.7ms | Allocations: 7422)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------
+CartsControllerTest: test_should_create_cart
+--------------------------------------------
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendered store/index.html.erb within layouts/application (Duration: 224.0ms | Allocations: 33341)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "carts"[0m
+Started POST "/carts" for 127.0.0.1 at 2021-05-12 10:40:44 +0800
+  Rendered store/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 6418)
+[Webpacker] Everything's up-to-date. Nothing to do
+Processing by CartsController#create as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCart Create (0.2ms)[0m  [1m[32mINSERT INTO "carts" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-05-12 02:40:44.164219"], ["updated_at", "2021-05-12 02:40:44.164219"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/carts/980190963
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms | Allocations: 884)
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 980190963]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "carts"[0m
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" ORDER BY "carts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 207281424], ["LIMIT", 1]]
+  Rendered collection of line_items/_line_item.html.erb [1 times] (Duration: 1.0ms | Allocations: 567)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendered carts/_cart.html.erb (Duration: 3.3ms | Allocations: 1911)
+  Rendered layout layouts/application.html.erb (Duration: 230.7ms | Allocations: 38597)
+Completed 200 OK in 235ms (Views: 231.8ms | ActiveRecord: 0.9ms | Allocations: 40751)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------
+CartsControllerTest: test_should_destroy_cart
+---------------------------------------------
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 207281424], ["LIMIT", 1]]
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 980190963]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 11)
+Started POST "/line_items" for 127.0.0.1 at 2021-05-12 10:40:44 +0800
+  Rendered carts/_cart.html.erb (Duration: 4.1ms | Allocations: 2745)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 12091)
+Completed 200 OK in 22ms (Views: 17.0ms | ActiveRecord: 0.9ms | Allocations: 15056)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------
+CartsControllerTest: test_should_get_edit
+-----------------------------------------
+[Webpacker] Everything's up-to-date. Nothing to do
+Processing by LineItemsController#create as HTML
+  Parameters: {"product_id"=>"207281424"}
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/carts/980190962/edit" for 127.0.0.1 at 2021-05-12 10:40:44 +0800
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCart Create (0.2ms)[0m  [1m[32mINSERT INTO "carts" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-05-12 02:40:44.171936"], ["updated_at", "2021-05-12 02:40:44.171936"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------
+  Rendered layout layouts/application.html.erb (Duration: 244.4ms | Allocations: 32483)
+CartsControllerTest: test_should_show_cart
+------------------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 500 Internal Server Error in 257ms (ActiveRecord: 0.1ms | Allocations: 35475)
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 207281424], ["LIMIT", 1]]
+Started GET "/carts/980190962" for 127.0.0.1 at 2021-05-12 10:40:44 +0800
+Processing by CartsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1 AND "line_items"."product_id" = $2 LIMIT $3[0m  [["cart_id", 980190964], ["product_id", 207281424], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------
+CartsControllerTest: test_should_update_cart
+--------------------------------------------
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  Rendering layout layouts/application.html.erb
+  Rendering carts/edit.html.erb within layouts/application
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 207281424], ["LIMIT", 1]]
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendered carts/_form.html.erb (Duration: 1.0ms | Allocations: 575)
+  Rendered carts/edit.html.erb within layouts/application (Duration: 1.6ms | Allocations: 929)
+  [1m[36mLineItem Create (0.4ms)[0m  [1m[32mINSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 207281424], ["cart_id", 980190964], ["created_at", "2021-05-12 02:40:44.176871"], ["updated_at", "2021-05-12 02:40:44.176871"]]
+  Rendering layout layouts/application.html.erb
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 7ms (ActiveRecord: 1.2ms | Allocations: 2841)
+Started PATCH "/carts/980190962" for 127.0.0.1 at 2021-05-12 10:40:44 +0800
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 980190962]]
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190964], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "carts"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+Started DELETE "/carts/980190964" for 127.0.0.1 at 2021-05-12 10:40:44 +0800
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 980190962]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+Processing by CartsController#destroy as HTML
+  Parameters: {"id"=>"980190964"}
+  Rendered collection of line_items/_line_item.html.erb [1 times] (Duration: 1.9ms | Allocations: 783)
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190964], ["LIMIT", 1]]
+  Rendered carts/_cart.html.erb (Duration: 4.0ms | Allocations: 1810)
+  Rendered carts/show.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1992)
+  Rendered collection of line_items/_line_item.html.erb [1 times] (Duration: 0.8ms | Allocations: 433)
+Processing by CartsController#update as HTML
+  Rendered carts/_cart.html.erb (Duration: 1.8ms | Allocations: 938)
+  Parameters: {"id"=>"980190962"}
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 4689)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.5ms | Allocations: 5722)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 980190964]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mLineItem Destroy (0.1ms)[0m  [1m[31mDELETE FROM "line_items" WHERE "line_items"."id" = $1[0m  [["id", 980190963]]
+  [1m[36mCart Destroy (0.2ms)[0m  [1m[31mDELETE FROM "carts" WHERE "carts"."id" = $1[0m  [["id", 980190964]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------
+CartsControllerTest: test_should_get_index
+------------------------------------------
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms | Allocations: 1198)
+[Webpacker] Everything's up-to-date. Nothing to do
+Redirected to http://www.example.com/carts/980190962
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 952)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "carts"[0m
+Started GET "/carts" for 127.0.0.1 at 2021-05-12 10:40:44 +0800
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendered collection of line_items/_line_item.html.erb [1 times] (Duration: 0.3ms | Allocations: 191)
+  Rendered carts/_cart.html.erb (Duration: 0.8ms | Allocations: 452)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 5261)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------
+CartsControllerTest: test_should_get_new
+----------------------------------------
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.4ms | Allocations: 6392)
+Processing by CartsController#index as HTML
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering carts/index.html.erb within layouts/application
+Started GET "/carts/new" for 127.0.0.1 at 2021-05-12 10:40:44 +0800
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+------------------------------------------------------
+ProductTest: test_product_attributes_must_not_be_empty
+------------------------------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+---------------------------
+ProductTest: test_image_url
+---------------------------
+  Rendered carts/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 567)
+Processing by CartsController#new as HTML
+  [1m[36mProduct Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 LIMIT $2[0m  [["title", "My Book Title"], ["LIMIT", 1]]
+  [1m[36mProduct Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 LIMIT $2[0m  [["title", "My Book Title"], ["LIMIT", 1]]
+  [1m[36mProduct Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 LIMIT $2[0m  [["title", "My Book Title"], ["LIMIT", 1]]
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendering layout layouts/application.html.erb
+  Rendering carts/new.html.erb within layouts/application
+  [1m[36mProduct Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 LIMIT $2[0m  [["title", "My Book Title"], ["LIMIT", 1]]
+  [1m[36mProduct Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 LIMIT $2[0m  [["title", "My Book Title"], ["LIMIT", 1]]
+  [1m[36mProduct Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 3819)
+  [1m[36mProduct Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 LIMIT $2[0m  [["title", "My Book Title"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms | Allocations: 4273)
+  Rendered carts/_form.html.erb (Duration: 0.8ms | Allocations: 509)
+  Rendered carts/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 813)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mProduct Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 LIMIT $2[0m  [["title", "My Book Title"], ["LIMIT", 1]]
+  [1m[36mProduct Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 LIMIT $2[0m  [["title", "My Book Title"], ["LIMIT", 1]]
+  [1m[36mProduct Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 LIMIT $2[0m  [["title", "My Book Title"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------
+ProductTest: test_product_price_must_be_positive
+------------------------------------------------
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mProduct Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 LIMIT $2[0m  [["title", "My Book Title"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------------------
+ProductTest: test_product_is_not_valid_without_a_unique_title
+-------------------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 207281424], ["LIMIT", 1]]
+  [1m[36mProduct Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 LIMIT $2[0m  [["title", "My Book Title"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 11)
+  [1m[36mProduct Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 LIMIT $2[0m  [["title", "Programming Ruby 1.9"], ["LIMIT", 1]]
+  [1m[36mProduct Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 LIMIT $2[0m  [["title", "My Book Title"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------
+ProductsControllerTest: test_should_get_edit
+--------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendered carts/_cart.html.erb (Duration: 2.2ms | Allocations: 1612)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 5435)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 6307)
+-------------------------------------------
+ProductsControllerTest: test_should_get_new
+-------------------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+ProductsControllerTest: test_cannot_delete_product_in_cart
+----------------------------------------------------------
+Started GET "/products/980190962/edit" for 127.0.0.1 at 2021-05-12 10:40:44 +0800
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+Started GET "/products/new" for 127.0.0.1 at 2021-05-12 10:40:44 +0800
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+---------------------------------------------
+ProductsControllerTest: test_should_get_index
+---------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started DELETE "/products/298486374" for 127.0.0.1 at 2021-05-12 10:40:44 +0800
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Started GET "/products" for 127.0.0.1 at 2021-05-12 10:40:44 +0800
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+Processing by ProductsController#new as HTML
+Processing by ProductsController#index as HTML
+Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"298486374"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/_form.html.erb (Duration: 2.1ms | Allocations: 1983)
+  Rendered products/edit.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2340)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLineItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "line_items" WHERE "line_items"."product_id" = $1 LIMIT $2[0m  [["product_id", 298486374], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/products
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms | Allocations: 1230)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered products/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2240)
+  Rendered products/_form.html.erb (Duration: 2.5ms | Allocations: 1965)
+  Rendered products/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2266)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 5278)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms | Allocations: 6413)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 5099)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms | Allocations: 6009)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------
+ProductsControllerTest: test_should_create_product
+--------------------------------------------------
+---------------------------------------------------
+ProductsControllerTest: test_should_destroy_product
+---------------------------------------------------
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 5211)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 6124)
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+Started DELETE "/products/980190962" for 127.0.0.1 at 2021-05-12 10:40:44 +0800
+Started POST "/products" for 127.0.0.1 at 2021-05-12 10:40:44 +0800
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------
+ProductsControllerTest: test_should_show_product
+------------------------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------
+ProductsControllerTest: test_should_update_product
+--------------------------------------------------
+Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"Lorem Ipsum", "description"=>"Wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/products/980190962" for 127.0.0.1 at 2021-05-12 10:40:44 +0800
+Started GET "/products/980190962" for 127.0.0.1 at 2021-05-12 10:40:44 +0800
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 LIMIT $2[0m  [["title", "Lorem Ipsum"], ["LIMIT", 1]]
+Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"title"=>"Lorem Ipsum", "description"=>"Wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}, "id"=>"980190962"}
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Lorem Ipsum"], ["description", "Wibbles are fun!"], ["image_url", "lorem.jpg"], ["price", "19.95"], ["created_at", "2021-05-12 02:40:44.212693"], ["updated_at", "2021-05-12 02:40:44.212693"]]
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Redirected to http://www.example.com/products/980190963
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms | Allocations: 1072)
+  [1m[36mLineItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "line_items" WHERE "line_items"."product_id" = $1 LIMIT $2[0m  [["product_id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mProduct Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 AND "products"."id" != $2 LIMIT $3[0m  [["title", "Lorem Ipsum"], ["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendered products/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 289)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+Redirected to http://www.example.com/products
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms | Allocations: 2563)
+  [1m[36mProduct Update (0.2ms)[0m  [1m[33mUPDATE "products" SET "title" = $1, "description" = $2, "price" = $3, "updated_at" = $4 WHERE "products"."id" = $5[0m  [["title", "Lorem Ipsum"], ["description", "Wibbles are fun!"], ["price", "19.95"], ["updated_at", "2021-05-12 02:40:44.214788"], ["id", 980190962]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/products/980190962
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms | Allocations: 1278)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 3223)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms | Allocations: 3804)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (36.4ms)[0m  [1m[35mTRUNCATE TABLE "line_items", "carts", "products"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[35m (35.9ms)[0m  [1m[35mTRUNCATE TABLE "line_items", "carts", "products"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[35m (37.3ms)[0m  [1m[35mTRUNCATE TABLE "line_items", "carts", "products"[0m
+  [1m[35m (37.3ms)[0m  [1m[35mTRUNCATE TABLE "line_items", "carts", "products"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "line_items";
+DELETE FROM "carts";
+INSERT INTO "products" ("id", "title", "description", "image_url", "price", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 02:42:57.557776', '2021-05-12 02:42:57.557776'), (298486374, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 02:42:57.557776', '2021-05-12 02:42:57.557776'), (207281424, 'Programming Ruby 1.9', 'Ruby is the fastest growing and most exciting dynamic language out there. If you need to get working programs delivered fast, you should add Ruby to your toolbox.', 'lorem.jpg', 49.5, '2021-05-12 02:42:57.557776', '2021-05-12 02:42:57.557776');
+INSERT INTO "line_items" ("id", "product_id", "cart_id", "created_at", "updated_at", "quantity") VALUES (980190962, 298486374, 980190962, '2021-05-12 02:42:57.562620', '2021-05-12 02:42:57.562620', DEFAULT), (298486374, 298486374, 298486374, '2021-05-12 02:42:57.562620', '2021-05-12 02:42:57.562620', DEFAULT);
+INSERT INTO "carts" ("id", "created_at", "updated_at") VALUES (980190962, '2021-05-12 02:42:57.565161', '2021-05-12 02:42:57.565161'), (298486374, '2021-05-12 02:42:57.565161', '2021-05-12 02:42:57.565161')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.8ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "line_items";
+DELETE FROM "carts";
+INSERT INTO "products" ("id", "title", "description", "image_url", "price", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 02:42:57.559583', '2021-05-12 02:42:57.559583'), (298486374, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 02:42:57.559583', '2021-05-12 02:42:57.559583'), (207281424, 'Programming Ruby 1.9', 'Ruby is the fastest growing and most exciting dynamic language out there. If you need to get working programs delivered fast, you should add Ruby to your toolbox.', 'lorem.jpg', 49.5, '2021-05-12 02:42:57.559583', '2021-05-12 02:42:57.559583');
+INSERT INTO "line_items" ("id", "product_id", "cart_id", "created_at", "updated_at", "quantity") VALUES (980190962, 298486374, 980190962, '2021-05-12 02:42:57.565049', '2021-05-12 02:42:57.565049', DEFAULT), (298486374, 298486374, 298486374, '2021-05-12 02:42:57.565049', '2021-05-12 02:42:57.565049', DEFAULT);
+INSERT INTO "carts" ("id", "created_at", "updated_at") VALUES (980190962, '2021-05-12 02:42:57.567706', '2021-05-12 02:42:57.567706'), (298486374, '2021-05-12 02:42:57.567706', '2021-05-12 02:42:57.567706')[0m
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "line_items";
+DELETE FROM "carts";
+INSERT INTO "products" ("id", "title", "description", "image_url", "price", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 02:42:57.560279', '2021-05-12 02:42:57.560279'), (298486374, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 02:42:57.560279', '2021-05-12 02:42:57.560279'), (207281424, 'Programming Ruby 1.9', 'Ruby is the fastest growing and most exciting dynamic language out there. If you need to get working programs delivered fast, you should add Ruby to your toolbox.', 'lorem.jpg', 49.5, '2021-05-12 02:42:57.560279', '2021-05-12 02:42:57.560279');
+INSERT INTO "line_items" ("id", "product_id", "cart_id", "created_at", "updated_at", "quantity") VALUES (980190962, 298486374, 980190962, '2021-05-12 02:42:57.565413', '2021-05-12 02:42:57.565413', DEFAULT), (298486374, 298486374, 298486374, '2021-05-12 02:42:57.565413', '2021-05-12 02:42:57.565413', DEFAULT);
+INSERT INTO "carts" ("id", "created_at", "updated_at") VALUES (980190962, '2021-05-12 02:42:57.568149', '2021-05-12 02:42:57.568149'), (298486374, '2021-05-12 02:42:57.568149', '2021-05-12 02:42:57.568149')[0m
+  [1m[35m (0.6ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "line_items";
+DELETE FROM "carts";
+INSERT INTO "products" ("id", "title", "description", "image_url", "price", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 02:42:57.559905', '2021-05-12 02:42:57.559905'), (298486374, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 02:42:57.559905', '2021-05-12 02:42:57.559905'), (207281424, 'Programming Ruby 1.9', 'Ruby is the fastest growing and most exciting dynamic language out there. If you need to get working programs delivered fast, you should add Ruby to your toolbox.', 'lorem.jpg', 49.5, '2021-05-12 02:42:57.559905', '2021-05-12 02:42:57.559905');
+INSERT INTO "line_items" ("id", "product_id", "cart_id", "created_at", "updated_at", "quantity") VALUES (980190962, 298486374, 980190962, '2021-05-12 02:42:57.565553', '2021-05-12 02:42:57.565553', DEFAULT), (298486374, 298486374, 298486374, '2021-05-12 02:42:57.565553', '2021-05-12 02:42:57.565553', DEFAULT);
+INSERT INTO "carts" ("id", "created_at", "updated_at") VALUES (980190962, '2021-05-12 02:42:57.568156', '2021-05-12 02:42:57.568156'), (298486374, '2021-05-12 02:42:57.568156', '2021-05-12 02:42:57.568156')[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------
+LineItemsControllerTest: test_should_update_line_item
+-----------------------------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------
+LineItemsControllerTest: test_should_get_new
+--------------------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------
+LineItemsControllerTest: test_should_create_line_item
+-----------------------------------------------------
+---------------------------------------------
+LineItemsControllerTest: test_should_get_edit
+---------------------------------------------
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/line_items/980190962" for 127.0.0.1 at 2021-05-12 10:42:57 +0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items"[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 207281424], ["LIMIT", 1]]
+Started POST "/line_items" for 127.0.0.1 at 2021-05-12 10:42:57 +0800
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by LineItemsController#update as HTML
+  Parameters: {"line_item"=>{"product_id"=>"298486374"}, "id"=>"980190962"}
+Started GET "/line_items/new" for 127.0.0.1 at 2021-05-12 10:42:57 +0800
+Started GET "/line_items/980190962/edit" for 127.0.0.1 at 2021-05-12 10:42:57 +0800
+Processing by LineItemsController#create as HTML
+  Parameters: {"product_id"=>"207281424"}
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by LineItemsController#new as HTML
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/line_items/980190962
+Completed 302 Found in 18ms (ActiveRecord: 0.7ms | Allocations: 8608)
+Processing by LineItemsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCart Create (0.2ms)[0m  [1m[32mINSERT INTO "carts" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-05-12 02:42:57.643455"], ["updated_at", "2021-05-12 02:42:57.643455"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 207281424], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+LineItemsControllerTest: test_should_destroy_line_item
+------------------------------------------------------
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items"[0m
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1 AND "line_items"."product_id" = $2 LIMIT $3[0m  [["cart_id", 980190963], ["product_id", 207281424], ["LIMIT", 1]]
+Started DELETE "/line_items/980190962" for 127.0.0.1 at 2021-05-12 10:42:57 +0800
+Processing by LineItemsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 207281424], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLineItem Destroy (0.1ms)[0m  [1m[31mDELETE FROM "line_items" WHERE "line_items"."id" = $1[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mLineItem Create (0.3ms)[0m  [1m[32mINSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 207281424], ["cart_id", 980190963], ["created_at", "2021-05-12 02:42:57.650658"], ["updated_at", "2021-05-12 02:42:57.650658"]]
+Redirected to http://www.example.com/line_items
+Completed 302 Found in 1ms (ActiveRecord: 0.4ms | Allocations: 601)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 18ms (ActiveRecord: 1.3ms | Allocations: 6700)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------
+LineItemsControllerTest: test_should_get_index
+----------------------------------------------
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2021-05-12 10:42:57 +0800
+Started GET "/line_items" for 127.0.0.1 at 2021-05-12 10:42:57 +0800
+Processing by LineItemsController#index as HTML
+Processing by StoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering line_items/new.html.erb within layouts/application
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190963], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering line_items/edit.html.erb within layouts/application
+  Rendering layout layouts/application.html.erb
+  Rendering line_items/index.html.erb within layouts/application
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items"[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  Rendered line_items/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 740)
+  Rendered line_items/_form.html.erb (Duration: 5.5ms | Allocations: 4185)
+  Rendered line_items/new.html.erb within layouts/application (Duration: 6.4ms | Allocations: 4619)
+  Rendered line_items/_form.html.erb (Duration: 5.6ms | Allocations: 4216)
+  Rendered line_items/edit.html.erb within layouts/application (Duration: 6.5ms | Allocations: 4695)
+  Rendered store/index.html.erb within layouts/application (Duration: 211.7ms | Allocations: 31879)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 980190963]]
+  Rendered layout layouts/application.html.erb (Duration: 219.3ms | Allocations: 31611)
+Completed 500 Internal Server Error in 223ms (ActiveRecord: 0.2ms | Allocations: 33360)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 207281424], ["LIMIT", 1]]
+  Rendered collection of line_items/_line_item.html.erb [1 times] (Duration: 1.5ms | Allocations: 567)
+  Rendered carts/_cart.html.erb (Duration: 4.4ms | Allocations: 1909)
+  Rendered layout layouts/application.html.erb (Duration: 220.8ms | Allocations: 37133)
+Completed 200 OK in 224ms (Views: 221.6ms | ActiveRecord: 0.8ms | Allocations: 39304)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------
+LineItemsControllerTest: test_should_show_line_item
+---------------------------------------------------
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/line_items/980190962" for 127.0.0.1 at 2021-05-12 10:42:57 +0800
+Processing by LineItemsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering line_items/show.html.erb within layouts/application
+  Rendered line_items/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 244)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 3147)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms | Allocations: 3711)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 237.1ms | Allocations: 35496)
+Completed 500 Internal Server Error in 252ms (ActiveRecord: 0.0ms | Allocations: 38257)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 247.3ms | Allocations: 35579)
+Completed 500 Internal Server Error in 264ms (ActiveRecord: 0.2ms | Allocations: 38557)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (39.7ms)[0m  [1m[35mTRUNCATE TABLE "line_items", "carts", "products"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (41.2ms)[0m  [1m[35mTRUNCATE TABLE "line_items", "carts", "products"[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (43.1ms)[0m  [1m[35mTRUNCATE TABLE "line_items", "carts", "products"[0m
+  [1m[35m (43.2ms)[0m  [1m[35mTRUNCATE TABLE "line_items", "carts", "products"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.8ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "line_items";
+DELETE FROM "carts";
+INSERT INTO "products" ("id", "title", "description", "image_url", "price", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 03:37:36.139792', '2021-05-12 03:37:36.139792'), (298486374, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 03:37:36.139792', '2021-05-12 03:37:36.139792'), (207281424, 'Programming Ruby 1.9', 'Ruby is the fastest growing and most exciting dynamic language out there. If you need to get working programs delivered fast, you should add Ruby to your toolbox.', 'lorem.jpg', 49.5, '2021-05-12 03:37:36.139792', '2021-05-12 03:37:36.139792');
+INSERT INTO "line_items" ("id", "product_id", "cart_id", "created_at", "updated_at", "quantity") VALUES (980190962, 298486374, 980190962, '2021-05-12 03:37:36.145892', '2021-05-12 03:37:36.145892', DEFAULT), (298486374, 298486374, 298486374, '2021-05-12 03:37:36.145892', '2021-05-12 03:37:36.145892', DEFAULT);
+INSERT INTO "carts" ("id", "created_at", "updated_at") VALUES (980190962, '2021-05-12 03:37:36.148056', '2021-05-12 03:37:36.148056'), (298486374, '2021-05-12 03:37:36.148056', '2021-05-12 03:37:36.148056')[0m
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "line_items";
+DELETE FROM "carts";
+INSERT INTO "products" ("id", "title", "description", "image_url", "price", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 03:37:36.139792', '2021-05-12 03:37:36.139792'), (298486374, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 03:37:36.139792', '2021-05-12 03:37:36.139792'), (207281424, 'Programming Ruby 1.9', 'Ruby is the fastest growing and most exciting dynamic language out there. If you need to get working programs delivered fast, you should add Ruby to your toolbox.', 'lorem.jpg', 49.5, '2021-05-12 03:37:36.139792', '2021-05-12 03:37:36.139792');
+INSERT INTO "line_items" ("id", "product_id", "cart_id", "created_at", "updated_at", "quantity") VALUES (980190962, 298486374, 980190962, '2021-05-12 03:37:36.146296', '2021-05-12 03:37:36.146296', DEFAULT), (298486374, 298486374, 298486374, '2021-05-12 03:37:36.146296', '2021-05-12 03:37:36.146296', DEFAULT);
+INSERT INTO "carts" ("id", "created_at", "updated_at") VALUES (980190962, '2021-05-12 03:37:36.148825', '2021-05-12 03:37:36.148825'), (298486374, '2021-05-12 03:37:36.148825', '2021-05-12 03:37:36.148825')[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.6ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "line_items";
+DELETE FROM "carts";
+INSERT INTO "products" ("id", "title", "description", "image_url", "price", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 03:37:36.139792', '2021-05-12 03:37:36.139792'), (298486374, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 03:37:36.139792', '2021-05-12 03:37:36.139792'), (207281424, 'Programming Ruby 1.9', 'Ruby is the fastest growing and most exciting dynamic language out there. If you need to get working programs delivered fast, you should add Ruby to your toolbox.', 'lorem.jpg', 49.5, '2021-05-12 03:37:36.139792', '2021-05-12 03:37:36.139792');
+INSERT INTO "line_items" ("id", "product_id", "cart_id", "created_at", "updated_at", "quantity") VALUES (980190962, 298486374, 980190962, '2021-05-12 03:37:36.147083', '2021-05-12 03:37:36.147083', DEFAULT), (298486374, 298486374, 298486374, '2021-05-12 03:37:36.147083', '2021-05-12 03:37:36.147083', DEFAULT);
+INSERT INTO "carts" ("id", "created_at", "updated_at") VALUES (980190962, '2021-05-12 03:37:36.149874', '2021-05-12 03:37:36.149874'), (298486374, '2021-05-12 03:37:36.149874', '2021-05-12 03:37:36.149874')[0m
+  [1m[35m (0.6ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "line_items";
+DELETE FROM "carts";
+INSERT INTO "products" ("id", "title", "description", "image_url", "price", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 03:37:36.139792', '2021-05-12 03:37:36.139792'), (298486374, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 03:37:36.139792', '2021-05-12 03:37:36.139792'), (207281424, 'Programming Ruby 1.9', 'Ruby is the fastest growing and most exciting dynamic language out there. If you need to get working programs delivered fast, you should add Ruby to your toolbox.', 'lorem.jpg', 49.5, '2021-05-12 03:37:36.139792', '2021-05-12 03:37:36.139792');
+INSERT INTO "line_items" ("id", "product_id", "cart_id", "created_at", "updated_at", "quantity") VALUES (980190962, 298486374, 980190962, '2021-05-12 03:37:36.146639', '2021-05-12 03:37:36.146639', DEFAULT), (298486374, 298486374, 298486374, '2021-05-12 03:37:36.146639', '2021-05-12 03:37:36.146639', DEFAULT);
+INSERT INTO "carts" ("id", "created_at", "updated_at") VALUES (980190962, '2021-05-12 03:37:36.149823', '2021-05-12 03:37:36.149823'), (298486374, '2021-05-12 03:37:36.149823', '2021-05-12 03:37:36.149823')[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------
+LineItemsControllerTest: test_should_get_edit
+---------------------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+LineItemsControllerTest: test_should_destroy_line_item
+------------------------------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------
+LineItemsControllerTest: test_should_get_new
+--------------------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------
+LineItemsControllerTest: test_should_show_line_item
+---------------------------------------------------
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items"[0m
+Started DELETE "/line_items/980190962" for 127.0.0.1 at 2021-05-12 11:37:36 +0800
+Started GET "/line_items/980190962/edit" for 127.0.0.1 at 2021-05-12 11:37:36 +0800
+Started GET "/line_items/new" for 127.0.0.1 at 2021-05-12 11:37:36 +0800
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by LineItemsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Processing by LineItemsController#new as HTML
+Started GET "/line_items/980190962" for 127.0.0.1 at 2021-05-12 11:37:36 +0800
+Processing by LineItemsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLineItem Destroy (0.1ms)[0m  [1m[31mDELETE FROM "line_items" WHERE "line_items"."id" = $1[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/line_items
+  Rendering layout layouts/application.html.erb
+Completed 302 Found in 10ms (ActiveRecord: 0.4ms | Allocations: 1778)
+  Rendering line_items/new.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------
+LineItemsControllerTest: test_should_create_line_item
+-----------------------------------------------------
+Processing by LineItemsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendered line_items/_form.html.erb (Duration: 3.8ms | Allocations: 4184)
+  Rendered line_items/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 4618)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items"[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 207281424], ["LIMIT", 1]]
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started POST "/line_items" for 127.0.0.1 at 2021-05-12 11:37:36 +0800
+Processing by LineItemsController#create as HTML
+  Parameters: {"product_id"=>"207281424"}
+  Rendering layout layouts/application.html.erb
+  Rendering line_items/edit.html.erb within layouts/application
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCart Create (0.2ms)[0m  [1m[32mINSERT INTO "carts" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-05-12 03:37:36.227498"], ["updated_at", "2021-05-12 03:37:36.227498"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 207281424], ["LIMIT", 1]]
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1 AND "line_items"."product_id" = $2 LIMIT $3[0m  [["cart_id", 980190963], ["product_id", 207281424], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 207281424], ["LIMIT", 1]]
+  Rendered line_items/_form.html.erb (Duration: 5.6ms | Allocations: 4215)
+  Rendered line_items/edit.html.erb within layouts/application (Duration: 6.4ms | Allocations: 4694)
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mLineItem Create (0.3ms)[0m  [1m[32mINSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 207281424], ["cart_id", 980190963], ["created_at", "2021-05-12 03:37:36.233287"], ["updated_at", "2021-05-12 03:37:36.233287"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 8ms (ActiveRecord: 1.2ms | Allocations: 5617)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items"[0m
+Started GET "/" for 127.0.0.1 at 2021-05-12 11:37:36 +0800
+  Rendering layout layouts/application.html.erb
+  Rendering line_items/show.html.erb within layouts/application
+  Rendered line_items/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 389)
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190963], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+[Webpacker] Compiling...
+[Webpacker] Compiling...
+[Webpacker] Compiling...
+  Rendered store/index.html.erb within layouts/application (Duration: 167.3ms | Allocations: 33972)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/swayongshen/Documents/Wright/learning_phase_project/depot/public/packs-test
+[Webpacker] Hash: 026a1351769d029deaae
+Version: webpack 4.46.0
+Time: 742ms
+Built at: 05/12/2021 11:37:37 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-24fbae606c35c9208739.js    641 KiB  application  [emitted] [immutable]  application
+js/application-24fbae606c35c9208739.js.map    745 KiB  application  [emitted] [dev]        application
+      js/bootstrap-52f0372469d67a622da0.js    521 KiB    bootstrap  [emitted] [immutable]  bootstrap
+  js/bootstrap-52f0372469d67a622da0.js.map    610 KiB    bootstrap  [emitted] [dev]        bootstrap
+                             manifest.json  729 bytes               [emitted]              
+Entrypoint application = js/application-24fbae606c35c9208739.js js/application-24fbae606c35c9208739.js.map
+Entrypoint bootstrap = js/bootstrap-52f0372469d67a622da0.js js/bootstrap-52f0372469d67a622da0.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 514 bytes {application} [built]
+[./app/javascript/packs/bootstrap.js] 118 KiB {bootstrap} {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {bootstrap} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {bootstrap} [built]
+    + 5 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 1719.9ms | Allocations: 37638)
+Completed 200 OK in 1729ms (Views: 1721.2ms | ActiveRecord: 0.0ms | Allocations: 40429)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------
+LineItemsControllerTest: test_should_get_index
+----------------------------------------------
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/line_items" for 127.0.0.1 at 2021-05-12 11:37:37 +0800
+Processing by LineItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering line_items/index.html.erb within layouts/application
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items"[0m
+  Rendered line_items/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 630)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3369)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.2ms | Allocations: 3847)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------
+LineItemsControllerTest: test_should_update_line_item
+-----------------------------------------------------
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/line_items/980190962" for 127.0.0.1 at 2021-05-12 11:37:37 +0800
+Processing by LineItemsController#update as HTML
+  Parameters: {"line_item"=>{"product_id"=>"298486374"}, "id"=>"980190962"}
+  [1m[36mLineItem Load (7.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/line_items/980190962
+Completed 302 Found in 18ms (ActiveRecord: 8.0ms | Allocations: 7514)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[Webpacker] Compiled all packs in /home/swayongshen/Documents/Wright/learning_phase_project/depot/public/packs-test
+[Webpacker] Hash: 026a1351769d029deaae
+Version: webpack 4.46.0
+Time: 767ms
+Built at: 05/12/2021 11:37:38 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-24fbae606c35c9208739.js    641 KiB  application  [emitted] [immutable]  application
+js/application-24fbae606c35c9208739.js.map    745 KiB  application  [emitted] [dev]        application
+      js/bootstrap-52f0372469d67a622da0.js    521 KiB    bootstrap  [emitted] [immutable]  bootstrap
+  js/bootstrap-52f0372469d67a622da0.js.map    610 KiB    bootstrap  [emitted] [dev]        bootstrap
+                             manifest.json  729 bytes               [emitted]              
+Entrypoint application = js/application-24fbae606c35c9208739.js js/application-24fbae606c35c9208739.js.map
+Entrypoint bootstrap = js/bootstrap-52f0372469d67a622da0.js js/bootstrap-52f0372469d67a622da0.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 514 bytes {application} [built]
+[./app/javascript/packs/bootstrap.js] 118 KiB {bootstrap} {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {bootstrap} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {bootstrap} [built]
+    + 5 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 1801.7ms | Allocations: 31904)
+Completed 200 OK in 1818ms (Views: 1803.4ms | ActiveRecord: 0.2ms | Allocations: 34915)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+[Webpacker] Compiled all packs in /home/swayongshen/Documents/Wright/learning_phase_project/depot/public/packs-test
+[Webpacker] Hash: 026a1351769d029deaae
+Version: webpack 4.46.0
+Time: 784ms
+Built at: 05/12/2021 11:37:38 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-24fbae606c35c9208739.js    641 KiB  application  [emitted] [immutable]  application
+js/application-24fbae606c35c9208739.js.map    745 KiB  application  [emitted] [dev]        application
+      js/bootstrap-52f0372469d67a622da0.js    521 KiB    bootstrap  [emitted] [immutable]  bootstrap
+  js/bootstrap-52f0372469d67a622da0.js.map    610 KiB    bootstrap  [emitted] [dev]        bootstrap
+                             manifest.json  729 bytes               [emitted]              
+Entrypoint application = js/application-24fbae606c35c9208739.js js/application-24fbae606c35c9208739.js.map
+Entrypoint bootstrap = js/bootstrap-52f0372469d67a622da0.js js/bootstrap-52f0372469d67a622da0.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 514 bytes {application} [built]
+[./app/javascript/packs/bootstrap.js] 118 KiB {bootstrap} {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {bootstrap} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {bootstrap} [built]
+    + 5 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 1882.9ms | Allocations: 37711)
+Completed 200 OK in 1898ms (Views: 1884.4ms | ActiveRecord: 0.2ms | Allocations: 40719)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+[Webpacker] Compiled all packs in /home/swayongshen/Documents/Wright/learning_phase_project/depot/public/packs-test
+[Webpacker] Hash: 026a1351769d029deaae
+Version: webpack 4.46.0
+Time: 758ms
+Built at: 05/12/2021 11:37:38 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-24fbae606c35c9208739.js    641 KiB  application  [emitted] [immutable]  application
+js/application-24fbae606c35c9208739.js.map    745 KiB  application  [emitted] [dev]        application
+      js/bootstrap-52f0372469d67a622da0.js    521 KiB    bootstrap  [emitted] [immutable]  bootstrap
+  js/bootstrap-52f0372469d67a622da0.js.map    610 KiB    bootstrap  [emitted] [dev]        bootstrap
+                             manifest.json  729 bytes               [emitted]              
+Entrypoint application = js/application-24fbae606c35c9208739.js js/application-24fbae606c35c9208739.js.map
+Entrypoint bootstrap = js/bootstrap-52f0372469d67a622da0.js js/bootstrap-52f0372469d67a622da0.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 514 bytes {application} [built]
+[./app/javascript/packs/bootstrap.js] 118 KiB {bootstrap} {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {bootstrap} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} {bootstrap} [built]
+    + 5 hidden modules
+
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 980190963]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 207281424], ["LIMIT", 1]]
+  Rendered collection of line_items/_line_item.html.erb [1 times] (Duration: 1.0ms | Allocations: 567)
+  Rendered carts/_cart.html.erb (Duration: 3.6ms | Allocations: 1909)
+  Rendered layout layouts/application.html.erb (Duration: 1933.8ms | Allocations: 40121)
+Completed 200 OK in 1937ms (Views: 1934.3ms | ActiveRecord: 0.8ms | Allocations: 42294)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (40.9ms)[0m  [1m[35mTRUNCATE TABLE "line_items", "carts", "products"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (39.1ms)[0m  [1m[35mTRUNCATE TABLE "line_items", "carts", "products"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (41.6ms)[0m  [1m[35mTRUNCATE TABLE "line_items", "carts", "products"[0m
+  [1m[35m (41.5ms)[0m  [1m[35mTRUNCATE TABLE "line_items", "carts", "products"[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "line_items";
+DELETE FROM "carts";
+INSERT INTO "products" ("id", "title", "description", "image_url", "price", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 03:37:43.655992', '2021-05-12 03:37:43.655992'), (298486374, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 03:37:43.655992', '2021-05-12 03:37:43.655992'), (207281424, 'Programming Ruby 1.9', 'Ruby is the fastest growing and most exciting dynamic language out there. If you need to get working programs delivered fast, you should add Ruby to your toolbox.', 'lorem.jpg', 49.5, '2021-05-12 03:37:43.655992', '2021-05-12 03:37:43.655992');
+INSERT INTO "line_items" ("id", "product_id", "cart_id", "created_at", "updated_at", "quantity") VALUES (980190962, 298486374, 980190962, '2021-05-12 03:37:43.662314', '2021-05-12 03:37:43.662314', DEFAULT), (298486374, 298486374, 298486374, '2021-05-12 03:37:43.662314', '2021-05-12 03:37:43.662314', DEFAULT);
+INSERT INTO "carts" ("id", "created_at", "updated_at") VALUES (980190962, '2021-05-12 03:37:43.665642', '2021-05-12 03:37:43.665642'), (298486374, '2021-05-12 03:37:43.665642', '2021-05-12 03:37:43.665642')[0m
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.7ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "line_items";
+DELETE FROM "carts";
+INSERT INTO "products" ("id", "title", "description", "image_url", "price", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 03:37:43.655994', '2021-05-12 03:37:43.655994'), (298486374, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 03:37:43.655994', '2021-05-12 03:37:43.655994'), (207281424, 'Programming Ruby 1.9', 'Ruby is the fastest growing and most exciting dynamic language out there. If you need to get working programs delivered fast, you should add Ruby to your toolbox.', 'lorem.jpg', 49.5, '2021-05-12 03:37:43.655994', '2021-05-12 03:37:43.655994');
+INSERT INTO "line_items" ("id", "product_id", "cart_id", "created_at", "updated_at", "quantity") VALUES (980190962, 298486374, 980190962, '2021-05-12 03:37:43.662328', '2021-05-12 03:37:43.662328', DEFAULT), (298486374, 298486374, 298486374, '2021-05-12 03:37:43.662328', '2021-05-12 03:37:43.662328', DEFAULT);
+INSERT INTO "carts" ("id", "created_at", "updated_at") VALUES (980190962, '2021-05-12 03:37:43.665359', '2021-05-12 03:37:43.665359'), (298486374, '2021-05-12 03:37:43.665359', '2021-05-12 03:37:43.665359')[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "line_items";
+DELETE FROM "carts";
+INSERT INTO "products" ("id", "title", "description", "image_url", "price", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 03:37:43.660461', '2021-05-12 03:37:43.660461'), (298486374, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 03:37:43.660461', '2021-05-12 03:37:43.660461'), (207281424, 'Programming Ruby 1.9', 'Ruby is the fastest growing and most exciting dynamic language out there. If you need to get working programs delivered fast, you should add Ruby to your toolbox.', 'lorem.jpg', 49.5, '2021-05-12 03:37:43.660461', '2021-05-12 03:37:43.660461');
+INSERT INTO "line_items" ("id", "product_id", "cart_id", "created_at", "updated_at", "quantity") VALUES (980190962, 298486374, 980190962, '2021-05-12 03:37:43.667431', '2021-05-12 03:37:43.667431', DEFAULT), (298486374, 298486374, 298486374, '2021-05-12 03:37:43.667431', '2021-05-12 03:37:43.667431', DEFAULT);
+INSERT INTO "carts" ("id", "created_at", "updated_at") VALUES (980190962, '2021-05-12 03:37:43.670509', '2021-05-12 03:37:43.670509'), (298486374, '2021-05-12 03:37:43.670509', '2021-05-12 03:37:43.670509')[0m
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[31mDELETE FROM "products";
+DELETE FROM "line_items";
+DELETE FROM "carts";
+INSERT INTO "products" ("id", "title", "description", "image_url", "price", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 03:37:43.660597', '2021-05-12 03:37:43.660597'), (298486374, 'MyString', 'MyText', 'lorem.jpg', 9.99, '2021-05-12 03:37:43.660597', '2021-05-12 03:37:43.660597'), (207281424, 'Programming Ruby 1.9', 'Ruby is the fastest growing and most exciting dynamic language out there. If you need to get working programs delivered fast, you should add Ruby to your toolbox.', 'lorem.jpg', 49.5, '2021-05-12 03:37:43.660597', '2021-05-12 03:37:43.660597');
+INSERT INTO "line_items" ("id", "product_id", "cart_id", "created_at", "updated_at", "quantity") VALUES (980190962, 298486374, 980190962, '2021-05-12 03:37:43.667392', '2021-05-12 03:37:43.667392', DEFAULT), (298486374, 298486374, 298486374, '2021-05-12 03:37:43.667392', '2021-05-12 03:37:43.667392', DEFAULT);
+INSERT INTO "carts" ("id", "created_at", "updated_at") VALUES (980190962, '2021-05-12 03:37:43.670656', '2021-05-12 03:37:43.670656'), (298486374, '2021-05-12 03:37:43.670656', '2021-05-12 03:37:43.670656')[0m
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+ProductTest: test_product_attributes_must_not_be_empty
+------------------------------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------------------
+ProductTest: test_product_is_not_valid_without_a_unique_title
+-------------------------------------------------------------
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 207281424], ["LIMIT", 1]]
+---------------------------
+ProductTest: test_image_url
+---------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------
+StoreControllerTest: test_should_get_index
+------------------------------------------
+  [1m[36mProduct Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProduct Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 LIMIT $2[0m  [["title", "My Book Title"], ["LIMIT", 1]]
+  [1m[36mProduct Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 LIMIT $2[0m  [["title", "My Book Title"], ["LIMIT", 1]]
+  [1m[36mProduct Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 LIMIT $2[0m  [["title", "My Book Title"], ["LIMIT", 1]]
+  [1m[36mProduct Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 LIMIT $2[0m  [["title", "My Book Title"], ["LIMIT", 1]]
+  [1m[36mProduct Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 LIMIT $2[0m  [["title", "Programming Ruby 1.9"], ["LIMIT", 1]]
+  [1m[36mProduct Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 LIMIT $2[0m  [["title", "My Book Title"], ["LIMIT", 1]]
+  [1m[36mProduct Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 LIMIT $2[0m  [["title", "My Book Title"], ["LIMIT", 1]]
+  [1m[36mProduct Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 LIMIT $2[0m  [["title", "My Book Title"], ["LIMIT", 1]]
+  [1m[36mProduct Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 LIMIT $2[0m  [["title", "My Book Title"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------
+ProductTest: test_product_price_must_be_positive
+------------------------------------------------
+  [1m[36mProduct Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 LIMIT $2[0m  [["title", "My Book Title"], ["LIMIT", 1]]
+  [1m[36mProduct Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 LIMIT $2[0m  [["title", "My Book Title"], ["LIMIT", 1]]
+  [1m[36mProduct Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 LIMIT $2[0m  [["title", "My Book Title"], ["LIMIT", 1]]
+  [1m[36mProduct Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 LIMIT $2[0m  [["title", "My Book Title"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------
+LineItemsControllerTest: test_should_create_line_item
+-----------------------------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------
+LineItemsControllerTest: test_should_get_index
+----------------------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------
+LineItemsControllerTest: test_should_show_line_item
+---------------------------------------------------
+Started GET "/" for 127.0.0.1 at 2021-05-12 11:37:43 +0800
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items"[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 207281424], ["LIMIT", 1]]
+Started POST "/line_items" for 127.0.0.1 at 2021-05-12 11:37:43 +0800
+Processing by StoreController#index as HTML
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by LineItemsController#create as HTML
+  Parameters: {"product_id"=>"207281424"}
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/line_items" for 127.0.0.1 at 2021-05-12 11:37:43 +0800
+Started GET "/line_items/980190962" for 127.0.0.1 at 2021-05-12 11:37:43 +0800
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCart Create (0.2ms)[0m  [1m[32mINSERT INTO "carts" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-05-12 03:37:43.760278"], ["updated_at", "2021-05-12 03:37:43.760278"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCart Create (0.2ms)[0m  [1m[32mINSERT INTO "carts" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-05-12 03:37:43.763409"], ["updated_at", "2021-05-12 03:37:43.763409"]]
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 207281424], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1 AND "line_items"."product_id" = $2 LIMIT $3[0m  [["cart_id", 980190963], ["product_id", 207281424], ["LIMIT", 1]]
+Processing by LineItemsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Processing by LineItemsController#index as HTML
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 207281424], ["LIMIT", 1]]
+  [1m[36mLineItem Create (0.4ms)[0m  [1m[32mINSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 207281424], ["cart_id", 980190963], ["created_at", "2021-05-12 03:37:43.769509"], ["updated_at", "2021-05-12 03:37:43.769509"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 16ms (ActiveRecord: 1.3ms | Allocations: 6794)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items"[0m
+Started GET "/" for 127.0.0.1 at 2021-05-12 11:37:43 +0800
+Processing by StoreController#index as HTML
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190963], ["LIMIT", 1]]
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering store/index.html.erb within layouts/application
+  Rendering layout layouts/application.html.erb
+  Rendering line_items/show.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."title" ASC[0m
+  Rendering layout layouts/application.html.erb
+  Rendering line_items/index.html.erb within layouts/application
+  Rendered line_items/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 388)
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items"[0m
+  Rendered line_items/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 857)
+  Rendered store/index.html.erb within layouts/application (Duration: 146.0ms | Allocations: 36039)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 138.1ms | Allocations: 31452)
+Completed 200 OK in 149ms (Views: 139.2ms | ActiveRecord: 0.2ms | Allocations: 34461)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------
+LineItemsControllerTest: test_should_get_new
+--------------------------------------------
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 980190963]]
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 12)
+  Rendered carts/_cart.html.erb (Duration: 4.7ms | Allocations: 2814)
+Started GET "/line_items/new" for 127.0.0.1 at 2021-05-12 11:37:43 +0800
+  Rendered layout layouts/application.html.erb (Duration: 155.3ms | Allocations: 42246)
+Completed 200 OK in 171ms (Views: 156.4ms | ActiveRecord: 0.9ms | Allocations: 47275)
+Processing by LineItemsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering line_items/new.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendered layout layouts/application.html.erb (Duration: 144.5ms | Allocations: 31944)
+Completed 200 OK in 154ms (Views: 145.5ms | ActiveRecord: 0.2ms | Allocations: 34731)
+  Rendered line_items/_form.html.erb (Duration: 2.0ms | Allocations: 1528)
+  Rendered line_items/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1839)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------
+LineItemsControllerTest: test_should_update_line_item
+-----------------------------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+LineItemsControllerTest: test_should_destroy_line_item
+------------------------------------------------------
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 4607)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 5080)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+Started DELETE "/line_items/980190962" for 127.0.0.1 at 2021-05-12 11:37:43 +0800
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------
+LineItemsControllerTest: test_should_get_edit
+---------------------------------------------
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/line_items/980190962" for 127.0.0.1 at 2021-05-12 11:37:43 +0800
+Started GET "/line_items/980190962/edit" for 127.0.0.1 at 2021-05-12 11:37:43 +0800
+Processing by LineItemsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Processing by LineItemsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering line_items/edit.html.erb within layouts/application
+  [1m[36mLineItem Destroy (0.1ms)[0m  [1m[31mDELETE FROM "line_items" WHERE "line_items"."id" = $1[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/line_items
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms | Allocations: 740)
+Processing by LineItemsController#update as HTML
+  Parameters: {"line_item"=>{"product_id"=>"298486374"}, "id"=>"980190962"}
+  Rendered line_items/_form.html.erb (Duration: 0.8ms | Allocations: 681)
+  Rendered line_items/edit.html.erb within layouts/application (Duration: 1.2ms | Allocations: 902)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items"[0m
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 3663)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.1ms | Allocations: 4250)
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------
+CartsControllerTest: test_should_get_edit
+-----------------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------
+CartsControllerTest: test_should_create_cart
+--------------------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Redirected to http://www.example.com/line_items/980190962
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms | Allocations: 2217)
+Started GET "/carts/980190962/edit" for 127.0.0.1 at 2021-05-12 11:37:43 +0800
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "carts"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------
+CartsControllerTest: test_should_destroy_cart
+---------------------------------------------
+Started POST "/carts" for 127.0.0.1 at 2021-05-12 11:37:43 +0800
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by CartsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 207281424], ["LIMIT", 1]]
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by CartsController#create as HTML
+Started POST "/line_items" for 127.0.0.1 at 2021-05-12 11:37:43 +0800
+  Rendering layout layouts/application.html.erb
+  Rendering carts/edit.html.erb within layouts/application
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCart Create (0.2ms)[0m  [1m[32mINSERT INTO "carts" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-05-12 03:37:43.942070"], ["updated_at", "2021-05-12 03:37:43.942070"]]
+Processing by LineItemsController#create as HTML
+  Parameters: {"product_id"=>"207281424"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/carts/980190963
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms | Allocations: 986)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "carts"[0m
+  [1m[36mCart Create (0.2ms)[0m  [1m[32mINSERT INTO "carts" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2021-05-12 03:37:43.943934"], ["updated_at", "2021-05-12 03:37:43.943934"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" ORDER BY "carts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 207281424], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendered carts/_form.html.erb (Duration: 4.2ms | Allocations: 3465)
+  Rendered carts/edit.html.erb within layouts/application (Duration: 4.8ms | Allocations: 3820)
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1 AND "line_items"."product_id" = $2 LIMIT $3[0m  [["cart_id", 980190964], ["product_id", 207281424], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------
+CartsControllerTest: test_should_update_cart
+--------------------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 207281424], ["LIMIT", 1]]
+Started PATCH "/carts/980190962" for 127.0.0.1 at 2021-05-12 11:37:43 +0800
+[Webpacker] Everything's up-to-date. Nothing to do
+Processing by CartsController#update as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCart Load (2.5ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Redirected to http://www.example.com/carts/980190962
+Completed 302 Found in 4ms (ActiveRecord: 2.5ms | Allocations: 631)
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 980190962]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------
+CartsControllerTest: test_should_get_new
+----------------------------------------
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/carts/new" for 127.0.0.1 at 2021-05-12 11:37:43 +0800
+  Rendered collection of line_items/_line_item.html.erb [1 times] (Duration: 3.1ms | Allocations: 1739)
+  Rendered carts/_cart.html.erb (Duration: 8.3ms | Allocations: 4996)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 11903)
+Processing by CartsController#new as HTML
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.5ms | Allocations: 13037)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering carts/new.html.erb within layouts/application
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------
+CartsControllerTest: test_should_get_index
+------------------------------------------
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendered carts/_form.html.erb (Duration: 0.8ms | Allocations: 500)
+  Rendered carts/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 801)
+Started GET "/carts" for 127.0.0.1 at 2021-05-12 11:37:43 +0800
+Processing by CartsController#index as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendering layout layouts/application.html.erb
+  Rendering carts/index.html.erb within layouts/application
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+  Rendered carts/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 559)
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 12)
+  [1m[36mLineItem Create (5.9ms)[0m  [1m[32mINSERT INTO "line_items" ("product_id", "cart_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 207281424], ["cart_id", 980190964], ["created_at", "2021-05-12 03:37:43.948799"], ["updated_at", "2021-05-12 03:37:43.948799"]]
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3328)
+  Rendered store/index.html.erb within layouts/application (Duration: 191.9ms | Allocations: 29988)
+  Rendered carts/_cart.html.erb (Duration: 3.7ms | Allocations: 2817)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.2ms | Allocations: 3790)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 6708)
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 7568)
+Redirected to http://www.example.com/
+Completed 302 Found in 27ms (ActiveRecord: 7.9ms | Allocations: 2055)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190964], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "carts"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+Started DELETE "/carts/980190964" for 127.0.0.1 at 2021-05-12 11:37:43 +0800
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------
+CartsControllerTest: test_should_show_cart
+------------------------------------------
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/carts/980190962" for 127.0.0.1 at 2021-05-12 11:37:43 +0800
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------
+ProductsControllerTest: test_should_get_index
+---------------------------------------------
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Started GET "/products" for 127.0.0.1 at 2021-05-12 11:37:43 +0800
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 980190962]]
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  Rendered collection of line_items/_line_item.html.erb [1 times] (Duration: 1.0ms | Allocations: 433)
+  Rendered carts/_cart.html.erb (Duration: 2.3ms | Allocations: 950)
+  Rendered carts/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1127)
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+Processing by CartsController#destroy as HTML
+  Parameters: {"id"=>"980190964"}
+  [1m[36mProduct Load (1.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 980190964], ["LIMIT", 1]]
+  Rendered collection of line_items/_line_item.html.erb [1 times] (Duration: 0.3ms | Allocations: 191)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  Rendered carts/_cart.html.erb (Duration: 0.8ms | Allocations: 452)
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 980190964]]
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 4394)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.5ms | Allocations: 4974)
+  [1m[36mLineItem Destroy (0.1ms)[0m  [1m[31mDELETE FROM "line_items" WHERE "line_items"."id" = $1[0m  [["id", 980190963]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCart Destroy (0.3ms)[0m  [1m[31mDELETE FROM "carts" WHERE "carts"."id" = $1[0m  [["id", 980190964]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms | Allocations: 1103)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "carts"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------------
+ProductsControllerTest: test_cannot_delete_product_in_cart
+----------------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------
+ProductsControllerTest: test_should_get_edit
+--------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mLineItem Load (0.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 980190963]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+Started GET "/products/980190962/edit" for 127.0.0.1 at 2021-05-12 11:37:43 +0800
+Started DELETE "/products/298486374" for 127.0.0.1 at 2021-05-12 11:37:43 +0800
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 207281424], ["LIMIT", 1]]
+  Rendered collection of line_items/_line_item.html.erb [1 times] (Duration: 1.5ms | Allocations: 567)
+  Rendered carts/_cart.html.erb (Duration: 4.4ms | Allocations: 1910)
+  Rendered layout layouts/application.html.erb (Duration: 212.8ms | Allocations: 35284)
+Completed 200 OK in 216ms (Views: 213.4ms | ActiveRecord: 0.8ms | Allocations: 37436)
+Processing by ProductsController#edit as HTML
+Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  Parameters: {"id"=>"298486374"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLineItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "line_items" WHERE "line_items"."product_id" = $1 LIMIT $2[0m  [["product_id", 298486374], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------
+ProductsControllerTest: test_should_update_product
+--------------------------------------------------
+Redirected to http://www.example.com/products
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms | Allocations: 1233)
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (Duration: 14.5ms | Allocations: 2186)
+Started PATCH "/products/980190962" for 127.0.0.1 at 2021-05-12 11:37:43 +0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered products/_form.html.erb (Duration: 3.2ms | Allocations: 2127)
+  Rendered products/edit.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2481)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 4874)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 1.9ms | Allocations: 5804)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------
+ProductsControllerTest: test_should_create_product
+--------------------------------------------------
+Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"title"=>"Lorem Ipsum", "description"=>"Wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}, "id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------
+ProductsControllerTest: test_should_show_product
+------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+[Webpacker] Everything's up-to-date. Nothing to do
+Started POST "/products" for 127.0.0.1 at 2021-05-12 11:37:43 +0800
+Started GET "/products/980190962" for 127.0.0.1 at 2021-05-12 11:37:43 +0800
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 AND "products"."id" != $2 LIMIT $3[0m  [["title", "Lorem Ipsum"], ["id", 980190962], ["LIMIT", 1]]
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 5247)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.2ms | Allocations: 6295)
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mProduct Update (0.2ms)[0m  [1m[33mUPDATE "products" SET "title" = $1, "description" = $2, "price" = $3, "updated_at" = $4 WHERE "products"."id" = $5[0m  [["title", "Lorem Ipsum"], ["description", "Wibbles are fun!"], ["price", "19.95"], ["updated_at", "2021-05-12 03:37:43.999707"], ["id", 980190962]]
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"Lorem Ipsum", "description"=>"Wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Redirected to http://www.example.com/products/980190962
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms | Allocations: 1335)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  Rendering layout layouts/application.html.erb
+-------------------------------------------
+  Rendering products/show.html.erb within layouts/application
+ProductsControllerTest: test_should_get_new
+-------------------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  Rendered products/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 292)
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."title" = $1 LIMIT $2[0m  [["title", "Lorem Ipsum"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/products/new" for 127.0.0.1 at 2021-05-12 11:37:44 +0800
+[Webpacker] Everything's up-to-date. Nothing to do
+Processing by ProductsController#new as HTML
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 3054)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.1ms | Allocations: 3738)
+---------------------------------------------------
+ProductsControllerTest: test_should_destroy_product
+---------------------------------------------------
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+Started DELETE "/products/980190962" for 127.0.0.1 at 2021-05-12 11:37:44 +0800
+  Rendered products/_form.html.erb (Duration: 1.1ms | Allocations: 1016)
+  Rendered products/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1192)
+Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLineItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "line_items" WHERE "line_items"."product_id" = $1 LIMIT $2[0m  [["product_id", 980190962], ["LIMIT", 1]]
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 3960)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 4431)
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://www.example.com/products
+Completed 302 Found in 2ms (ActiveRecord: 0.6ms | Allocations: 998)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Lorem Ipsum"], ["description", "Wibbles are fun!"], ["image_url", "lorem.jpg"], ["price", "19.95"], ["created_at", "2021-05-12 03:37:44.002180"], ["updated_at", "2021-05-12 03:37:44.002180"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/products/980190963
+Completed 302 Found in 15ms (ActiveRecord: 0.5ms | Allocations: 1216)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
