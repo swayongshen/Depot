@@ -11,8 +11,9 @@
   </head>
 
   <body class ='<%= controller.controller_name %>'>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <% if alert %>
+      <p class="alert"><%= alert %></p>
+    <% end %>
     <div id="banner">
       <%= image_tag 'logo.svg', alt: 'The Pragmatic Bookshelf' %>
       <span class="title"><%= @page_title %></span>

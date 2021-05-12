@@ -1,23 +1,23 @@
 {
-  "application.js": "/packs-test/js/application-24fbae606c35c9208739.js",
-  "application.js.map": "/packs-test/js/application-24fbae606c35c9208739.js.map",
-  "bootstrap.js": "/packs-test/js/bootstrap-52f0372469d67a622da0.js",
-  "bootstrap.js.map": "/packs-test/js/bootstrap-52f0372469d67a622da0.js.map",
+  "application.js": "/packs-test/js/application-ea30293fc0ba521131d1.js",
+  "application.js.map": "/packs-test/js/application-ea30293fc0ba521131d1.js.map",
+  "bootstrap.js": "/packs-test/js/bootstrap-b18b1cb93159eb8121f2.js",
+  "bootstrap.js.map": "/packs-test/js/bootstrap-b18b1cb93159eb8121f2.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs-test/js/application-24fbae606c35c9208739.js"
+        "/packs-test/js/application-ea30293fc0ba521131d1.js"
       ],
       "js.map": [
-        "/packs-test/js/application-24fbae606c35c9208739.js.map"
+        "/packs-test/js/application-ea30293fc0ba521131d1.js.map"
       ]
     },
     "bootstrap": {
       "js": [
-        "/packs-test/js/bootstrap-52f0372469d67a622da0.js"
+        "/packs-test/js/bootstrap-b18b1cb93159eb8121f2.js"
       ],
       "js.map": [
-        "/packs-test/js/bootstrap-52f0372469d67a622da0.js.map"
+        "/packs-test/js/bootstrap-b18b1cb93159eb8121f2.js.map"
       ]
     }
   }
