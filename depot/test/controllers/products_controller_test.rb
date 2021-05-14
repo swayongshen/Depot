@@ -1,6 +1,8 @@
 require "test_helper"
 
 class ProductsControllerTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
+
   setup do
     @product = products(:one)
     @update = {
@@ -9,6 +11,8 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
       image_url: 'lorem.jpg',
       price: 19.95
     }
+    sign_in users(:one)
+
   end
 
   test "should get index" do

@@ -25,7 +25,7 @@ class LineItemsController < ApplicationController
   # POST /line_items or /line_items.json
   def create
     # Find the Product with the same product_id as provided in params.
-    product = Product.find(params[:product_id])
+    product = Product.find_by(id: params[:product_id])
 
     # Add a line item of the product to the cart of the session.
     @line_item = @cart.add_product(product)
