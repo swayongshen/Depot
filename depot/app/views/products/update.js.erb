@@ -1,0 +1,7 @@
+$("#main").html(`<p id="notice"><%= notice %></p>\
+<h1>Your Products</h1>
+<table id="products">
+  <%= render @products %>
+</table>
+<br />
+<%= link_to 'New product', new_product_path %>")`);

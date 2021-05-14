@@ -1,2 +1,8 @@
-<p>Order date: <%= order.created_at %></p>
-<p>Total cost: <%= order.total_price %></p>
+<tr id="order">
+  <td><%= link_to order.id, order %></td>
+  <td><%= order.email %></td>
+  <td><%= order.pay_type %></td>
+  <td><%= order.address %></td>
+  <td><%= order.created_at %></td>
+  <td id="shipped"><%= order.shipped ? "Shipped" : button_to('Ship', order, method: :put, params: {order: {shipped: true}},remote: true)  %></td>
+</tr>

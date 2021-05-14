@@ -1,14 +1,13 @@
 class OrdersController < ApplicationController
   include CurrentCart
-  before_action :authenticate_user!, only: [:index, :show]
+  before_action :authenticate_user!, only: [:index, :show, :update]
   before_action :set_cart, only: [:new, :create]
   before_action :ensure_cart_isnt_empty, only: :new
   before_action :set_order, only: %i[ show edit update destroy ]
 
   # GET /orders or /orders.json
   def index
-    @orders = Order.includes(line_items: [product: [:user]])
-                   .where(line_items: { products: { users: current_user} })
+    @orders = get_all_orders_by_user
   end
 
   # GET /orders/1 or /orders/1.json
@@ -47,9 +46,14 @@ class OrdersController < ApplicationController
 
   # PATCH/PUT /orders/1 or /orders/1.json
   def update
+    @orders = get_all_orders_by_user
     respond_to do |format|
       if @order.update(order_params)
+        if params[:shipped].present? and params[:shipped]
+          OrderMailer.shipped(@order).deliver_later
+        end
         format.html { redirect_to @order, notice: "Order was successfully updated." }
+        format.js
         format.json { render :show, status: :ok, location: @order }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -68,6 +72,7 @@ class OrdersController < ApplicationController
   end
 
 
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_order
@@ -76,7 +81,7 @@ class OrdersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def order_params
-      params.require(:order).permit(:name, :address, :email, :pay_type)
+      params.require(:order).permit(:name, :address, :email, :pay_type, :shipped)
     end
 
     def ensure_cart_isnt_empty
@@ -85,8 +90,13 @@ class OrdersController < ApplicationController
       end
     end
 
-  def invalid_order
-    logger.error "Attempted to access invalid order #{params[:id]}"
-    redirect_to orders_url, notice: 'Invalid order'
-  end
+    def get_all_orders_by_user
+      Order.includes(line_items: [product: [:user]])
+                     .where(line_items: { products: { users: current_user} })
+    end
+
+    def invalid_order
+      logger.error "Attempted to access invalid order #{params[:id]}"
+      redirect_to orders_url, notice: 'Invalid order'
+    end
 end

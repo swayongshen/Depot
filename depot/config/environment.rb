@@ -12,10 +12,10 @@ Depot::Application.configure do
     port: 587,
     domain: "wright.com.sg",
     authentication: "login",
-    user_name: ENV["GMAIL_USERNAME"],
-    password: ENV["GMAIL_PASSWORD"],
+    user_name: ENV["EMAIL_USERNAME"],
+    password: ENV["EMAIL_PASSWORD"],
     enable_starttls_auto: true,
-
+    openssl_verify_mode: 'none'
   }
 
   # :address => "mail.wright.com.sg",
