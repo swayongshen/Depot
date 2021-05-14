@@ -4,10 +4,10 @@ class CartsController < ApplicationController
   # If there's a RecordNotFound exception, call invalid_cart
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
 
-  # GET /carts or /carts.json
-  def index
-    @carts = Cart.all
-  end
+  # # GET /carts or /carts.json
+  # def index
+  #   @carts = Cart.all
+  # end
 
   # GET /carts/1 or /carts/1.json
   def show

@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-<h1>Products</h1>
+<h1>Your Products</h1>
 <table>
   <% @products.each do |product| %>
     <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
@@ -24,4 +24,3 @@
 </table>
 <br />
 <%= link_to 'New product', new_product_path %>
-Even this simple template uses a number of built

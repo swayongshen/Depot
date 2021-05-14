@@ -8,13 +8,20 @@ Depot::Application.configure do
   config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.smtp_settings = {
-    address:
-      "smtp.gmail.com",
+    address: "mail.wright.com.sg",
     port: 587,
-    domain: "gmail.com",
-    authentication: "plain",
+    domain: "wright.com.sg",
+    authentication: "login",
     user_name: ENV["GMAIL_USERNAME"],
     password: ENV["GMAIL_PASSWORD"],
-    enable_starttls_auto: true
+    enable_starttls_auto: true,
+
   }
+
+  # :address => "mail.wright.com.sg",
+  #   :port => 587,
+  #   :domain => "mail.wright.com.sg",
+  #   :authentication => :login,
+  #   :enable_starttls_auto => true,
+  #   :openssl_verify_mode => 'none'
 end

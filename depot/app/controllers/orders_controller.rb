@@ -1,17 +1,19 @@
 class OrdersController < ApplicationController
   include CurrentCart
-  skip_before_action :authenticate_user!
+  before_action :authenticate_user!, only: [:index, :show]
   before_action :set_cart, only: [:new, :create]
   before_action :ensure_cart_isnt_empty, only: :new
   before_action :set_order, only: %i[ show edit update destroy ]
 
   # GET /orders or /orders.json
   def index
-    @orders = Order.all
+    @orders = Order.includes(line_items: [product: [:user]])
+                   .where(line_items: { products: { users: current_user} })
   end
 
   # GET /orders/1 or /orders/1.json
   def show
+    @orders = Order.find_by(id: params[:id])
   end
 
   # GET /orders/new
@@ -82,4 +84,9 @@ class OrdersController < ApplicationController
         redirect_to store_index_url, notice: 'Your cart is empty'
       end
     end
+
+  def invalid_order
+    logger.error "Attempted to access invalid order #{params[:id]}"
+    redirect_to orders_url, notice: 'Invalid order'
+  end
 end
