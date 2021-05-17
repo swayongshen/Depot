@@ -8,6 +8,7 @@ environment.plugins.append('Provide',
         $: 'jquery/src/jquery',
         jquery: 'jquery/src/jquery',
         jQuery: 'jquery/src/jquery',
+        moment: 'moment/moment'
     })
 )
 

@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %><% flash.each do |type, message| %><%= message %><% end %></p>
 <h1>Your Products</h1>
 <table id="products">
   <%= render @products %>

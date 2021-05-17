@@ -1,0 +1,26 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+(Browse products) as (UC1)
+(Select products to purchase) as (UC2)
+(Create order) as (UC3)
+(Add product) as (UC4)
+(List sold products) as (UC5)
+(Delete product) as (UC6)
+(Update product info) as (UC7)
+(View orders awaiting shipment) as (UC8)
+(Mark orders as shipped) as (UC9)
+actor Seller
+actor Buyer
+Seller --> (UC4)
+Seller --> (UC5)
+Seller --> (UC6)
+Seller --> (UC7)
+Seller --> (UC8)
+Seller --> (UC9)
+Buyer --> (UC1)
+Buyer --> (UC2)
+Buyer --> (UC3)
+
+
+@enduml

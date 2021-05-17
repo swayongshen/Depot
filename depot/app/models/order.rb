@@ -24,4 +24,24 @@ class Order < ApplicationRecord
     line_items.each { |item| sum += item.total_price}
     sum
   end
+
+  def ordered_line_items_of_user(user_id)
+    line_items.includes(product: [:user])
+              .where(products: { users: user_id })
+  end
+
+  def is_user_products_shipped?(user_id)
+    ordered_line_items_of_user(user_id).all? {|item| item.shipped?}
+  end
+
+  def mark_user_products_shipped(user_id)
+    ordered_line_items_of_user(user_id).each do |item|
+      item.shipped = true
+      unless item.save
+        return false
+      end
+    end
+    true
+  end
+
 end

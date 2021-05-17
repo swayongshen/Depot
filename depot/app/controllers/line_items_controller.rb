@@ -37,6 +37,7 @@ class LineItemsController < ApplicationController
         format.json { render :show, status: :created, location: @line_item }
       else
         format.html { render :new, status: :unprocessable_entity }
+        format.js
         format.json { render json: @line_item.errors, status: :unprocessable_entity }
       end
     end
@@ -67,11 +68,11 @@ class LineItemsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_line_item
-      @line_item = LineItem.find(params[:id])
+      @line_item = LineItem.select("*").where(id: params[:id]).first
     end
 
     # Only allow a list of trusted parameters through.
     def line_item_params
-      params.require(:line_item).permit(:product_id)
+      params.require(:line_item).permit(:product_id, :shipped)
     end
 end

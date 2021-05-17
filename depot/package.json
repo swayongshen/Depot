@@ -2,13 +2,18 @@
   "name": "depot",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.3.0",
+    "datatables.net-bs4": "^1.10.24",
+    "datatables.net-fixedcolumns-bs4": "^3.3.2",
     "jquery": "^3.6.0",
     "jquery-ui": "^1.12.1",
+    "moment": "^2.29.1",
     "popper.js": "^1.16.1",
+    "tempusdominus-bootstrap-4": "^5.39.0",
     "turbolinks": "^5.2.0",
     "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12"

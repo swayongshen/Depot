@@ -1,7 +1,11 @@
-$("#main").html(`<p id="notice"><%= notice %></p>\
+var body = `
+<p id="notice"><%= notice %></p>
 <h1>Your Products</h1>
 <table id="products">
-  <%= render @products %>
+  <%=j render @products %>
 </table>
 <br />
-<%= link_to 'New product', new_product_path %>")`);
+<%= link_to 'New product', new_product_path %>
+`
+
+$("#main").html(body);

@@ -42,17 +42,17 @@ class ProductsController < ApplicationController
   def update
     respond_to do |format|
       if @product.update(product_params)
+        @products = Product.all
+        ActionCable.server.broadcast 'products',
+                                     html: render_to_string('store/index', layout: false)
         set_products
         format.html { redirect_to @product, notice: "Product was successfully updated." }
         format.js { render 'update.js.erb'}
         format.json { render :show, status: :ok, location: @product }
 
-        @products = Product.all
-        ActionCable.server.broadcast 'products',
-                                     html: render_to_string('store/index', layout: false)
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.js{render :edit, status: :unprocessable_entity }
+        format.js{ render :edit, status: :unprocessable_entity }
         format.json { render json: @product.errors, status: :unprocessable_entity }
       end
     end
@@ -60,19 +60,37 @@ class ProductsController < ApplicationController
 
   # DELETE /products/1 or /products/1.json
   def destroy
-    @product.destroy
     respond_to do |format|
-      set_products
-      format.html { redirect_to products_url, notice: "Product was successfully destroyed." }
-      format.js { render 'update.js.erb'}
-      format.json { head :no_content }
+      is_destroyed = @product.destroy
+      user_products_getter = Thread.new { Thread.current[:output] = set_products }
+      user_products_getter.join
+      @products = user_products_getter[:output]
+
+      if is_destroyed
+        format.html { redirect_to products_url, notice: "Product was successfully deleted." }
+        format.js { render 'update.js.erb'}
+        format.json { head :no_content }
+      else
+        @notice = "Cannot delete product, it is being referenced by a line item."
+        flash.now[:notice] = @notice
+        format.html { redirect_to products_url }
+        format.js { render 'update.js.erb', status: :unprocessable_entity }
+      end
     end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
-      @product = Product.find(params[:id])
+      begin
+        @product = Product.find(params[:id])
+        if @product.user != current_user
+          unauthorised_access
+        end
+      rescue ActiveRecord::RecordNotFound
+        unauthorised_access
+      end
+
     end
 
     def set_products
@@ -82,5 +100,11 @@ class ProductsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def product_params
       params.require(:product).permit(:title, :description, :image_url, :price)
+    end
+
+    def unauthorised_access
+      flash[:error] = "You are not authorised to handle product id:#{params[:id]}"
+      flash.keep
+      redirect_to products_url
     end
 end

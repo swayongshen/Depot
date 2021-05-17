@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Buyer name:</strong>
   <%= @order.name %>
 </p>
 
@@ -20,7 +20,9 @@
   <%= @order.pay_type %>
 </p>
 
-<b>Items:</b>
-<div id="items">
-  <%= render(@order.line_items) %>
-</div>
+<b>Ordered items:</b>
+<table id="items">
+  <%= render(@order.ordered_line_items_of_user(current_user)) %>
+</table>
+
+<%= button_to "Back", orders_path, class: "back-btn", method: :get%>

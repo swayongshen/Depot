@@ -1,0 +1,30 @@
+<div class="modal fade" id="filter-form-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Filters</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+        <%= form_with url: filter_orders_path, method: :get do |form| %>
+          <div class="modal-body">
+            <div class="field">
+              <%= form.label 'User' %>
+              <%= form.text_field :email, size: 40 %>
+            </div>
+
+            <div class="field">
+              <%= form.label 'Delivery address' %>
+              <%= form.text_area :address, rows: 3, cols: 40 %>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <%= form.submit 'Filter', class: "btn btn-primary" %>
+          </div>
+        <% end %>
+
+    </div>
+  </div>
+</div>

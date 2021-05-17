@@ -1,22 +1,77 @@
+<script type="text/javascript">
+    function search() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("search");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("table");
+        tr = table.getElementsByTagName("tr");
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+
+
+    $(document).ready(function() {
+        $('#orders-datatable').DataTable({
+            scrollY:        "300px",
+            scrollX:        true,
+            scrollCollapse: true,
+            paging:         false,
+            "bLengthChange": false,
+            "dom": '<"toolbar">frtip'
+        });
+
+        $("div.toolbar").html('<button type="button" class="btn btn-light" data-toggle="modal" data-target="#filter-form-modal">Filter orders</button>');
+    });
+
+</script>
+<style>
+  .wrapper {
+      width: 800px;
+      height: 800px;
+  }
+
+  .toolbar {
+  }
+
+  th, td { white-space: nowrap; }
+
+</style>
+
 <p id="notice"><%= notice %></p>
 
-<h1>Your Orders</h1>
+<div class="wrapper">
+  <div class="row">
+    <div class="col-sm-8"><h1>Your Orders</h1></div>
+  </div>
 
-<table id="example" class="table table-striped table-bordered" style="width:100%">
-  <thead>
-  <tr>
-    <th>Id</th>
-    <th>User</th>
-    <th>Payment Type</th>
-    <th>Delivery Address</th>
-    <th>Date</th>
-    <th>Shipped?</th>
-  </tr>
-  </thead>
+  <table id="orders-datatable" class="table table-striped table-bordered" style="width:100%">
+    <thead>
+    <tr>
+      <th class="header">Id</th>
+      <th class="header">User</th>
+      <th class="header">Payment Type</th>
+      <th class="header">Delivery Address</th>
+      <th class="header">Date</th>
+      <th class="header">Shipped?</th>
+    </tr>
+    </thead>
 
-  <tbody id="orders">
-    <%= render(@orders) %>
-  </tbody>
-</table>
+    <tbody id="orders">
+      <%= render @orders %>
+    </tbody>
+  </table>
+</div>
 
-<br>
+
+
+<%= render 'orders/filter_form'%>
