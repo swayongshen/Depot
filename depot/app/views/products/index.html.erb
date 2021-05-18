@@ -1,9 +1,10 @@
-<p id="notice"><%= notice %><% flash.each do |type, message| %><%= message %><% end %></p>
-<div class="row"><h1 id="title">Your Products</h1></div>
-<div class="row">
-  <table id="products">
+<h1 id="title">Your Products</h1>
+<div class="row" id="products">
+  <table>
     <%= render @products %>
   </table>
   <br />
+</div>
+<div class="row">
   <%= link_to 'New product', new_product_path %>
 </div>

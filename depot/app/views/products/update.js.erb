@@ -1,11 +1,15 @@
 var body = `
-<p id="notice"><%= notice %></p>
-<h1>Your Products</h1>
-<table id="products">
-  <%=j render @products %>
-</table>
-<br />
-<%= link_to 'New product', new_product_path %>
+<p id="notice"><%= notice %><% flash.each do |type, message| %><%= message %><% end %></p>
+<div class="row"><h1 id="title">Your Products</h1></div>
+<div class="row" id="products">
+    <table>
+      <%= render @products %>
+    </table>
+    <br />
+</div>
+<div class="row">
+  <%= link_to 'New product', new_product_path %>
+</div>
 `
 
 $("#main").html(body);

@@ -19,11 +19,26 @@
 #title {
   margin-top: -30px;
   margin-bottom: 50px;
+  border-bottom: 1px solid black
 }
+
+#navbar {
+  margin-right: -35px;
+
+  .nav-link {
+    font-size: 20px !important;
+  }
+
+  #navbarSupportedContent {
+    margin-left: 25px;
+  }
+}
+
 
 #wrapper {
   padding-left: 250px;
   transition: all 0.4s ease 0s;
+  margin-top: 85px;
 }
 
 #sidebar-wrapper {
@@ -31,13 +46,13 @@
   margin-top: -30px;
   left: 250px;
   width: 250px;
+  min-width: 250px;
   background: #CCC;
   position: fixed;
   height: 100%;
   overflow-y: auto;
   z-index: 1000;
   transition: all 0.4s ease 0s;
-  align-content: center;
 }
 
 .sidebar-heading {
@@ -46,7 +61,7 @@
   margin-bottom: 25px;
 }
 
-#cart, #navigation-links {
+#navigation-links {
   width: 80%;
   margin: 0 auto;
   margin-bottom: 25px;

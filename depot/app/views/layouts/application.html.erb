@@ -9,9 +9,17 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script>
-        setTimeout(function(){
-            $("#flash_notice").add("#flash_error").fadeTo(2000, 0).animate({ height: "0px" }, 500)
-        },4000);
+      $(document).ready(function() {
+          setTimeout(function(){
+              $("#flash_notice").add("#flash_error").fadeTo(2000, 0).animate({ height: "0px" }, 500)
+          },4000);
+
+          $('.navbar-nav li').click(function() {
+              $('.navbar-nav li').removeClass('active');
+              $(this).addClass('active');
+          });
+      })
+
     </script>
     <%= stylesheet_link_tag "https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css" %>
     <%- stylesheet_link_tag "https://datatables.net/release-datatables/extensions/FixedColumns/css/fixedColumns.bootstrap4.css" %>
@@ -24,38 +32,17 @@
   <body class ='<%= controller.controller_name %>'>
     <% if alert %>
       <p class="alert"><%= alert %></p>
-
     <% end %>
     <div id="wrapper" class="d-flex container-fluid">
+      <%= render 'layouts/navbar' %>
       <div class="row">
         <div id="sidebar-wrapper" class="bg-light col-md-2">
-            <div class="sidebar-heading"><%= image_tag 'logo.svg', alt: 'The Pragmatic Bookshelf', align: "middle" %></div>
-            <div id="cart">
-              <% if @cart %>
-                <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
-                  <%= render(@cart) %>
-                <% end %>
-              <% end %>
-            </div>
-            <div id="navigation-links" class="list-group list-group-flush">
-              <% if current_user.present? %>
-                <li class="list-group-item list-group-item-action bg-light"><b>Welcome: <%= current_user.name %></b></li>
-              <% end %>
-              <li class="list-group-item list-group-item-action bg-light"><%= link_to 'Home', store_index_url %></li>
-              <% if current_user.present? %>
-                <li class="list-group-item list-group-item-action bg-light"><%= link_to 'Received orders', orders_url %></li>
-                <li class="list-group-item list-group-item-action bg-light"><%= link_to 'Manage products', products_url %></li>
-                <li class="list-group-item list-group-item-action bg-light"><%= link_to 'Account settings', edit_user_registration_path %></li>
-                <li class="list-group-item list-group-item-action bg-light"><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
-              <% else %>
-                <li class="list-group-item list-group-item-action bg-light"><%= link_to 'Login', new_user_session_path %></li>
-                <li class="list-group-item list-group-item-action bg-light"><%= link_to 'Sign up', new_user_registration_path %></li>
-              <% end %>
-            </div>
+            <%= render 'layouts/sidebar' %>
         </div>
-        <div id="page-content-wrapper">
-          <div class="container-fluid col-md-10">
+        <div class="col-md-10">
+          <div id="page-content-wrapper">
             <div id="main">
+              <p id="notice"><%= notice %><% flash.each do |type, message| %><%= message %><% end %></p>
               <%= yield %>>
             </div>
           </div>

@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  include CurrentCart
+  before_action :set_cart, only: [:index, :show, :new, :edit]
   before_action :set_product, only: %i[ show edit update destroy ]
 
   # GET /products or /products.json

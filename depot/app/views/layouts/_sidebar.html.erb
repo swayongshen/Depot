@@ -1,0 +1,10 @@
+<div class="sidebar-heading"><%= image_tag 'logo.svg', alt: 'The Pragmatic Bookshelf', align: "middle" %></div>
+<div id="cart">
+  <% if @cart %>
+    <%= render @cart %>
+  <% else %>
+    <script>
+      $('#sidebar-wrapper').addClass("collapse");
+    </script>
+  <% end %>
+</div>
