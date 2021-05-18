@@ -1,7 +1,7 @@
 class OrdersController < ApplicationController
   include CurrentCart
   before_action :authenticate_user!, only: [:index, :show, :update, :ship]
-  before_action :set_cart, only: [:new, :create, :index]
+  before_action :set_cart
   before_action :ensure_cart_isnt_empty, only: :new
   before_action :set_order, only: %i[ show edit update destroy ship]
 
@@ -13,7 +13,8 @@ class OrdersController < ApplicationController
       @orders = Order.where(nil)
       @orders = @orders.where(email: params[:email]) if params[:email].present?
       @orders = @orders.where(address: params[:address]) if params[:address].present?
-      unless params[:email].present? or params[:address].present?
+      @orders = @orders.where(name: params[:name]) if params[:name].present?
+      unless params[:email].present? or params[:address].present? or params[:name].present?
         @orders = Order.none
       end
       puts @orders

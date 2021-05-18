@@ -1,6 +1,7 @@
 <tr id="order">
   <td><%= link_to order.id, order, class: 'a-primary'%></td>
   <td><%= order.email %></td>
+  <td><%= order.name %></td>
   <td><%= order.pay_type %></td>
   <td><%= order.address %></td>
   <td><%= order.created_at.strftime("%m/%d/%Y") %></td>

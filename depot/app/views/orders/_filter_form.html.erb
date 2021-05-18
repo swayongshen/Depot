@@ -15,6 +15,11 @@
             </div>
 
             <div class="field">
+              <%= form.label 'Name' %>
+              <%= form.text_field :name %>
+            </div>
+
+            <div class="field">
               <%= form.label 'Delivery address' %>
               <%= form.text_area :address, rows: 3, cols: 40 %>
             </div>

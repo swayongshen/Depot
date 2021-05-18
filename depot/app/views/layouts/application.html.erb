@@ -18,6 +18,11 @@
               $('.navbar-nav li').removeClass('active');
               $(this).addClass('active');
           });
+
+          $("#notice").fadeTo(2000, 500).slideUp(500, function(){
+              $("#notice").slideUp(500);
+          });
+
       })
 
     </script>
@@ -42,7 +47,12 @@
         <div class="col-md-10">
           <div id="page-content-wrapper">
             <div id="main">
-              <p id="notice"><%= notice %><% flash.each do |type, message| %><%= message %><% end %></p>
+              <% if notice %>
+                <div class="alert alert-info" role="alert" id="notice">
+                  <button type="button" class="close" data-dismiss="alert">x</button>
+                  <strong><%= notice %></strong>
+                </div>
+              <% end %>
               <%= yield %>>
             </div>
           </div>
