@@ -21,6 +21,6 @@ Seller --> (UC9)
 Buyer --> (UC1)
 Buyer --> (UC2)
 Buyer --> (UC3)
-
+Seller --> Buyer
 
 @enduml

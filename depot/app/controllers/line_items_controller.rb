@@ -68,7 +68,7 @@ class LineItemsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_line_item
-      @line_item = LineItem.select("*").where(id: params[:id]).first
+      @line_item = LineItem.select(:id, :shipped, :product_id, :order_id, :quantity).where(id: params[:id]).first
     end
 
     # Only allow a list of trusted parameters through.

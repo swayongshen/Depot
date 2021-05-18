@@ -22,28 +22,25 @@
 
     $(document).ready(function() {
         $('#orders-datatable').DataTable({
-            scrollY:        "300px",
+            scrollY:        true,
             scrollX:        true,
             scrollCollapse: true,
             paging:         false,
             "bLengthChange": false,
-            "dom": '<"toolbar">frtip'
+            "dom": '<"toolbar">frtip',
         });
 
         $("div.toolbar").html('<button type="button" class="btn btn-light" data-toggle="modal" data-target="#filter-form-modal">Filter orders</button>');
+        $("div.toolbar").css({"float": "left", "margin-right": "25px", "margin-top": "-5px"});
     });
 
 </script>
 <style>
-  .wrapper {
-      width: 800px;
-      height: 800px;
-  }
-
-  .toolbar {
-  }
 
   th, td { white-space: nowrap; }
+  .wrapper {
+      height: 1000px;
+  }
 
 </style>
 
@@ -51,7 +48,7 @@
 
 <div class="wrapper">
   <div class="row">
-    <div class="col-sm-8"><h1>Your Orders</h1></div>
+    <h1 id="title">Your Orders</h1>
   </div>
 
   <table id="orders-datatable" class="table table-striped table-bordered" style="width:100%">

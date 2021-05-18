@@ -28,7 +28,7 @@ class ProductsController < ApplicationController
       if @product.save
         set_products
         format.html { redirect_to @product, notice: "Product was successfully created." }
-        format.js { render 'update.js.erb'}
+        format.js { render :update}
         format.json { render :show, status: :created, location: @product }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -94,12 +94,12 @@ class ProductsController < ApplicationController
     end
 
     def set_products
-      @products = Product.includes('user').where(users: current_user)
+      @products = Product.includes('user').where(users: current_user).order(:title)
     end
 
     # Only allow a list of trusted parameters through.
     def product_params
-      params.require(:product).permit(:title, :description, :image_url, :price)
+      params.require(:product).permit(:title, :description, :image_url, :price, :product_type)
     end
 
     def unauthorised_access

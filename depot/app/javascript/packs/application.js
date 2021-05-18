@@ -7,11 +7,8 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
-import "./bootstrap"
-import '../../../node_modules/jquery-ui/ui/effects/effect-blind'
+import "bootstrap"
 import "@fortawesome/fontawesome-free/js/all"
-require( 'datatables.net-bs4' )
-require('datatables.net-fixedcolumns-bs4')
 
 import $ from 'jquery';
 global.$ = jQuery;
