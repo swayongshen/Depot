@@ -8,6 +8,8 @@
     </tr>
   </table>
 </div>
-<%= button_to 'Checkout', new_order_path, method: :get, class:"checkout-btn"%>
-<%= button_to 'Empty cart', cart, method: :delete, class: "empty-cart-btn",
-              data: { confirm: 'Are you sure?' } %>
+<div class="cart-buttons">
+</div>
+  <%= button_to 'Checkout', new_order_path, method: :get, class:"checkout-btn"%>
+  <%= button_to 'Empty cart', cart, method: :delete, class: "empty-cart-btn",
+                data: { confirm: 'Are you sure?' } %>
