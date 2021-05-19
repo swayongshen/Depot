@@ -8,8 +8,6 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.3.0",
     "bootstrap": "4.6.0",
-    "datatables.net-bs4": "^1.10.24",
-    "datatables.net-fixedcolumns-bs4": "^3.3.2",
     "jquery": "^3.6.0",
     "moment": "^2.29.1",
     "popper.js": "^1.16.1",

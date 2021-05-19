@@ -59,5 +59,15 @@ body.products {
     padding-left: 200px;
     width: 200px;
   }
+
+  .dataTables_filter {
+    justify-content: start;
+    float: left !important;
+  }
+
+  #add_product_btn {
+    color: grey;
+  }
+
 }
 

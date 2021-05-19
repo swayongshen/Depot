@@ -1,10 +1,33 @@
+<script>
+  $(document).ready(function() {
+      $('#products-datatable').DataTable({
+          scrollY: true,
+          scrollX: true,
+          scrollCollapse: true,
+          paging: false,
+          "bLengthChange": false,
+          "dom": '<"toolbar">frtip'
+      });
+
+    $("div.toolbar").html(`<%= link_to new_product_path, class:"btn", id: "add-product-btn" do %>
+      <i class='fas fa-plus-square'></i> Add product
+    <% end %>`);
+    $("div.toolbar").css({"float": "left", "margin-right": "25px", "margin-top": "-5px", "color":"white"});
+  });
+
+</script>
 <h1 id="title">Your Products</h1>
-<div class="row" id="products">
-  <table>
+<table id="products-datatable" class="table table-striped" style="width:100%">
+  <thead>
+  <tr>
+    <th class="header">Id</th>
+    <th class="header">Image</th>
+    <th class="header">Title</th>
+    <th class="header">Description</th>
+    <th class="header">Actions</th>
+  </tr>
+  </thead>
+  <tbody>
     <%= render @products %>
-  </table>
-  <br />
-</div>
-<div class="row">
-  <%= link_to 'New product', new_product_path %>
-</div>
+  </tbody>
+</table>
