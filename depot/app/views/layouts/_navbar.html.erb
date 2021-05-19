@@ -2,7 +2,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item"><button class="btn" id="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></button></li>
-      <li class="nav-item"><%= link_to 'Home', store_index_url, class: "nav-link" %></li>
+      <li class="nav-item"><%= link_to 'Shop', store_index_url, class: "nav-link" %></li>
       <% if current_user.present? %>
         <li class="nav-item"><%= link_to 'Orders', orders_url, class: "nav-link"%></li>
         <li class="nav-item"><%= link_to 'Products', products_url, class: "nav-link" %></li>

@@ -2,7 +2,16 @@
 <p>
   This is just to let you know that we've shipped some items from your recent order:
 </p>
+
 <table>
-  <tr><th colspan="2">Qty</th><th>Title</th><th>Price</th></tr>
+  <thead>
+  <tr>
+    <th>Qty</th>
+    <th>Title</th>
+    <th>Total price</th>
+  </tr>
+  </thead>
+  <tbody>
   <%= render @order.ordered_line_items_of_user(@seller) -%>
+  </tbody>
 </table>
