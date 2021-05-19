@@ -23,6 +23,10 @@
               $("#notice").slideUp(500);
           });
 
+          $("#alert").fadeTo(2000, 500).slideUp(500, function(){
+              $("#alert").slideUp(500);
+          });
+
           $("#menu-toggle").on("click", function (e) {
               e.preventDefault();
               $("#wrapper").toggleClass("toggled");
@@ -39,16 +43,21 @@
   </head>
 
   <body class ='<%= controller.controller_name %>'>
-    <% if alert %>
-      <p class="alert"><%= alert %></p>
-    <% end %>
     <div id="wrapper" class="d-flex">
       <div id="sidebar-wrapper" class="bg-light border-right">
-          <%= render 'layouts/sidebar' %>
+        <%= render 'layouts/sidebar' %>
       </div>
         <div id="page-content-wrapper">
-          <%= render 'layouts/navbar' %>
+          <div id="navbar">
+            <%= render 'layouts/navbar' %>
+          </div>
           <div class="container-fluid" id="main">
+            <% if alert %>
+              <div class="alert alert-danger" role="alert" id="alert">
+                <button type="button" class="close" data-dismiss="alert">x</button>
+                <strong class="alert-content"><%= alert %></strong>
+              </div>
+            <% end %>
             <% if notice %>
               <div class="alert alert-info" role="alert" id="notice">
                 <button type="button" class="close" data-dismiss="alert">x</button>
