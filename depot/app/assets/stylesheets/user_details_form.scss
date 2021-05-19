@@ -7,27 +7,27 @@
 #user_form {
   margin-top: 15%;
   padding-left: 150px;
+
+  .card-body {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: $light !important;
+  }
+
+  #login-form {
+    height: 200px;
+  }
+
+  #signup-form {
+    height: 280px;
+  }
 }
 
 body.registrations, body.sessions {
   background-image: url(login_background.jpg);
 }
 
-#login-form.card-body {
-  height: 200px;
-  margin-top: auto;
-  margin-bottom: auto;
-  width: 400px;
-  background-color: $light !important;
-}
-
-#signup-form.card-body {
-  height: 300px;
-  margin-top: auto;
-  margin-bottom: auto;
-  width: 400px;
-  background-color: $light !important;
-}
 
 .input-group-prepend span {
   width: 50px;
