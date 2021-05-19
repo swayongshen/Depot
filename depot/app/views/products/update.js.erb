@@ -1,15 +1,36 @@
+$('#products-datatable').DataTable({
+    scrollY: true,
+    scrollX: true,
+    scrollCollapse: true,
+    paging: false,
+    "bLengthChange": false,
+    "dom": '<"toolbar">frtip',
+    fixedColumns: {
+        leftColumns: 1
+    }
+});
+
+$("div.toolbar").html(`<%= link_to new_product_path, class:"btn", id: "add-product-btn" do %>
+<i class='fas fa-plus-square'></i> Add product
+<% end %>`);
+$("div.toolbar").css({"float": "left", "margin-right": "25px", "margin-top": "-5px", "color":"white"});
+
 var body = `
-<p id="notice"><%= notice %><% flash.each do |type, message| %><%= message %><% end %></p>
-<div class="row"><h1 id="title">Your Products</h1></div>
-<div class="row" id="products">
-    <table>
-      <%= render @products %>
-    </table>
-    <br />
-</div>
-<div class="row">
-  <%= link_to 'New product', new_product_path %>
-</div>
+<h1 id="title">Your Products</h1>
+<table id="products-datatable" class="table table-striped" style="width:100%">
+  <thead>
+  <tr>
+    <th class="header">Id</th>
+    <th class="header">Image</th>
+    <th class="header">Title</th>
+    <th class="header">Description</th>
+    <th class="header">Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+    <%= render @products %>
+  </tbody>
+</table>
 `
 
 $("#main").html(body);

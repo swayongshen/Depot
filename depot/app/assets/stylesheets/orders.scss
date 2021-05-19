@@ -1,14 +1,22 @@
 // Place all the styles related to the Orders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.a-primary {
-  color: dodgerblue;
-}
+body.orders {
+  .a-primary {
+    color: dodgerblue;
+  }
 
-.back-btn {
-  margin-top: 10px;
-}
+  .back-btn {
+    margin-top: 10px;
+  }
 
-.form-group#pay_type_select {
-  width: 200px;
+  .form-group#pay_type_select {
+    width: 200px;
+  }
+
+  .modal-body {
+    .field {
+      max-width: 300px;
+    }
+  }
 }

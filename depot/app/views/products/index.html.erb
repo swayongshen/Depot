@@ -1,12 +1,15 @@
 <script>
   $(document).ready(function() {
       $('#products-datatable').DataTable({
-          scrollY: true,
-          scrollX: true,
+          scrollY: "800px",
+          scrollX: "800px",
           scrollCollapse: true,
           paging: false,
           "bLengthChange": false,
-          "dom": '<"toolbar">frtip'
+          "dom": '<"toolbar">frtip',
+          fixedColumns: {
+              leftColumns: 2
+          }
       });
 
     $("div.toolbar").html(`<%= link_to new_product_path, class:"btn", id: "add-product-btn" do %>
@@ -17,12 +20,12 @@
 
 </script>
 <h1 id="title">Your Products</h1>
-<table id="products-datatable" class="table table-striped" style="width:100%">
+<table id="products-datatable" class="table table-striped table-bordered" style="width:100%">
   <thead>
   <tr>
     <th class="header">Id</th>
-    <th class="header">Image</th>
     <th class="header">Title</th>
+    <th class="header">Image</th>
     <th class="header">Description</th>
     <th class="header">Actions</th>
   </tr>

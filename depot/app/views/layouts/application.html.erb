@@ -34,12 +34,17 @@
       })
 
     </script>
+
     <%= stylesheet_link_tag "https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css" %>
-    <%- stylesheet_link_tag "https://datatables.net/release-datatables/extensions/FixedColumns/css/fixedColumns.bootstrap4.css" %>
+    <%= stylesheet_link_tag "https://datatables.net/release-datatables/extensions/FixedColumns/css/fixedColumns.bootstrap4.css" %>
+    <%= stylesheet_link_tag "https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" %>
 
     <%= javascript_include_tag "https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js" %>
     <%= javascript_include_tag "https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js" %>
     <%= javascript_include_tag "https://datatables.net/release-datatables/extensions/FixedColumns/js/dataTables.fixedColumns.js" %>
+    <%= javascript_include_tag "https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" %>
+
+
   </head>
 
   <body class ='<%= controller.controller_name %>'>

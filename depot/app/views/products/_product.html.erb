@@ -3,10 +3,10 @@
     <%= link_to product.id, product %>
   </td>
   <td>
-    <%= image_tag(product.image_url, class: 'list_image') %>
-  </td>
-  <td class="list_description">
     <%= product.title %>
+  </td>
+  <td>
+    <%= image_tag(product.image_url, class: 'list_image') %>
   </td>
   <td>
     <%= truncate(strip_tags(product.description), length: 80) %>
