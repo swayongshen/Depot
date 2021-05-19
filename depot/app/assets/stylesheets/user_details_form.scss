@@ -1,0 +1,67 @@
+/* Author: Mutiullah Samim*/
+
+@import url('https://fonts.googleapis.com/css?family=Numans');
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+
+#user_form {
+  margin-top: 15%;
+  padding-left: 150px;
+}
+
+body.registrations, body.sessions {
+  background-image: url(login_background.jpg);
+}
+
+#login-form.card-body {
+  height: 200px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 400px;
+  background-color: $light !important;
+}
+
+#signup-form.card-body {
+  height: 300px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 400px;
+  background-color: $light !important;
+}
+
+.input-group-prepend span {
+  width: 50px;
+  color: black;
+  border:0 !important;
+}
+
+input:focus{
+  box-shadow: 0 0 0 0 !important;
+}
+
+.remember input
+{
+  width: 20px;
+  height: 20px;
+  margin-left: 15px;
+  margin-right: 5px;
+}
+
+.submit_btn {
+  color: white;
+  background-color: $dark;
+  width: 100px;
+}
+
+.submit_btn:hover {
+  color: black;
+  background-color: white;
+}
+
+.links{
+  color: white;
+}
+
+.links a{
+  margin-left: 4px;
+}
