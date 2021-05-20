@@ -10,7 +10,7 @@ class OrdersController < ApplicationController
   def filter
     puts "FILTER"
     respond_to do |format|
-      @orders = Order.where(nil)
+      @orders = User.get_all_orders_by_user(current_user)
       @orders = @orders.where(email: params[:email]) if params[:email].present?
       @orders = @orders.where(address: params[:address]) if params[:address].present?
       @orders = @orders.where(name: params[:name]) if params[:name].present?
@@ -143,7 +143,7 @@ class OrdersController < ApplicationController
     end
 
     def unauthorised_access
-      flash[:error] = "You are not authorised to handle order id:#{params[:id]}"
+      flash[:alert] = "You are not authorised to handle order id:#{params[:id]}"
       flash.keep
       redirect_to orders_url
     end

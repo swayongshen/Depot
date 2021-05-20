@@ -8,6 +8,19 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+<!--    Datatable stylesheets-->
+    <%= stylesheet_link_tag "https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css" %>
+    <%= stylesheet_link_tag "https://datatables.net/release-datatables/extensions/FixedColumns/css/fixedColumns.bootstrap4.css" %>
+<!--    Datetimepicker stylesheet-->
+    <%= stylesheet_link_tag "https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" %>
+
+<!--    Datatable scripts-->
+    <%= javascript_include_tag "https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js" %>
+    <%= javascript_include_tag "https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js" %>
+    <%= javascript_include_tag "https://datatables.net/release-datatables/extensions/FixedColumns/js/dataTables.fixedColumns.js" %>
+<!--    Datetimepicker script-->
+    <%= javascript_include_tag "https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" %>
     <script>
       $(document).ready(function() {
           setTimeout(function(){
@@ -26,25 +39,8 @@
           $("#alert").fadeTo(2000, 500).slideUp(500, function(){
               $("#alert").slideUp(500);
           });
-
-          $("#menu-toggle").on("click", function (e) {
-              e.preventDefault();
-              $("#wrapper").toggleClass("toggled");
-          });
       })
-
     </script>
-
-    <%= stylesheet_link_tag "https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css" %>
-    <%= stylesheet_link_tag "https://datatables.net/release-datatables/extensions/FixedColumns/css/fixedColumns.bootstrap4.css" %>
-    <%= stylesheet_link_tag "https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" %>
-
-    <%= javascript_include_tag "https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js" %>
-    <%= javascript_include_tag "https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js" %>
-    <%= javascript_include_tag "https://datatables.net/release-datatables/extensions/FixedColumns/js/dataTables.fixedColumns.js" %>
-    <%= javascript_include_tag "https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" %>
-
-
   </head>
 
   <body class ='<%= controller.controller_name %>'>
@@ -56,7 +52,7 @@
           <div id="navbar">
             <%= render 'layouts/navbar' %>
           </div>
-          <div class="container-fluid" id="main">
+          <div class="container" id="main">
             <% if alert %>
               <div class="alert alert-danger" role="alert" id="alert">
                 <button type="button" class="close" data-dismiss="alert">x</button>

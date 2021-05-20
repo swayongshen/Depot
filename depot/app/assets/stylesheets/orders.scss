@@ -6,8 +6,16 @@ body.orders {
     color: dodgerblue;
   }
 
+  table.dataTable td, th {
+    font-size: 110%;
+  }
+
   .back-btn {
     margin-top: 10px;
+  }
+
+  #filter-form-button {
+    margin-bottom: 20px;
   }
 
   .form-group#pay_type_select {

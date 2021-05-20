@@ -4,22 +4,22 @@
           scrollY: "800px",
           scrollX: "800px",
           scrollCollapse: true,
-          paging: false,
-          "bLengthChange": false,
-          "dom": '<"toolbar">frtip',
+          responsive: true,
           fixedColumns: {
               leftColumns: 2
           }
       });
-
-    $("div.toolbar").html(`<%= link_to new_product_path, class:"btn", id: "add-product-btn" do %>
-      <i class='fas fa-plus-square'></i> Add product
-    <% end %>`);
-    $("div.toolbar").css({"float": "left", "margin-right": "25px", "margin-top": "-5px", "color":"white"});
   });
 
 </script>
 <h1 id="title">Your Products</h1>
+<div class="row justify-content-end">
+  <%= button_to new_product_path, class:"btn btn-success", id: "add-product-btn", method: :get do %>
+    <i class='fas fa-plus-square'></i> New
+  <% end %>
+
+</div>
+
 <table id="products-datatable" class="table table-striped table-bordered" style="width:100%">
   <thead>
   <tr>

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :orders do
+  resources :orders, except: [:edit, :destroy, :update] do
     member do
       get 'ship'
     end

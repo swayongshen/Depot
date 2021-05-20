@@ -1,9 +1,9 @@
 <tr id="order">
   <td><%= link_to order.id, order, class: 'a-primary'%></td>
-  <td><%= order.email %></td>
-  <td><%= order.name %></td>
+  <td><%= order.email.truncate(30) %></td>
+  <td><%= order.name.truncate(30) %></td>
   <td><%= order.pay_type %></td>
-  <td><%= order.address %></td>
+  <td><%= order.address.truncate(30) %></td>
   <td><%= order.created_at.strftime("%m/%d/%Y") %></td>
   <td id="shipped"><%= order.is_user_products_shipped?(current_user) ? "Shipped" : button_to('Ship', ship_order_url(order), method: :get, remote: true)  %></td>
 </tr>

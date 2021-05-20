@@ -48,7 +48,7 @@ class ProductsController < ApplicationController
                                      html: render_to_string('store/index', layout: false)
         set_products
         format.html { redirect_to @product, notice: "Product was successfully updated." }
-        format.js { render 'update.js.erb'}
+        format.js { render 'update.js.erb', notice: "Product was successfully updated." }
         format.json { render :show, status: :ok, location: @product }
 
       else
@@ -100,11 +100,11 @@ class ProductsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def product_params
-      params.require(:product).permit(:title, :description, :image_url, :price, :product_type)
+      params.require(:product).permit(:title, :description, :image_url, :product_image, :price, :product_type)
     end
 
     def unauthorised_access
-      flash[:error] = "You are not authorised to handle product id:#{params[:id]}"
+      flash[:alert] = "You are not authorised to handle product id:#{params[:id]}"
       flash.keep
       redirect_to products_url
     end

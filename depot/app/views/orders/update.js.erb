@@ -1,1 +1,16 @@
+$('#orders-datatable').DataTable({
+    scrollY:        true,
+    scrollX:        true,
+    scrollCollapse: true,
+    paging:         false,
+    "bLengthChange": false,
+    "dom": '<"toolbar">frtip',
+    fixedColumns: {
+        leftColumns: 2
+    }
+});
+
+$("div.toolbar").html('<button type="button" class="btn btn-light" data-toggle="modal" data-target="#filter-form-modal">Filter orders</button>');
+$("div.toolbar").css({"float": "left", "margin-right": "25px", "margin-top": "-5px"});
+
 $("#orders").html("<%=j render(@orders) %>");
