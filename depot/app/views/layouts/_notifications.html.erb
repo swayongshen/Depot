@@ -1,0 +1,12 @@
+<% if alert %>
+  <div class="alert alert-danger" role="alert" id="alert">
+    <button type="button" class="close" data-dismiss="alert">x</button>
+    <strong class="alert-content"><%= alert %></strong>
+  </div>
+<% end %>
+<% if notice %>
+  <div class="alert alert-info" role="alert" id="notice">
+    <button type="button" class="close" data-dismiss="alert">x</button>
+    <strong class="notice-content"><%= notice %></strong>
+  </div>
+<% end %>
