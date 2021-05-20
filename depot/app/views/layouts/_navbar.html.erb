@@ -5,6 +5,7 @@
       <% if current_user.present? %>
         <li class="nav-item"><%= link_to 'Orders', orders_url, class: "nav-link"%></li>
         <li class="nav-item"><%= link_to 'Products', products_url, class: "nav-link" %></li>
+        <li class="nav-item"><%= link_to 'Genres', genres_url, class: "nav-link" %></li>
         <li class="nav-item"><%= link_to 'Account', edit_user_registration_path, class: "nav-link" %></li>
         <li class="nav-item"><%= link_to 'Logout', destroy_user_session_path, class: "nav-link", method: :delete %></li>
       <% else %>

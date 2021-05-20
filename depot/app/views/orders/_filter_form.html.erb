@@ -21,14 +21,11 @@
         <%= form_with url: filter_orders_path, method: :get do |form| %>
           <div class="modal-body container">
             <div class="row">
-              <div class="field col-md-12">
+              <div class="field col-md-6">
                 <%= form.label 'Buyer email' %>
                 <%= form.text_field :email, size: 40, class: "form-control" %>
               </div>
-            </div>
-
-            <div class="row">
-              <div class="field col-md-12">
+              <div class="field col-md-6">
                 <%= form.label 'Buyer name' %>
                 <%= form.text_field :name, class: "form-control" %>
               </div>
@@ -38,20 +35,20 @@
               <div class="col-md-6">
                 <div class="field">
                   <%= form.label 'From:' %>
-                  <input id="datepicker-from" width="200" />
+                  <input id="datepicker-from" width="100%" />
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="field">
                   <%= form.label 'To:' %>
-                  <input id="datepicker-to" width="200" />
+                  <input id="datepicker-to" width="100%" />
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="field col-md-12">
                 <%= form.label 'Delivery address' %>
-                <%= form.text_area :address, rows: 3, cols: 40 %>
+                <%= form.text_field :address, class: "form-control" %>
               </div>
             </div>
           </div>

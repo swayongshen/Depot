@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  resources :genres do
+    collection do
+      get '/', to: 'genres#index'
+      match '/new', to: 'genres#create', via: [:get, :post]
+    end
+    member do
+      get '/', to: 'genres#show'
+      match '/edit', to: 'genres#edit', via: [:get, :patch]
+      match '/delete', to: 'genres#delete', via: [:get, :delete]
+    end
+  end
+
   resources :orders, except: [:edit, :destroy, :update] do
     member do
       get 'ship'

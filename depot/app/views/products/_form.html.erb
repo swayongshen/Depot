@@ -1,9 +1,7 @@
-
 <%= form_with(model: product, local: false) do |form| %>
   <% if product.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
-
       <ul>
         <% product.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -22,18 +20,13 @@
     <%= form.text_area :description, rows: 10, cols: 60, class:"form-control" %>
   </div>
 
-  <div class="field">
-    <strong><%= form.label :image_url %></strong>
-    <%= form.text_field :image_url, class:"form-control" %>
+  <div class="field image-carousel form-carousel">
+    <%= render 'products/image_carousel' %>
   </div>
 
   <div class="field">
-    <%= image_tag @product.product_image if @product.product_image.attached? %>
-  </div>
-
-  <div class="field">
-    <%= form.label :product_image %>
-    <%= form.file_field :product_image %>
+    <%= form.label 'Product images: click to download' %>
+    <%= form.file_field :product_images, multiple: true %>
   </div>
 
 

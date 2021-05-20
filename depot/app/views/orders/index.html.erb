@@ -1,13 +1,22 @@
 <script type="text/javascript">
     $(document).ready(function() {
-        $('#orders-datatable').DataTable({
+        var table = $('#orders-datatable').DataTable({
             scrollY:        true,
             scrollX:        true,
             scrollCollapse: true,
             fixedColumns: {
                 leftColumns: 2
+            },
+            select: {
+                style: 'single',
+                selector: 'td:not(:last-child)'
             }
         });
+        table.on('select', (e, dt, type, index) => {
+            console.log(table.rows(index).data().toArray()[0][0])
+            var order_id = table.rows(index).data().toArray()[0][0]
+            window.location.replace('<%= orders_url %>' + '/' + order_id);
+        })
     });
 
 </script>
@@ -29,6 +38,7 @@
         <th class="header">Name</th>
         <th class="header">Payment Type</th>
         <th class="header">Delivery Address</th>
+        <th class="header">Amount</th>
         <th class="header">Date</th>
         <th class="header">Shipped?</th>
       </tr>

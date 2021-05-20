@@ -71,7 +71,7 @@ class OrdersController < ApplicationController
       if @order.update(order_params)
         format.html { redirect_to @order, notice: "Order was successfully updated." }
         @orders = User.get_all_orders_by_user(current_user)
-        format.js
+        format.js { render 'update', notice: "Order was successfully updated." }
         format.json { render :show, status: :ok, location: @order }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -86,7 +86,7 @@ class OrdersController < ApplicationController
         OrderMailer.shipped(@order, current_user).deliver_later
         format.html { redirect_to @order, notice: "Successfully marked order as shipped." }
         @orders = User.get_all_orders_by_user(current_user)
-        format.js { render 'update' }
+        format.js { render 'update', notice: "Successfully marked order as shipped." }
         format.json { render :show, status: :ok, location: @order }
       else
         format.html { render :edit, status: :unprocessable_entity }

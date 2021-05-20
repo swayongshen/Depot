@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   include CurrentCart
-  before_action :set_product, only: %i[ show edit update destroy ]
+  before_action :set_product_and_check_owner, only: %i[ edit update destroy ]
+  before_action :set_product, only: [:show]
 
   # GET /products or /products.json
   def index
@@ -48,7 +49,7 @@ class ProductsController < ApplicationController
                                      html: render_to_string('store/index', layout: false)
         set_products
         format.html { redirect_to @product, notice: "Product was successfully updated." }
-        format.js { render 'update.js.erb', notice: "Product was successfully updated." }
+        format.js
         format.json { render :show, status: :ok, location: @product }
 
       else
@@ -82,7 +83,7 @@ class ProductsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_product
+    def set_product_and_check_owner
       begin
         @product = Product.find(params[:id])
         if @product.user != current_user
@@ -91,7 +92,14 @@ class ProductsController < ApplicationController
       rescue ActiveRecord::RecordNotFound
         unauthorised_access
       end
+    end
 
+    def set_product
+      begin
+        @product = Product.find(params[:id])
+      rescue ActiveRecord::RecordNotFound
+        unauthorised_access
+      end
     end
 
     def set_products
@@ -100,7 +108,7 @@ class ProductsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def product_params
-      params.require(:product).permit(:title, :description, :image_url, :product_image, :price, :product_type)
+      params.require(:product).permit(:title, :description, :price, :product_type, :product_images => [])
     end
 
     def unauthorised_access

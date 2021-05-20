@@ -4,6 +4,6 @@
   <tr>
 <% end %>
   <td class="item-description"><%= line_item.quantity %>&times;</td>
-  <td class="item-description"><%= line_item.product.title.truncate(20) %></td>
+  <td class="item-description"><%= line_item.product.title.truncate(40) %></td>
   <td class="item_price"><%= number_to_currency(line_item.total_price) %></td>
 </tr>

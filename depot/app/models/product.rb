@@ -1,8 +1,9 @@
 class Product < ApplicationRecord
   # Each product can be referenced by many line_items.
-  has_one_attached :product_image
+  has_many_attached :product_images
   has_many :line_items, dependent: :delete_all
   has_many :orders, through: :line_items
+  belongs_to :genre
   belongs_to :user
 
   validates :title, :description, :image_url, presence: true
@@ -16,20 +17,29 @@ class Product < ApplicationRecord
   validate :acceptable_image
 
   def acceptable_image
-    return unless product_image.attached?
+    return unless product_images.attached?
 
-    unless product_image.byte_size <= 2.megabyte
-      errors.add(:product_image, "is too big")
+    unless product_images.all? { |image| image.byte_size <= 3.megabyte }
+      errors.add(:product_images, "contain an image that is too big")
     end
 
     acceptable_types = ["image/jpeg", "image/png", "image/jpg"]
-    unless acceptable_types.include?(product_image.content_type)
-      errors.add(:main_image, "must be a JPG, JPEG or PNG")
+    unless product_images.all? { |image| acceptable_types.include?(image.content_type) }
+      errors.add(:product_images, "must be a JPG, JPEG or PNG")
     end
   end
 
   def self.get_all_products_less_than_ten_dollars
     Product.where("price < ?", 10)
+  end
+
+  def get_shortened_description
+    if description.length > 300
+      short_description = description[0..297] + '...'
+      ActionController::Base.helpers.sanitize(short_description)
+    else
+      description
+    end
   end
 
   private

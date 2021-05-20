@@ -1,6 +1,8 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.scss.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
 
 body.products {
   #new-product-form {
@@ -15,6 +17,38 @@ body.products {
   #add-product-btn {
     margin-bottom: 10px;
     margin-right: 20px;
+  }
+
+  .image-carousel {
+    .carousel-control {
+      background: black;
+    }
+
+
+    .product-image {
+      width: 100%;
+      margin: auto;
+    }
+
+    .no-image-message {
+      border: 1px solid black;
+      text-align: center
+    }
+
+    .no-image-message h3 {
+      vertical-align: middle;
+    }
+  }
+
+  .product-display {
+    #seller-line {
+      border-bottom: 1px solid black;
+    }
+    .add-to-cart-btn {
+      background-color: $dark;
+      border-color: white;
+      color: $light;
+    }
   }
 
 }

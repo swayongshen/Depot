@@ -1,0 +1,26 @@
+
+
+<h1 id="title">Product catalogue</h1>
+<% cache @products do %>
+  <% i = 0 %>
+  <% @products.each do |product| %>
+<!--    For every 3 products, create new row-->
+    <% if i % 3 == 0 %>
+      <div class="row px-5 pt-5">
+        <% cache product do %>
+          <%= render 'store/product_card', product: product %>
+        <% end %>
+<!--      Last product of row closes row div-->
+    <% elsif (i + 1) % 3 == 0 %>
+      <% cache product do %>
+        <%= render 'store/product_card', product: product %>
+      <% end %>
+      </div>
+    <% else %>
+      <% cache product do %>
+        <%= render 'store/product_card', product: product %>
+      <% end %>
+    <% end %>
+    <% i += 1 %>
+  <% end %>
+<% end %>

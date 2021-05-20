@@ -6,10 +6,17 @@
     <%= product.title %>
   </td>
   <td>
-    <%= image_tag(product.image_url, class: 'list_image') %>
+    <% if product.product_images.attached? %>
+      <%= image_tag(product.product_images.first.variant(resize_to_limit: [200, nil]), class: 'list_image') %>
+    <% else %>
+      No image
+    <% end %>
   </td>
   <td>
-    <%= truncate(strip_tags(product.description), length: 80) %>
+    <%= truncate(strip_tags(product.description), length: 400) %>
+  </td>
+  <td>
+    $<%= number_with_precision(product.price, precision: 2, delimiter: ',') %>
   </td>
   <td class="list_actions">
     <%= link_to 'Show', product %><br/>

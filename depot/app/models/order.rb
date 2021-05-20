@@ -19,9 +19,9 @@ class Order < ApplicationRecord
     end
   end
 
-  def total_price
+  def total_price(user_id)
     sum = 0
-    line_items.each { |item| sum += item.total_price}
+    ordered_line_items_of_user(user_id).each { |item| sum += item.total_price}
     sum
   end
 
