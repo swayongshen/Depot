@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_20_084126) do
+ActiveRecord::Schema.define(version: 2021_05_21_042823) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,15 @@ ActiveRecord::Schema.define(version: 2021_05_20_084126) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "business_permits", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "permit_number"
+    t.integer "#<ActiveRecord::ConnectionAdapters::PostgreSQL::TableDefinition"
+    t.integer "user_id"
+    t.index ["permit_number"], name: "index_business_permits_on_permit_number", unique: true
+  end
+
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -54,6 +63,13 @@ ActiveRecord::Schema.define(version: 2021_05_20_084126) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "description"
     t.index ["name"], name: "index_genres_on_name", unique: true
+  end
+
+  create_table "genres_products", id: false, force: :cascade do |t|
+    t.bigint "product_id", null: false
+    t.bigint "genre_id", null: false
+    t.index ["genre_id"], name: "index_genres_products_on_genre_id"
+    t.index ["product_id"], name: "index_genres_products_on_product_id"
   end
 
   create_table "line_items", force: :cascade do |t|
@@ -84,8 +100,8 @@ ActiveRecord::Schema.define(version: 2021_05_20_084126) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
-    t.string "product_type"
     t.integer "genre_id"
+    t.string "image_url"
   end
 
   create_table "users", force: :cascade do |t|

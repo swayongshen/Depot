@@ -44,7 +44,18 @@ class GenresController < ApplicationController
 
 
   def delete
-
+    if request.delete?
+      @genre.destroy
+      respond_to do |format|
+        format.html { redirect_to genres_url, notice: "Genre was successfully deleted." }
+        format.json { head :no_content }
+      end
+    elsif request.get?
+      respond_to do |format|
+        format.html { render :'genres/delete'}
+        format.js
+      end
+    end
   end
 
   def show

@@ -15,7 +15,6 @@
             window.location.replace('<%= genres_url %>' + '/' + genre_id);
         })
     });
-
 </script>
 <table id="genres-datatable" class="table table-striped table-bordered" style="width:100%">
   <thead>
@@ -35,9 +34,10 @@
       <td>
         <%= link_to 'Show', genre %><br/>
         <%= link_to 'Edit', edit_genre_path(genre) %><br/>
-        <%= link_to 'Destroy', delete_genre_path(genre) %>
+        <%= link_to 'Delete', delete_genre_path(genre), remote:true %>
       </td>
     </tr>
     <% end %>
   </tbody>
 </table>
+<div class="delete-modal-wrapper"></div>

@@ -5,9 +5,16 @@
 @import "bootstrap/scss/variables";
 
 body.products {
-  #new-product-form {
+  #product-form-wrapper {
     padding-left: 200px;
     width: 200px;
+    margin-bottom: 10%
+  }
+
+  #form {
+    .submit-btn {
+      margin-top: 3%
+    }
   }
 
   #add-product-btn {
@@ -19,8 +26,6 @@ body.products {
     .carousel-control {
       background: black;
     }
-
-
     .product-image {
       width: 100%;
       margin: auto;

@@ -2,6 +2,7 @@ class ProductsController < ApplicationController
   include CurrentCart
   before_action :set_product_and_check_owner, only: %i[ edit update destroy ]
   before_action :set_product, only: [:show]
+  before_action :set_genres, only: [:edit, :new]
 
   # GET /products or /products.json
   def index
@@ -53,6 +54,7 @@ class ProductsController < ApplicationController
         format.json { render :show, status: :ok, location: @product }
 
       else
+        set_genres
         format.html { render :edit, status: :unprocessable_entity }
         format.js{ render :edit, status: :unprocessable_entity }
         format.json { render json: @product.errors, status: :unprocessable_entity }
@@ -102,18 +104,28 @@ class ProductsController < ApplicationController
       end
     end
 
+    def set_genres
+      @genres = Genre.all
+    end
+
     def set_products
       @products = Product.includes('user').where(users: current_user).order(:title)
     end
 
     # Only allow a list of trusted parameters through.
     def product_params
-      params.require(:product).permit(:title, :description, :price, :product_type, :product_images => [])
+      params_filter_empty_genre
+      params.require(:product).permit(:title, :description, :price, :product_images => [], :genres => [])
     end
 
     def unauthorised_access
       flash[:alert] = "You are not authorised to handle product id:#{params[:id]}"
       flash.keep
       redirect_to products_url
+    end
+
+    def params_filter_empty_genre
+      filtered_genre_ids = params[:product][:genres].select{ |genre| genre != "" }
+      params[:product][:genres] = Genre.where(id: filtered_genre_ids).to_a
     end
 end

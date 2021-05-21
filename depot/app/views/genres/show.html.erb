@@ -1,2 +1,8 @@
-<h1>Genres#show</h1>
-<p>Find me in app/views/genres/show.html.erb</p>
+<h1 id="title">Genre: <%= @genre.name %></h1>
+<div class="row">
+  <div class="col-md-12">
+    <h4>Description</h4>
+    <p><%= @genre.description %></p>
+    <%= link_to 'Back to all genres', genres_path, method: :get %>
+  </div>
+</div>

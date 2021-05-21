@@ -9,7 +9,8 @@
 # encoding: utf-8
 Product.delete_all
 User.delete_all
-User.create!(name: 'Test', email: 'Test@test.com', password:'123456')
+BusinessPermit.create!(permit_id: "12345")
+BusinessPermit.first.User.create!(name: 'Test', email: 'Test@test.com', password:'123456')
 User.first.products.create!(title: 'Rails, Angular, Postgres, and Bootstrap',
   description:
     %{<p>

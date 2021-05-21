@@ -6,44 +6,13 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'true' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'true' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-<!--    Datatable stylesheets-->
-    <%#= stylesheet_link_tag "https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css" %>
-    <%#= stylesheet_link_tag "https://datatables.net/release-datatables/extensions/FixedColumns/css/fixedColumns.bootstrap4.css" %>
-    <%#= stylesheet_link_tag "https://cdn.datatables.net/select/1.3.3/css/select.dataTables.min.css"%>
-<!--    Datetimepicker stylesheet-->
+<!--    Datetime picker-->
     <%= stylesheet_link_tag "https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" %>
-
-<!--    Datatable scripts-->
-    <%#= javascript_include_tag "https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js" %>
-    <%#= javascript_include_tag "https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js" %>
-    <%#= javascript_include_tag "https://datatables.net/release-datatables/extensions/FixedColumns/js/dataTables.fixedColumns.js" %>
-    <%#= javascript_include_tag "https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js" %>
-<!--    Datetimepicker script-->
     <%= javascript_include_tag "https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" %>
 
-    <script>
-      $(document).ready(function() {
-          setTimeout(function(){
-              $("#flash_notice").add("#flash_error").fadeTo(2000, 0).animate({ height: "0px" }, 500)
-          },4000);
-
-          $('.navbar-nav li').click(function() {
-              $('.navbar-nav li').removeClass('active');
-              $(this).addClass('active');
-          });
-
-          $("#notice").fadeTo(2000, 500).slideUp(500, function(){
-              $("#notice").slideUp(500);
-          });
-
-          $("#alert").fadeTo(2000, 500).slideUp(500, function(){
-              $("#alert").slideUp(500);
-          });
-      })
-    </script>
   </head>
 
   <body class ='<%= controller.controller_name %>'>

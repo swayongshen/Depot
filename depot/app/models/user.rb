@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :products, dependent: :delete_all
   has_many :line_items, through: :products
   has_many :orders, through: :line_items
+  has_one :business_permit
 
   def self.get_all_orders_by_user(user_id)
     Order.includes(line_items: [product: [:user]])

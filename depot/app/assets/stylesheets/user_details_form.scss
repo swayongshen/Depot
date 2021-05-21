@@ -20,7 +20,7 @@
   }
 
   #signup-form {
-    height: 360px;
+    height: 400px;
   }
 }
 
@@ -47,7 +47,7 @@ input:focus{
   margin-right: 5px;
 }
 
-.submit_btn {
+.btn.submit_btn {
   color: white;
   background-color: $dark;
   width: 100px;

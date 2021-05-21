@@ -1,3 +1,9 @@
+<script>
+  $(document).ready(() => {
+      $('.select-genre').select2()
+  })
+</script>
+
 <%= form_with(model: product, local: false) do |form| %>
   <% if product.errors.any? %>
     <div id="error_explanation">
@@ -20,20 +26,11 @@
     <%= form.text_area :description, rows: 10, cols: 60, class:"form-control" %>
   </div>
 
-  <div class="field image-carousel form-carousel">
-    <%= render 'products/image_carousel' %>
-  </div>
-
-  <div class="field">
-    <%= form.label 'Product images: click to download' %>
-    <%= form.file_field :product_images, multiple: true %>
-  </div>
-
 
   <div class="row">
     <div class="field col-md-6">
-      <strong><%= form.label :product_type %></strong>
-      <%= form.text_field :product_type, class:"form-control" %>
+      <strong><%= form.label :genres %></strong>
+      <%= form.select :genres, @genres.map{|genre| [genre.name, genre]}, {}, class: "select-genre form-control", multiple: true %>
     </div>
     <div class="field col-md-6">
       <strong><%= form.label :price %></strong>
@@ -41,9 +38,20 @@
     </div>
   </div>
 
+  <div class="field image-carousel form-carousel">
+    <%= render 'products/image_carousel' %>
+  </div>
+
+  <div class="field">
+    Product images: click to download
+  </div>
+
+  <div class="field">
+    <%= form.file_field :product_images, multiple: true %>
+  </div>
 
 
   <div class="actions">
-    <%= form.submit class: "btn btn-secondary" %>
+    <%= form.submit class: "btn btn-secondary submit-btn" %>
   </div>
 <% end %>
