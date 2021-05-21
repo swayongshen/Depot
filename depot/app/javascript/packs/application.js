@@ -3,14 +3,20 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-import Rails from "@rails/ujs"
-import Turbolinks from "turbolinks"
-import * as ActiveStorage from "@rails/activestorage"
-import "channels"
-import 'css/site'
+require("@rails/ujs").start()
+require("turbolinks").start()
+require("@rails/activestorage").start()
+require("channels")
 import "@fortawesome/fontawesome-free/js/all"
+import "bootstrap"
+import "./src/application.scss"
+window.$ = window.jQuery = window.jquery = jQuery;
 
 
-Rails.start()
-Turbolinks.start()
-ActiveStorage.start()
+require( 'jszip' );
+require( 'datatables.net-bs4' );
+require( 'datatables.net-buttons-bs4' );
+require( 'datatables.net-buttons/js/buttons.html5.js' );
+require( 'datatables.net-fixedcolumns-bs4' );
+require( 'datatables.net-select-bs4' );
+

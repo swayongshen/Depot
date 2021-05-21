@@ -17,11 +17,4 @@ Depot::Application.configure do
     enable_starttls_auto: true,
     openssl_verify_mode: 'none'
   }
-
-  # :address => "mail.wright.com.sg",
-  #   :port => 587,
-  #   :domain => "mail.wright.com.sg",
-  #   :authentication => :login,
-  #   :enable_starttls_auto => true,
-  #   :openssl_verify_mode => 'none'
 end
