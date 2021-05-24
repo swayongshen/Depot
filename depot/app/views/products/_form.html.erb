@@ -1,7 +1,7 @@
 <script>
   $(document).ready(() => {
       $('.select-genre').select2({
-          tags: true
+          tags: true,
       })
   })
 </script>
@@ -41,6 +41,14 @@
       <strong><%= form.label :price %></strong>
       <%= form.text_field :price, class:"form-control" %>
     </div>
+  </div>
+
+  <strong><label>Best seller rankings</label></strong>
+  <div id="best-seller-rankings">
+    <%= form.fields_for :best_seller_rankings do |ranking| %>
+      <%= render 'best_seller_ranking_fields', f: ranking %>
+    <% end %>
+    <%= link_to_add_association 'Add ranking', form, :best_seller_rankings %>
   </div>
 
   <div class="field image-carousel form-carousel">

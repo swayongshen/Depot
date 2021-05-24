@@ -5,6 +5,9 @@ class Product < ApplicationRecord
   has_many :orders, through: :line_items
   has_many :genres
   belongs_to :user
+  has_many :best_seller_rankings
+  accepts_nested_attributes_for :best_seller_rankings, allow_destroy: true,
+                                reject_if: lambda {|ranking| ranking[:category].blank? or ranking[:rank].blank? }
 
   validates :title, :description, presence: true
   validates :price, numericality: {greater_than_or_equal_to: 0.01}

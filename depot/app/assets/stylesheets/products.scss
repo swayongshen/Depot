@@ -15,6 +15,10 @@ body.products {
     .submit-btn {
       margin-top: 3%
     }
+
+    #best-seller-rankings {
+      margin-bottom: 20px;
+    }
   }
 
   #add-product-btn {
@@ -26,20 +30,19 @@ body.products {
     .carousel-control {
       background: black;
     }
+
     .product-image {
       width: 100%;
       margin: auto;
     }
-    .no-image-message h3 {
-      vertical-align: middle;
+
+    .carousel.no-image {
+      background: $dark;
+      height: 100%;
     }
   }
 
-  .carousel.no-image {
-    background: $dark;
-    height: 100%;
-  }
-
+  //For show product page
   .product-display {
     #seller-line {
       border-bottom: 1px solid black;

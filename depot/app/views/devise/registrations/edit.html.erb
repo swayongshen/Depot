@@ -14,6 +14,16 @@
           <strong><label>Name</label></strong>
           <%= f.text_field :name, class: "form-control", placeholder: "Name" %>
         </div>
+
+        <div id="business-permit">
+          <%= f.fields_for :business_permit do |permit| %>
+            <div class="field">
+              <strong><%= permit.label 'Business permit number' %></strong>
+              <%= permit.text_field :permit_number, autocomplete:"business-permit" %>
+            </div>
+          <% end %>
+        </div>
+
         <div class="field form-group">
           <strong><label>New password</label></strong>
           <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>

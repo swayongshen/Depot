@@ -9,7 +9,7 @@ entity users {
     * created_at
 }
 
-entity business_permit {
+entity business_permits {
     * id <<PK>>
     * permit_number
     * user_id <<FK>>
@@ -24,6 +24,13 @@ entity products {
     image
     * updated_at
     * created_at
+}
+
+entity best_seller_rankings {
+    * id <<PK>>
+    * product_id <<FK>>
+    * category
+    * ranking
 }
 
 entity line_items {
@@ -61,7 +68,7 @@ entity genres {
 }
 
 users }o--|| products
-users |o--|| business_permit
+users |o--|| business_permits
 products }o--|| line_items
 line_items |o--o{ carts
 line_items |o--o{ orders

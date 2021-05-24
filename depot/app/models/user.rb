@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :line_items, through: :products
   has_many :orders, through: :line_items
   has_one :business_permit
+  accepts_nested_attributes_for :business_permit, allow_destroy: true, reject_if: :all_blank
 
   def self.get_all_orders_by_user(user_id)
     Order.includes(line_items: [product: [:user]])
