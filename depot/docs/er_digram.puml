@@ -9,6 +9,12 @@ entity users {
     * created_at
 }
 
+entity business_permit {
+    * id <<PK>>
+    * permit_number
+    * user_id <<FK>>
+}
+
 entity products {
     * id <<PK>>
     * user_id <<FK>>
@@ -47,12 +53,21 @@ entity orders {
     * created_at
 }
 
+entity genres {
+    * id <<PK>>
+    * name
+    * description
+    * product_id <<FK>>
+}
+
 users }o--|| products
+users |o--|| business_permit
 products }o--|| line_items
 line_items |o--o{ carts
 line_items |o--o{ orders
 orders }o--o{ users
 orders }o--o{ products
+products }o--|| genres
 
 
 

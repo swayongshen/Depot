@@ -5,8 +5,6 @@ body.orders {
   .a-primary {
     color: dodgerblue;
   }
-
-
   .back-btn {
     margin-top: 10px;
   }
@@ -17,5 +15,15 @@ body.orders {
 
   .form-group#pay_type_select {
     width: 200px;
+  }
+
+  .order-show {
+    .order-ship {
+      width: 300px;
+      .order-ship-btn {
+        margin-top: 10px;
+        float: right;
+      }
+    }
   }
 }

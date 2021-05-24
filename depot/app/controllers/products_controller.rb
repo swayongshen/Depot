@@ -132,11 +132,13 @@ class ProductsController < ApplicationController
       redirect_to products_url
     end
 
+    # Use new to create new genres and attach it to the new product and save it together with the product
     def new_clean_up_genre_param
       filter_genres_empty_string = params[:product][:genre_names].select{ |genre_name| genre_name != "" }
       @product.new_genres_if_not_exist(filter_genres_empty_string)
     end
 
+    # Creates and saves genres and attach them to the product.
     def update_clean_up_genre_aram
       filter_genres_empty_string = params[:product][:genre_names].select{ |genre_name| genre_name != "" }
       @product.create_genres_if_not_exist(filter_genres_empty_string)

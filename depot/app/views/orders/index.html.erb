@@ -1,30 +1,30 @@
 <script type="text/javascript">
-    $(document).ready(function() {
-        var table = $('#orders-datatable').DataTable({
-            scrollY:        "600px",
-            scrollX:        true,
-            scrollCollapse: true,
-            fixedColumns: {
-                leftColumns: 2
-            },
-            select: {
-                style: 'single',
-                selector: 'td:not(:last-child)'
-            }
-        });
-        table.on('select', (e, dt, type, index) => {
-            console.log(table.rows(index).data().toArray()[0][0])
-            var order_id = table.rows(index).data().toArray()[0][0]
-            window.location.replace('<%= orders_url %>' + '/' + order_id);
-        })
-    });
+  $(document).ready(function() {
+      var table = $('#orders-datatable').DataTable({
+          scrollY:        "600px",
+          scrollX:        true,
+          scrollCollapse: true,
+          fixedColumns: {
+              leftColumns: 2
+          },
+          select: {
+              style: 'single',
+              selector: 'td:not(:last-child)'
+          }
+      });
+      table.on('select', (e, dt, type, index) => {
+          console.log(table.rows(index).data().toArray()[0][0])
+          var order_id = table.rows(index).data().toArray()[0][0]
+          window.location.replace('<%= orders_url %>' + '/' + order_id);
+      })
+  });
 
 </script>
 <style>
   th, td { white-space: nowrap; }
 </style>
 
-<h1 id="title">Your Orders</h1>
+<h1 id="title">Your Received Orders</h1>
 <div class="row">
   <button type="button" id="filter-form-button" class="btn btn-light" data-toggle="modal" data-target="#filter-form-modal">Filter orders</button>
 </div>

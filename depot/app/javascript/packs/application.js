@@ -7,13 +7,13 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-import "@fortawesome/fontawesome-free/js/all"
-import "bootstrap"
 import "./src/application.scss"
-import "select2/dist/css/select2.css"
 window.$ = window.jQuery = window.jquery = jQuery;
 
-
+// Libraries
+import "@fortawesome/fontawesome-free/js/all"
+import "bootstrap"
+import "select2/dist/css/select2.css"
 require( 'jszip' );
 require( 'datatables.net-bs4' );
 require( 'datatables.net-buttons-bs4' );
@@ -21,6 +21,7 @@ require( 'datatables.net-buttons/js/buttons.html5.js' );
 require( 'datatables.net-fixedcolumns-bs4' );
 require( 'datatables.net-select-bs4' );
 require('select2');
+require("@nathanvda/cocoon")
 
 $(document).ready(function() {
     setTimeout(function(){
@@ -39,8 +40,6 @@ $(document).ready(function() {
     $("#alert").fadeTo(2000, 500).slideUp(500, function(){
         $("#alert").slideUp(500);
     });
-
 });
-
 
 
