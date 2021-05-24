@@ -88,7 +88,12 @@ tbody {
   min-height: 100vh;
   margin-left: -15rem;
   transition: margin 0.25s ease-out;
-  margin-top: 3%
+  margin-top: 3%;
+}
+
+.cart-button {
+  width: 100%;
+  justify-content: center;
 }
 
 #sidebar-wrapper .sidebar-heading {

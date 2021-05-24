@@ -9,6 +9,12 @@ class Order < ApplicationRecord
     "Purchase order" => 2
   }
 
+  enum ship_status: {
+    "Any" => 1,
+    "Shipped" => true,
+    "Not shipped" => false,
+  }
+
   validates :name, :address, :email, presence: true
   validates :pay_type, inclusion: pay_types.keys
 

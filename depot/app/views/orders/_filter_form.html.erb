@@ -1,9 +1,11 @@
 <script>
     $(document).ready(function() {
         $('#datepicker-from').datepicker({
+            format: 'yyyy-mm-dd',
             uiLibrary: 'bootstrap4'
         });
         $('#datepicker-to').datepicker({
+            format: 'yyyy-mm-dd',
             uiLibrary: 'bootstrap4'
         });
     });
@@ -35,14 +37,20 @@
               <div class="col-md-6">
                 <div class="field">
                   <%= form.label 'From:' %>
-                  <input id="datepicker-from" width="100%" />
+                  <%= form.text_field :from_date, id: "datepicker-from" %>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="field">
                   <%= form.label 'To:' %>
-                  <input id="datepicker-to" width="100%" />
+                  <%= form.text_field :to_date, id: "datepicker-to" %>
                 </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="field col-md-12">
+                <label>Ship status</label>
+                <%= form.select :ship_status, Order.ship_statuses.keys, {}, class: "form-control" %>
               </div>
             </div>
             <div class="row">
@@ -57,7 +65,6 @@
             <%= form.submit 'Filter', class: "btn btn-primary" %>
           </div>
         <% end %>
-
     </div>
   </div>
 </div>

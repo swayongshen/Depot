@@ -1,8 +1,17 @@
 <h1 id="title">Genre: <%= @genre.name %></h1>
-<div class="row">
+<div class="row genre-display-container h-50">
   <div class="col-md-12">
-    <h4>Description</h4>
-    <p><%= @genre.description %></p>
-    <%= link_to 'Back to all genres', genres_path, method: :get %>
+    <div class="card">
+      <div class="card-header">
+        Genre description
+      </div>
+      <div class="card-body">
+        <p><%= @genre.description %></p>
+      </div>
+
+    </div>
   </div>
+</div>
+<div class="row">
+  <%= button_to 'Back to genres', genres_path, method: :get %>
 </div>

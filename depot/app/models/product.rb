@@ -3,7 +3,7 @@ class Product < ApplicationRecord
   has_many_attached :product_images
   has_many :line_items, dependent: :delete_all
   has_many :orders, through: :line_items
-  has_and_belongs_to_many :genres
+  has_many :genres
   belongs_to :user
 
   validates :title, :description, presence: true
@@ -37,6 +37,28 @@ class Product < ApplicationRecord
     end
   end
 
+  def genres_if_not_exist(genre_names)
+    genre_array = []
+    genre_names.each do |genre_name|
+      genres_with_same_name = genres.where(name: genre_name.downcase)
+      # Should only have 1 record, if any.
+      if genres_with_same_name.size > 0
+        genre_array << genres_with_same_name.first
+      else
+        yield(genre_array, genre_name)
+      end
+    end
+    self.genres.replace(genre_array)
+  end
+
+  def new_genres_if_not_exist(genre_names)
+    genres_if_not_exist(genre_names) { |genre_array, genre_name| genre_array << genres.new(name: genre_name.downcase) }
+  end
+
+  def create_genres_if_not_exist(genre_names)
+    genres_if_not_exist(genre_names) { |genre_array, genre_name| genre_array << genres.create(name: genre_name.downcase) }
+  end
+
   private
   # ensure that there are no line items referencing this product
   def ensure_not_referenced_by_any_line_item
@@ -45,4 +67,5 @@ class Product < ApplicationRecord
       throw :abort
     end
   end
+
 end

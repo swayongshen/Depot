@@ -1,11 +1,10 @@
-
+<h1 id="title"><%= @product.title %></h1>
 <div class="row product-display">
   <div class="col-4 image-carousel">
     <%= render 'products/image_carousel' %>
   </div>
   <div class="col-8">
-    <h3><%= @product.title %></h3>
-    <p id="seller-line">Seller: <%= @product.user.name %></p>
+    <h5 id="seller-line">Seller: <%= @product.user.name %></h5>
     <p><%= sanitize(@product.description) %></p>
     <p class="btn w-100 px-4 text-center mx-auto">
       <%= button_to(line_items_path(product_id: @product), {remote: true, class: "btn btn-warning add-to-cart-btn"}) do %>

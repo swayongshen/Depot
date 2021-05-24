@@ -5,8 +5,6 @@ class OrdersController < ApplicationController
   before_action :ensure_cart_isnt_empty, only: :new
   before_action :set_order, only: %i[ show edit update destroy ship]
 
-
-
   def filter
     puts "FILTER"
     respond_to do |format|
@@ -14,10 +12,16 @@ class OrdersController < ApplicationController
       @orders = @orders.where(email: params[:email]) if params[:email].present?
       @orders = @orders.where(address: params[:address]) if params[:address].present?
       @orders = @orders.where(name: params[:name]) if params[:name].present?
-      unless params[:email].present? or params[:address].present? or params[:name].present?
+      @orders = @orders.where("created_at >= ?", params[:from_date].to_date) if params[:from_date].present?
+      @orders = @orders.where("created_at <= ?", params[:to_date].to_date) if params[:to_date].present?
+      if params[:ship_status].present? and params[:ship_status] != 1
+        wanted_orders = @orders.select {|order| !Order.ship_statuses[params[:ship_status]] ^ order.is_user_products_shipped?(current_user)}
+        wanted_order_ids = wanted_orders.map {|order| order.id}
+        @orders = @orders.where(id: wanted_order_ids)
+      end
+      if params.empty?
         @orders = Order.none
       end
-      puts @orders
       format.html { render :index }
       format.js
     end
@@ -123,7 +127,7 @@ class OrdersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def order_params
-      params.require(:order).permit(:name, :address, :email, :pay_type, :shipped)
+      params.require(:order).permit(:name, :address, :email, :pay_type, :ship_status, :to_date, :from_date)
     end
 
     def ensure_cart_isnt_empty
@@ -133,7 +137,7 @@ class OrdersController < ApplicationController
     end
 
     def filter_params
-      params.permit(:name, :address, :email, :pay_type, :shipped)
+      params.permit(:name, :address, :email, :pay_type, :shipped, :from)
     end
 
 

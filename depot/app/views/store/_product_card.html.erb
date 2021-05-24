@@ -1,7 +1,10 @@
 <script>
-    $('.product-card').on('click', () => {
+    $('.product-card').click(() => {
         window.location.replace('<%= product_url(product) %>');
     })
+    $('add-to-cart-btn').click((event) => {
+        event.stopPropagation();
+    });
 </script>
 <div class="col-md-4 mt-4 mt-sm-0 card-container product-card-container">
   <div class="card text-center p-4 pt-5 border-0 h-100 rounded-0 product-card">
@@ -11,7 +14,7 @@
       <p><%= product.get_shortened_description %></p>
       <span class="price">$<%= number_with_precision(product.price, precision: 2, delimiter: ',') %></span>
     </div>
-    <p class="btn w-100 px-4 text-center mx-auto">
+    <p class="btn w-100 px-4 text-center mx-auto add-to-cart-btn-wrapper">
       <%= button_to(line_items_path(product_id: product), {remote: true, class: "btn btn-warning add-to-cart-btn"}) do %>
         Add to cart <i class='fa fa-cart-plus' aria-hidden='true'></i>
       <% end %>

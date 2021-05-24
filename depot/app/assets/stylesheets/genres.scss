@@ -3,5 +3,13 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 body.genres {
+  #add-genre-btn {
+    margin-bottom: 10px;
+    margin-right: 20px;
+  }
+
+  .genre-display-container {
+    min-height: 200px;
+  }
 }
 

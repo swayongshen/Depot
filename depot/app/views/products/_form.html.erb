@@ -1,6 +1,8 @@
 <script>
   $(document).ready(() => {
-      $('.select-genre').select2()
+      $('.select-genre').select2({
+          tags: true
+      })
   })
 </script>
 
@@ -30,7 +32,10 @@
   <div class="row">
     <div class="field col-md-6">
       <strong><%= form.label :genres %></strong>
-      <%= form.select :genres, @genres.map{|genre| [genre.name, genre]}, {}, class: "select-genre form-control", multiple: true %>
+<!--      Options are all existing genre names and selected are current genres of the product-->
+      <%= form.select :genre_names,
+                      options_for_select(@genre_names, selected: @product.genres.map {|genre| genre.name}),
+                      {}, class: "select-genre form-control", multiple: true %>
     </div>
     <div class="field col-md-6">
       <strong><%= form.label :price %></strong>

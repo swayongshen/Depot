@@ -1,8 +1,8 @@
 <script>
   $(document).ready(function() {
       var table = $('#products-datatable').DataTable({
-          scrollY: "800px",
-          scrollX: "800px",
+          scrollY: "600px",
+          scrollX: true,
           scrollCollapse: true,
           responsive: true,
           fixedColumns: {
@@ -27,7 +27,6 @@
   <%= button_to new_product_path, class:"btn btn-success", id: "add-product-btn", method: :get do %>
     <i class='fas fa-plus-square'></i> New
   <% end %>
-
 </div>
 
 <div class="row">
@@ -44,7 +43,7 @@
       </tr>
       </thead>
       <tbody>
-      <%= render @products %>
+        <%= render @products %>
       </tbody>
     </table>
   </div>

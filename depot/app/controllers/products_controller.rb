@@ -1,8 +1,9 @@
 class ProductsController < ApplicationController
   include CurrentCart
+  skip_before_action :authenticate_user!, only: [:show]
   before_action :set_product_and_check_owner, only: %i[ edit update destroy ]
   before_action :set_product, only: [:show]
-  before_action :set_genres, only: [:edit, :new]
+  before_action :set_genre_names, only: [:edit]
 
   # GET /products or /products.json
   def index
@@ -11,11 +12,13 @@ class ProductsController < ApplicationController
 
   # GET /products/1 or /products/1.json
   def show
+    set_cart
   end
 
   # GET /products/new
   def new
     @product = Product.new
+    set_genre_names
   end
 
   # GET /products/1/edit
@@ -24,8 +27,9 @@ class ProductsController < ApplicationController
 
   # POST /products or /products.json
   def create
-    @product = Product.new(product_params)
+    @product = Product.new(product_params.except(:genre_names))
     @product.user_id = current_user.id
+    new_clean_up_genre_param
 
     respond_to do |format|
       if @product.save
@@ -44,7 +48,11 @@ class ProductsController < ApplicationController
   # PATCH/PUT /products/1 or /products/1.json
   def update
     respond_to do |format|
-      if @product.update(product_params)
+      update_clean_up_genre_aram
+      if @product.update(product_params.except(:genre_names))
+        puts "SAVED"
+        puts @product
+        puts @product.genres.size
         @products = Product.all
         ActionCable.server.broadcast 'products',
                                      html: render_to_string('store/index', layout: false)
@@ -54,7 +62,7 @@ class ProductsController < ApplicationController
         format.json { render :show, status: :ok, location: @product }
 
       else
-        set_genres
+        set_genre_names
         format.html { render :edit, status: :unprocessable_entity }
         format.js{ render :edit, status: :unprocessable_entity }
         format.json { render json: @product.errors, status: :unprocessable_entity }
@@ -104,8 +112,9 @@ class ProductsController < ApplicationController
       end
     end
 
-    def set_genres
-      @genres = Genre.all
+  # Get all unique genre names used by all products for the user to choose from
+    def set_genre_names
+      @genre_names = Genre.distinct.pluck(:name)
     end
 
     def set_products
@@ -114,8 +123,7 @@ class ProductsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def product_params
-      params_filter_empty_genre
-      params.require(:product).permit(:title, :description, :price, :product_images => [], :genres => [])
+      params.require(:product).permit(:title, :description, :price, :genre_names => [], :product_images => [])
     end
 
     def unauthorised_access
@@ -124,8 +132,13 @@ class ProductsController < ApplicationController
       redirect_to products_url
     end
 
-    def params_filter_empty_genre
-      filtered_genre_ids = params[:product][:genres].select{ |genre| genre != "" }
-      params[:product][:genres] = Genre.where(id: filtered_genre_ids).to_a
+    def new_clean_up_genre_param
+      filter_genres_empty_string = params[:product][:genre_names].select{ |genre_name| genre_name != "" }
+      @product.new_genres_if_not_exist(filter_genres_empty_string)
+    end
+
+    def update_clean_up_genre_aram
+      filter_genres_empty_string = params[:product][:genre_names].select{ |genre_name| genre_name != "" }
+      @product.create_genres_if_not_exist(filter_genres_empty_string)
     end
 end
