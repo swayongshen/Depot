@@ -1,15 +1,14 @@
 <script>
-    $('.product-card').click(() => {
-        window.location.replace('<%= product_url(product) %>');
-    })
-    $('add-to-cart-btn').click((event) => {
-        event.stopPropagation();
-    });
+  $(document).ready(() => {
+      $("#product-<%=product.id %>").click(() => {
+          window.location.replace('<%= product_url(product) %>');
+      })
+  })
 </script>
 <div class="col-md-4 mt-4 mt-sm-0 card-container product-card-container">
   <div class="card text-center p-4 pt-5 border-0 h-100 rounded-0 product-card">
     <%= image_tag product.product_images.first, class: "product-image" if product.product_images.attached? %>
-    <div class="card-body p-4 py-0 h-xs-440p">
+    <div class="card-body p-4 py-0 h-xs-440p product" id="product-<%= product.id %>">
       <h3><%= product.title %></h3>
       <p><%= product.get_shortened_description %></p>
       <span class="price">$<%= number_with_precision(product.price, precision: 2, delimiter: ',') %></span>

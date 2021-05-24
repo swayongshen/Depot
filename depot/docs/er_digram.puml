@@ -75,6 +75,7 @@ line_items |o--o{ orders
 orders }o--o{ users
 orders }o--o{ products
 products }o--|| genres
+products }o--|| best_seller_rankings
 
 
 

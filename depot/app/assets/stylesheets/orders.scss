@@ -5,9 +5,6 @@ body.orders {
   .a-primary {
     color: dodgerblue;
   }
-  .back-btn {
-    margin-top: 10px;
-  }
 
   #filter-form-button {
     margin-bottom: 20px;
@@ -18,12 +15,16 @@ body.orders {
   }
 
   .order-show {
-    .order-ship {
+    .order-ship-col {
       width: 300px;
       .order-ship-btn {
         margin-top: 10px;
         float: right;
       }
+    }
+
+    .orders-back-link {
+      margin-top: 50px;
     }
   }
 }

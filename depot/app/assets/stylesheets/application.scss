@@ -19,7 +19,7 @@
 @import "bootstrap/scss/variables";
 @import "datatables.net-bs4/css/dataTables.bootstrap4";
 @import "datatables.net-fixedcolumns-bs4/css/fixedColumns.bootstrap4";
-
+@import "datatables.net-buttons-bs4/css/buttons.bootstrap4";
 
 #main {
   margin-top: 10%
@@ -88,7 +88,7 @@ tbody {
   min-height: 100vh;
   margin-left: -15rem;
   transition: margin 0.25s ease-out;
-  margin-top: 3%;
+  margin-top: 50px;
 }
 
 .cart-button {

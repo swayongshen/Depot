@@ -12,8 +12,8 @@ class OrdersController < ApplicationController
       @orders = @orders.where(email: params[:email]) if params[:email].present?
       @orders = @orders.where(address: params[:address]) if params[:address].present?
       @orders = @orders.where(name: params[:name]) if params[:name].present?
-      @orders = @orders.where("created_at >= ?", params[:from_date].to_date) if params[:from_date].present?
-      @orders = @orders.where("created_at <= ?", params[:to_date].to_date) if params[:to_date].present?
+      @orders = @orders.where("orders.created_at >= ?", params[:from_date].to_date) if params[:from_date].present?
+      @orders = @orders.where("orders.created_at <= ?", params[:to_date].to_date) if params[:to_date].present?
       if params[:ship_status].present? and params[:ship_status] != 1
         wanted_orders = @orders.select {|order| !Order.ship_statuses[params[:ship_status]] ^ order.is_user_products_shipped?(current_user)}
         wanted_order_ids = wanted_orders.map {|order| order.id}

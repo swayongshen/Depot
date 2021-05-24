@@ -14,7 +14,6 @@ window.$ = window.jQuery = window.jquery = jQuery;
 import "@fortawesome/fontawesome-free/js/all"
 import "bootstrap"
 import "select2/dist/css/select2.css"
-require( 'jszip' );
 require( 'datatables.net-bs4' );
 require( 'datatables.net-buttons-bs4' );
 require( 'datatables.net-buttons/js/buttons.html5.js' );

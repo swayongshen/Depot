@@ -10,5 +10,4 @@ environment.plugins.append('Provide',
     })
 )
 
-
 module.exports = environment

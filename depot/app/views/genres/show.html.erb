@@ -6,7 +6,11 @@
         Genre description
       </div>
       <div class="card-body">
-        <p><%= @genre.description %></p>
+        <% if @genre.description %>
+          <p><%= @genre.description %></p>
+        <% else %>
+          <p><i>Empty description.</i></p>
+        <% end %>
       </div>
 
     </div>

@@ -13,6 +13,9 @@ class ProductsController < ApplicationController
   # GET /products/1 or /products/1.json
   def show
     set_cart
+    respond_to do |format|
+      format.js
+    end
   end
 
   # GET /products/new
