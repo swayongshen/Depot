@@ -1,5 +1,14 @@
+<script>
+  $(document).ready(() => {
+      $('.close-cart-btn').on('click', closeCart)
+  })
+</script>
 <div class="sidebar-heading"><%= image_tag 'logo.svg', alt: 'The Pragmatic Bookshelf', align: "middle" %></div>
 <div id="cart">
+  <div class="float-right">
+    <button class="btn close-cart-btn"><i class="fa fa-chevron-left" aria-hidden="true"></i>
+    </button>
+  </div>
   <% if @cart %>
     <%= render @cart %>
   <% else %>

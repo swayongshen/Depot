@@ -31,22 +31,28 @@ var body = `
 
 $("#main").html(body);
 $("#notifications").html('<%=j render '/layouts/notifications', locals: { notice: flash[:notice], alert: flash[:alert]} %>')
-var table = $('#products-datatable').DataTable({
-    scrollY: "800px",
-    scrollX: "800px",
-    scrollCollapse: true,
-    responsive: true,
-    fixedColumns: {
-        leftColumns: 2
-    },
-    select: {
-        style: 'single',
-        selector: 'td:not(:last-child)'
-    }
-});
-table.on('select', (e, dt, type, index) => {
-    console.log(table.rows(index).data().toArray()[0][0])
-    var product_id = table.rows(index).data().toArray()[0][0]
-    window.location.replace('<%= products_url %>' + '/' + product_id);
-});
-table.columns.adjust().draw();
+if (! $.fn.DataTable.isDataTable('#products-datatable')) {
+    var table = $('#products-datatable').DataTable({
+        scrollY: "600px",
+        scrollX: true,
+        scrollCollapse: true,
+        fixedColumns: {
+            leftColumns: 2
+        },
+        select: {
+            style: 'single',
+            selector: 'td:not(:last-child)'
+        }
+    });
+    table.on('select', (e, dt, type, index) => {
+        console.log(table.rows(index).data().toArray()[0][0])
+        var product_id = table.rows(index).data().toArray()[0][0]
+        window.location.replace('<%= products_url %>' + '/' + product_id);
+    });
+    setTimeout(() => {
+        table.columns.adjust().draw();
+    }, 50)
+    document.addEventListener("turbolinks:before-cache", function() {
+        table.destroy();
+    })
+}

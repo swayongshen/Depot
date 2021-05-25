@@ -10,14 +10,6 @@
         "/packs/js/application-c0dc31488a80233ce708.js.map"
       ]
     },
-    "jszip": {
-      "js": [
-        "/packs/js/jszip-c433f384f9e9f3ab4ad9.js"
-      ],
-      "js.map": [
-        "/packs/js/jszip-c433f384f9e9f3ab4ad9.js.map"
-      ]
-    },
     "src/application": {
       "js": [
         "/packs/js/src/application-d5f8ba58090c39bcf990.js"
@@ -27,8 +19,6 @@
       ]
     }
   },
-  "jszip.js": "/packs/js/jszip-c433f384f9e9f3ab4ad9.js",
-  "jszip.js.map": "/packs/js/jszip-c433f384f9e9f3ab4ad9.js.map",
   "src/application.js": "/packs/js/src/application-d5f8ba58090c39bcf990.js",
   "src/application.js.map": "/packs/js/src/application-d5f8ba58090c39bcf990.js.map"
 }

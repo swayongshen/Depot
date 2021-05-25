@@ -6,6 +6,14 @@
   <div class="col-8">
     <h5 id="seller-line">Seller: <%= @product.user.name %></h5>
     <p><%= sanitize(@product.description) %></p>
+    <% if @product.best_seller_rankings.size > 0 %>
+      <b>Best seller rankings:</b>
+      <ul>
+        <% @product.best_seller_rankings.each do |ranking| %>
+          <li><%= ranking.category %>: <%= number_with_precision(ranking.rank, precision: 0, delimiter: ',') %></li>
+        <% end %>
+      </ul>
+    <% end %>
     <p class="btn w-100 px-4 text-center mx-auto">
       <%= button_to(line_items_path(product_id: @product), {remote: true, class: "btn btn-warning add-to-cart-btn"}) do %>
         Add to cart <i class='fa fa-cart-plus' aria-hidden='true'></i>

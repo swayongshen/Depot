@@ -1,12 +1,25 @@
 <%= form_with model: genre, url: route_url do |form| %>
-  <div class="form-group">
-    <%= form.label 'Genre name' %>
-    <%= form.text_field :name, class:"form-control"%>
+  <div class="row">
+    <div class="col-md-6 field">
+      <div>
+        <%= form.label 'Genre name' %>
+      </div>
+      <%= form.text_field :name, class:"form-control"%>
+    </div>
+    <div class="col-md-6">
+      <div class="field">
+        <div>
+          <%= form.label 'Product' %>
+        </div>
+        <%= form.select 'product_id', Product.all.map {|product| [product.title, product.id]}, {}, class:"form-control" %>
+      </div>
+    </div>
   </div>
   <div class="form-group">
     <%= form.label :description %>
     <%= form.text_area :description, rows: 5, cols: 60, class:"form-control" %>
   </div>
+
   <div class="actions">
     <%= form.submit class: "btn btn-secondary" %>
   </div>

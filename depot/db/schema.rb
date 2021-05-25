@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_24_024141) do
+ActiveRecord::Schema.define(version: 2021_05_24_092020) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,7 +58,6 @@ ActiveRecord::Schema.define(version: 2021_05_24_024141) do
     t.integer "permit_number"
     t.integer "#<ActiveRecord::ConnectionAdapters::PostgreSQL::TableDefinition"
     t.integer "user_id"
-    t.index ["permit_number"], name: "index_business_permits_on_permit_number", unique: true
   end
 
   create_table "carts", force: :cascade do |t|

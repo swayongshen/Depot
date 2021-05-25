@@ -22,7 +22,7 @@
 @import "datatables.net-buttons-bs4/css/buttons.bootstrap4";
 
 #main {
-  margin-top: 10%
+  margin-top: 7%
 }
 
 #title {
@@ -66,7 +66,7 @@ tbody {
 }
 
 #navbar {
-  .nav-link, #welcome-user-name-text {
+  .nav-link {
     font-size: 20px !important;
     color: lightgrey;
   }
@@ -75,8 +75,8 @@ tbody {
     margin-left: 25px;
   }
 
-  #menu-toggle {
-    color: grey
+  .toggle-cart-btn {
+    color: lightgrey;
   }
 }
 
@@ -88,7 +88,13 @@ tbody {
   min-height: 100vh;
   margin-left: -15rem;
   transition: margin 0.25s ease-out;
-  margin-top: 50px;
+  margin-top: 30px;
+
+  .close-cart-btn {
+    margin-right: -26px;
+    background: $dark;
+    color: white
+  }
 }
 
 .cart-button {
@@ -124,7 +130,7 @@ tbody {
   }
 
   #wrapper.toggled #sidebar-wrapper {
-    margin-left: -15rem;
+    margin-left: -20rem;
   }
 }
 

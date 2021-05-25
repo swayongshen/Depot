@@ -1,5 +1,7 @@
 class GenresController < ApplicationController
+  include CurrentCart
   before_action :set_genre, except: [:create, :index]
+  before_action :set_cart
 
   def create
     if request.get?
@@ -8,7 +10,7 @@ class GenresController < ApplicationController
       @genre = Genre.new(genre_params)
       @genre.name = @genre.name.downcase
       respond_to do |format|
-        if Genre.select(:name).where("name = ?", @genre.name).size == 0
+        if Genre.where("name = ?", @genre.name).size == 0
           if @genre.save
             flash[:notice] = "Genre was successfully added."
             format.html {redirect_to :genres}
@@ -73,6 +75,6 @@ class GenresController < ApplicationController
   end
 
   def genre_params
-    params.require(:genre).permit(:name, :description)
+    params.require(:genre).permit(:name, :description, :product_id)
   end
 end

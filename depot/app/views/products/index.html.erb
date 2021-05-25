@@ -1,27 +1,3 @@
-<script>
-  $(document).ready(function() {
-      var table = $('#products-datatable').DataTable({
-          scrollY: "600px",
-          scrollX: true,
-          scrollCollapse: true,
-          responsive: true,
-          fixedColumns: {
-              leftColumns: 2
-          },
-          select: {
-              style: 'single',
-              selector: 'td:not(:last-child)'
-          }
-      });
-      table.on('select', (e, dt, type, index) => {
-          console.log(table.rows(index).data().toArray()[0][0])
-          var product_id = table.rows(index).data().toArray()[0][0]
-          window.location.replace('<%= products_url %>' + '/' + product_id);
-      });
-      table.columns.adjust().draw();
-  });
-
-</script>
 <h1 id="title">Your Products</h1>
 <div class="row justify-content-end">
   <%= button_to new_product_path, class:"btn btn-success", id: "add-product-btn", method: :get do %>
@@ -48,4 +24,33 @@
     </table>
   </div>
 </div>
+<script>
+    $(document).ready(function() {
+        if (! $.fn.DataTable.isDataTable('#products-datatable')) {
+            var table = $('#products-datatable').DataTable({
+                scrollY: "600px",
+                scrollX: true,
+                scrollCollapse: true,
+                fixedColumns: {
+                    leftColumns: 2
+                },
+                select: {
+                    style: 'single',
+                    selector: 'td:not(:last-child)'
+                }
+            });
+            table.on('select', (e, dt, type, index) => {
+                console.log(table.rows(index).data().toArray()[0][0])
+                var product_id = table.rows(index).data().toArray()[0][0]
+                window.location.replace('<%= products_url %>' + '/' + product_id);
+            });
+            setTimeout(() => {
+                table.columns.adjust().draw();
+            }, 50)
+            document.addEventListener("turbolinks:before-cache", function() {
+                table.destroy();
+            })
+        }
+    });
+</script>
 

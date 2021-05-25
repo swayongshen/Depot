@@ -17,4 +17,6 @@ Depot::Application.configure do
     enable_starttls_auto: true,
     openssl_verify_mode: 'none'
   }
+
+  config.time_zone = 'Singapore'
 end

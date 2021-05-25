@@ -2,8 +2,7 @@ class ProductsController < ApplicationController
   include CurrentCart
   skip_before_action :authenticate_user!, only: [:show]
   before_action :set_product_and_check_owner, only: %i[ edit update destroy ]
-  before_action :set_product, only: [:show]
-  before_action :set_genre_names, only: [:edit]
+  before_action :set_cart
 
   # GET /products or /products.json
   def index
@@ -12,10 +11,7 @@ class ProductsController < ApplicationController
 
   # GET /products/1 or /products/1.json
   def show
-    set_cart
-    respond_to do |format|
-      format.js
-    end
+    set_product
   end
 
   # GET /products/new
@@ -26,6 +22,7 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
+    set_genre_names
   end
 
   # POST /products or /products.json

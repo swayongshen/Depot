@@ -1,26 +1,35 @@
 class OrdersController < ApplicationController
   include CurrentCart
   before_action :authenticate_user!, only: [:index, :show, :update, :ship]
-  before_action :set_cart, only: [:new, :create]
+  before_action :set_cart
   before_action :ensure_cart_isnt_empty, only: :new
   before_action :set_order, only: %i[ show edit update destroy ship]
 
   def filter
-    puts "FILTER"
+    filter_params
     respond_to do |format|
-      @orders = User.get_all_orders_by_user(current_user)
+      @orders = Order.includes(line_items: [product: [:user]])
+      @orders = @orders.where(line_items: { products: { users: current_user} })
       @orders = @orders.where(email: params[:email]) if params[:email].present?
       @orders = @orders.where(address: params[:address]) if params[:address].present?
       @orders = @orders.where(name: params[:name]) if params[:name].present?
-      @orders = @orders.where("orders.created_at >= ?", params[:from_date].to_date) if params[:from_date].present?
-      @orders = @orders.where("orders.created_at <= ?", params[:to_date].to_date) if params[:to_date].present?
-      if params[:ship_status].present? and params[:ship_status] != 1
+
+      @orders = @orders.where("orders.created_at >= ?",
+                              helpers.parse_user_date_time(params[:from_date])) if params[:from_date].present?
+      @orders = @orders.where("orders.created_at <= ?",
+                              helpers.parse_user_date_time(params[:to_date])) if params[:to_date].present?
+      # If ship_status is not any, filter orders by ship_status
+      if params[:ship_status].present? and params[:ship_status] != "Any"
+        puts params[:ship_status]
         wanted_orders = @orders.select {|order| !Order.ship_statuses[params[:ship_status]] ^ order.is_user_products_shipped?(current_user)}
         wanted_order_ids = wanted_orders.map {|order| order.id}
         @orders = @orders.where(id: wanted_order_ids)
       end
       if params.empty?
         @orders = Order.none
+      end
+      if @orders
+        @orders = @orders.order("order_id ASC")
       end
       format.html { render :index }
       format.js
@@ -127,7 +136,7 @@ class OrdersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def order_params
-      params.require(:order).permit(:name, :address, :email, :pay_type, :ship_status, :to_date, :from_date)
+      params.require(:order).permit(:name, :address, :email, :pay_type)
     end
 
     def ensure_cart_isnt_empty
@@ -137,7 +146,7 @@ class OrdersController < ApplicationController
     end
 
     def filter_params
-      params.permit(:name, :address, :email, :pay_type, :shipped, :from)
+      params.permit(:name, :address, :email, :pay_type, :ship_status, :from_date, :to_date, :commit)
     end
 
 
