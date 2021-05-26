@@ -1,5 +1,5 @@
 <script type="text/javascript">
-  $(document).ready(function() {
+  $(document).on('turbolinks:load', function() {
       if (! $.fn.DataTable.isDataTable('#orders-datatable')) {
           var table = $('#orders-datatable').DataTable({
               scrollY:        "600px",
@@ -14,15 +14,18 @@
               }
           });
           table.on('select', (e, dt, type, index) => {
-              console.log(table.rows(index).data().toArray()[0][0])
               var order_id = table.rows(index).data().toArray()[0][0]
-              window.location.replace('<%= orders_url %>' + '/' + order_id);
-          })
-          document.addEventListener("turbolinks:before-cache", function() {
-              table.destroy();
+              Turbolinks.visit('<%= orders_url %>' + '/' + order_id)
           })
       }
   });
+  $(document).ready(() => {
+      document.addEventListener("turbolinks:before-cache", function() {
+          if ($.fn.DataTable.isDataTable('#orders-datatable')) {
+              $('#orders-datatable').DataTable().destroy();
+          }
+      });
+  })
 
 </script>
 <h1 id="title">Your Received Orders</h1>
@@ -31,7 +34,7 @@
 </div>
 <div class="row data-table-row">
   <div class="col-md-12">
-    <table id="orders-datatable" class="table table-striped table-bordered" style="width:100%">
+    <table id="orders-datatable" data-turbolinks-permanent class="table table-striped table-bordered" style="width:100%">
       <thead>
       <tr>
         <th class="header">Id</th>
@@ -45,7 +48,7 @@
       </tr>
       </thead>
       <tbody id="orders">
-      <%= render @orders %>
+        <%= render @orders %>
       </tbody>
     </table>
   </div>

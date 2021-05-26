@@ -1,5 +1,5 @@
 <script>
-    $(document).ready(function() {
+    $(document).on('turbolinks:load', function() {
         $('#datepicker-from').datetimepicker({
             format: 'dd/mm/yyyy HH:MM',
             uiLibrary: 'bootstrap4',
@@ -14,9 +14,6 @@
         });
     });
 </script>
-<!--    Datetime picker-->
-<%= stylesheet_link_tag "https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" %>
-<%= javascript_include_tag "https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" %>
 
 <div class="modal fade" id="filter-form-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">

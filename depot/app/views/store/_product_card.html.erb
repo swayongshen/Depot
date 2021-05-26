@@ -1,7 +1,7 @@
 <script>
   $(document).ready(() => {
       $("#product-<%=product.id %>").click(() => {
-          window.location.replace('<%= product_url(product) %>');
+          Turbolinks.visit('<%= product_url(product) %>')
       })
   })
 </script>

@@ -1,31 +1,40 @@
 <script>
-  $(document).ready(() => {
-      $('.toggle-cart-btn').on('click', closeCart)
+  $(document).on('turbolinks:load', () => {
+      const openCart = () => {
+          $('#wrapper').removeClass('toggled');
+          localStorage.setItem('revealed?', 'true')
+          const cart_down_icon = `<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          <i class="fa fa-chevron-left" aria-hidden="true"></i>`
+          $('.toggle-cart-btn').html(cart_down_icon);
+          $('.toggle-cart-btn').off('click').on('click',closeCart);
+      }
+      const closeCart = () => {
+          $('#wrapper').addClass('toggled');
+          localStorage.setItem('revealed?', 'false')
+          const cart_right_icon = `<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          <i class="fa fa-chevron-right" aria-hidden="true"></i>`;
+          $('.toggle-cart-btn').html(cart_right_icon);
+          $('.toggle-cart-btn').off('click').on('click', openCart);
+      }
+      if (localStorage.getItem('revealed?') === 'true') {
+          openCart();
+      } else {
+          closeCart();
+      }
   })
-    const openCart = () => {
-        $('#wrapper').removeClass('toggled');
-        const cart_down_icon = `<i class="fa fa-shopping-cart" aria-hidden="true"></i>
-            <i class="fa fa-chevron-down" aria-hidden="true"></i>`
-        $('.toggle-cart-btn').html(cart_down_icon);
-        $('.toggle-cart-btn').off('click').on('click',closeCart);
-    }
-    const closeCart = () => {
-        $('#wrapper').addClass('toggled');
-        const cart_right_icon = `<i class="fa fa-shopping-cart" aria-hidden="true"></i>
-            <i class="fa fa-chevron-right" aria-hidden="true"></i>`;
-        $('.toggle-cart-btn').html(cart_right_icon);
-        $('.toggle-cart-btn').off('click').on('click', openCart);
-    }
+
 </script>
 <nav class="navbar fixed-top navbar-expand-lg bg-dark border-bottom" id="navbar">
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <button class="btn toggle-cart-btn">
-          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-          <i class="fa fa-chevron-down" aria-hidden="true"></i>
-        </button>
-      </li>
+        <li class="nav-item">
+          <% if @cart %>
+            <button class="btn toggle-cart-btn">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            </button>
+          <% end %>
+        </li>
       <li class="nav-item"><%= link_to 'Shop', store_index_url, class: "nav-link" %></li>
       <% if current_user.present? %>
         <li class="nav-item"><%= link_to 'Orders', orders_url, class: "nav-link"%></li>

@@ -1,5 +1,5 @@
 <script>
-  $(document).ready(() => {
+  $(document).on('turbolinks:load', () => {
       $('.select-genre').select2({
           tags: true,
       })

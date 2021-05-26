@@ -1,16 +1,9 @@
-<tr class="<%= cycle('list_line_odd', 'list_line_even') %>" id="<%= "product#{product.id}" %>">
+<tr>
   <td>
     <%= product.id %>
   </td>
   <td>
     <%= product.title %>
-  </td>
-  <td>
-    <% if product.product_images.attached? %>
-      <%= image_tag(product.product_images.first.variant(resize_to_limit: [200, nil]), class: 'list_image') %>
-    <% else %>
-      No image
-    <% end %>
   </td>
   <td>
     <%= truncate(strip_tags(product.description), length: 400) %>

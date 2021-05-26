@@ -8,11 +8,14 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!--    Datetime picker-->
+    <%= stylesheet_link_tag "https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" %>
+    <%= javascript_include_tag "https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" %>
 
   </head>
 
   <body class ='<%= controller.controller_name %>'>
-    <div id="wrapper" class="d-flex">
+    <div id="wrapper" class="d-flex toggled">
       <div id="sidebar-wrapper" class="bg-light border-right">
         <%= render 'layouts/sidebar' %>
       </div>

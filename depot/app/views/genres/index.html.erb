@@ -1,5 +1,5 @@
 <script type="text/javascript">
-    $(document).ready(function() {
+    $(document).on('turbolinks:load', function() {
         if (! $.fn.DataTable.isDataTable('#genres-datatable')) {
             var table = $('#genres-datatable').DataTable({
                 scrollY:        true,
@@ -13,13 +13,17 @@
             table.on('select', (e, dt, type, index) => {
                 console.log(table.rows(index).data().toArray()[0][0])
                 var genre_id = table.rows(index).data().toArray()[0][0]
-                window.location.replace('<%= genres_url %>' + '/' + genre_id);
-            })
-            document.addEventListener("turbolinks:before-cache", function() {
-                table.destroy();
+                Turbolinks.visit('<%= genres_url %>' + '/' + genre_id)
             })
         }
     });
+    $(document).ready(() => {
+        document.addEventListener("turbolinks:before-cache", function() {
+            if ($.fn.DataTable.isDataTable('#genres-datatable')) {
+                $('#genres-datatable').DataTable().destroy();
+            }
+        });
+    })
 </script>
 <h1 id="title">Genres</h1>
 <div class="row justify-content-end">
