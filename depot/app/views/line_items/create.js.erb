@@ -1,6 +1,7 @@
 if ($('#cart tr').length == 1) { $('#cart').show('blind', 1000); }
 
 $("#cart").html("<%=j render(@cart) %>");
+openCart();
 
 //Add animation to highlight new item added to cart.
 $('#current_item').css({

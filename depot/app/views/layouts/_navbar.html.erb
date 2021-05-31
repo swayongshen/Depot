@@ -1,21 +1,21 @@
 <script>
-  $(document).on('turbolinks:load', () => {
-      const openCart = () => {
-          $('#wrapper').removeClass('toggled');
-          localStorage.setItem('revealed?', 'true')
-          const cart_down_icon = `<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+    const openCart = () => {
+        $('#wrapper').removeClass('toggled');
+        localStorage.setItem('revealed?', 'true')
+        const cart_down_icon = `<i class="fa fa-shopping-cart" aria-hidden="true"></i>
           <i class="fa fa-chevron-left" aria-hidden="true"></i>`
-          $('.toggle-cart-btn').html(cart_down_icon);
-          $('.toggle-cart-btn').off('click').on('click',closeCart);
-      }
-      const closeCart = () => {
-          $('#wrapper').addClass('toggled');
-          localStorage.setItem('revealed?', 'false')
-          const cart_right_icon = `<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        $('.toggle-cart-btn').html(cart_down_icon);
+        $('.toggle-cart-btn').off('click').on('click',closeCart);
+    }
+    const closeCart = () => {
+        $('#wrapper').addClass('toggled');
+        localStorage.setItem('revealed?', 'false')
+        const cart_right_icon = `<i class="fa fa-shopping-cart" aria-hidden="true"></i>
           <i class="fa fa-chevron-right" aria-hidden="true"></i>`;
-          $('.toggle-cart-btn').html(cart_right_icon);
-          $('.toggle-cart-btn').off('click').on('click', openCart);
-      }
+        $('.toggle-cart-btn').html(cart_right_icon);
+        $('.toggle-cart-btn').off('click').on('click', openCart);
+    }
+  $(document).on('turbolinks:load', () => {
       if (localStorage.getItem('revealed?') === 'true') {
           openCart();
       } else {

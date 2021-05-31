@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All defaults demo</title>
+  <script src="https://unpkg.com/markerjs2/markerjs2.js"></script>
+  <script>
+      function showMarkerArea(target) {
+          const markerArea = new markerjs2.MarkerArea(target);
+          markerArea.addRenderEventListener((imgURL) => {
+              target.src = imgURL
+
+          });
+          markerArea.show();
+      }
+      $(document).on('turbolinks:load', () => {
+          $('.target-image').on('click', () => {
+              showMarkerArea(event.target);
+          })
+      })
+  </script>
+  <style>
+    .target-image {
+        min-width: 500px;
+    }
+  </style>
+</head>
+<body>
+<%= image_tag "adrpo.jpg", class: "target-image" %>
+<div>
+  <%= form_with url: marker_url do |form| %>
+    <%= form.file_field :image %>
+  <% end %>
+</div>
+</body>
+</html>
+

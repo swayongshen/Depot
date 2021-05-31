@@ -17,6 +17,9 @@
               var order_id = table.rows(index).data().toArray()[0][0]
               Turbolinks.visit('<%= orders_url %>' + '/' + order_id)
           })
+          table.on('draw', () => {
+              table.columns.adjust().draw();
+          })
       }
   });
   $(document).ready(() => {
